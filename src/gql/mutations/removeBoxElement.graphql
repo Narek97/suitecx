@@ -1,0 +1,9 @@
+mutation RemoveBoxElement($removeBoxElementInput: RemoveBoxElementInput!) {
+  removeBoxElement(removeBoxElementInput: $removeBoxElementInput) {
+    id
+    columnId
+    rowId
+    text
+    stepId
+  }
+}

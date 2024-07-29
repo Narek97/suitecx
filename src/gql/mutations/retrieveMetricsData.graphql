@@ -1,0 +1,37 @@
+mutation RetrieveMetricsData($id: Int!, $previous: Boolean!) {
+    retrieveMetricsData(id: $id, previous:$previous) {
+        rowId
+        columnId
+        id
+        name
+        commentsCount
+        descriptionEnabled
+        description
+        type
+        value
+        goal
+        flippedText
+        surveyId
+        questionId
+        source
+        startDate
+        endDate
+        dateRange
+        overall
+        nps
+        csat
+        ces
+        x
+        y
+        z
+        persona {
+            id
+            name
+            type
+            attachment {
+                url
+                key
+            }
+        }
+    }
+}

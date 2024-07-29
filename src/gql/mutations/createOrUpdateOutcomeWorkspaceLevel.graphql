@@ -1,0 +1,10 @@
+mutation CreateUpdateOutcomeWorkspaceLevel(
+  $createOrUpdateWorkspaceOutcomeInput: CreateOrUpdateWorkspaceOutcomeInput!
+) {
+  createUpdateOutcomeWorkspaceLevel(
+    createOrUpdateWorkspaceOutcomeInput: $createOrUpdateWorkspaceOutcomeInput
+  ) {
+    id
+    title
+  }
+}

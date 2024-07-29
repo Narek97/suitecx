@@ -1,0 +1,55 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.performance-logs {
+
+  &--empty-page {
+    @include absolute-center;
+  }
+
+  .custom-table--payloadSize {
+    padding: 2px 4px;
+  }
+
+  .green-size,
+  .yellow-size,
+  .red-size {
+    display: inline-block;
+    min-width: 60px;
+    width: auto;
+    border-radius: 2px;
+    text-align: center;
+    color: $BASE-WHITE-COLOR;
+  }
+
+  .green-size {
+    background-color: $POSITIVE-COLOR;
+  }
+
+  .yellow-size {
+    background-color: $NEUTRAL-COLOR;
+  }
+
+  .red-size {
+    background-color: $BASE-ERROR-COLOR;
+  }
+}
+
+.query-modal {
+  &-content {
+    color: $BASE_GRAY_COLOR;
+    padding: 40px 25px;
+    max-height: 400px;
+    overflow-y: auto;
+
+    &-item {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $BASE_LIGHT-GRAY-COLOR;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

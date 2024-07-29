@@ -1,0 +1,39 @@
+mutation CreateMetrics($createMetricsInput: CreateMetricsInput!, $createDataPointsInput: CreateDataPointsInput) {
+  createMetrics(createMetricsInput: $createMetricsInput, createDataPointsInput: $createDataPointsInput) {
+    id
+    id
+    rowId
+    columnId
+    name
+    commentsCount
+    descriptionEnabled
+    description
+    type
+    value
+    goal
+    typeData
+    flippedText
+    surveyId
+    questionId
+    source
+    startDate
+    endDate
+    dateRange
+    overall
+    nps
+    csat
+    ces
+    x
+    y
+    z
+    persona {
+      id
+      name
+      type
+      attachment {
+        url
+        key
+      }
+    }
+  }
+}

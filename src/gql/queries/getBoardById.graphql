@@ -1,0 +1,16 @@
+query GetBoardById($id: Int!) {
+  getBoardById(id: $id) {
+    id
+    name
+    description
+    defaultMapId
+    pinnedOutcomeGroupCount
+    createdAt
+    workspace {
+      id
+      name
+    }
+    personasCount
+    journeyMapCount
+  }
+}

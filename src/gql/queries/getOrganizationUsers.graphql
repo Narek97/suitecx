@@ -1,0 +1,14 @@
+query GetOrganizationUsers($paginationInput: QuestionProPaginationInput!) {
+  getOrganizationUsers(paginationInput: $paginationInput) {
+    users {
+      id
+      userId
+      lastName
+      firstName
+      emailAddress
+      updatedAt
+      createdAt
+    }
+    count
+  }
+}

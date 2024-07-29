@@ -1,0 +1,13 @@
+query GetPersonaById($getPersonaByIdInput: GetPersonaByIdInput!) {
+  getPersonaById(getPersonaByIdInput: $getPersonaByIdInput) {
+    id
+    name
+    type
+    color
+    journeys
+    attachment {
+      key
+      url
+    }
+  }
+}

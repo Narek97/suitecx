@@ -1,0 +1,5 @@
+mutation updateItems($updateItemsInput: UpdateItemsInput!) {
+  updateItems(updateItemsInput: $updateItemsInput) {
+    __typename
+  }
+}

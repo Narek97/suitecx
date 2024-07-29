@@ -1,0 +1,5 @@
+query GenerateToken($generateTokenArgs: GenerateTokenInput!) {
+  generateToken(generateTokenArgs: $generateTokenArgs) {
+    token
+  }
+}

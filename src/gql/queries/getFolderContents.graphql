@@ -1,0 +1,3 @@
+query GetFolderContents($folder: String!){
+    getFolderContents(folder: $folder)
+}

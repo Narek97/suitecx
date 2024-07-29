@@ -1,0 +1,3 @@
+mutation DeleteMapLink($id: Int!) {
+  deleteLink(id: $id)
+}

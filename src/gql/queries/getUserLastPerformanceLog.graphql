@@ -1,0 +1,12 @@
+query GetUserLastPerformanceLog {
+    getUserLastPerformanceLog{
+        id
+        payloadSize
+        responseTime
+        queryCount
+        complexity
+        path
+        method
+        sqlRowQueries
+    }
+}

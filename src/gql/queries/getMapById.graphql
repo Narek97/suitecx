@@ -1,0 +1,29 @@
+query getMapById($id: Int!) {
+  getMapById(id: $id) {
+    id
+    title
+    type
+    rowCount
+    columnCount
+    rows {
+      id
+      size
+      label
+      rowFunction
+    }
+    columns {
+      id
+      size
+      label
+      headerColor
+    }
+    board {
+      id
+      name
+      workspace {
+        id
+        name
+      }
+    }
+  }
+}

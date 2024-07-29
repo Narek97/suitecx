@@ -1,0 +1,3 @@
+mutation DeleteMapRow($id: Int!) {
+    deleteMapRow(id: $id)
+}

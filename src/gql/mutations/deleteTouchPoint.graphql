@@ -1,0 +1,7 @@
+mutation DeleteTouchPoint($id: Int!) {
+  deleteTouchPoint(id: $id) {
+    rowId
+    columnId
+    index
+  }
+}

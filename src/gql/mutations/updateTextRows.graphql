@@ -1,0 +1,11 @@
+mutation UpdateTextRows($updateTextRowInput: UpdateTextRowInput!) {
+  updateTextRows(updateTextRowInput: $updateTextRowInput) {
+    id
+    columnId
+    text
+    rowId
+    action
+    stepId
+    previousText
+  }
+}

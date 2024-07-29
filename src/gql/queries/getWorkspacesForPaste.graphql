@@ -1,0 +1,6 @@
+query GetWorkspacesForPast {
+  getWorkspaces {
+    id
+    name
+  }
+}

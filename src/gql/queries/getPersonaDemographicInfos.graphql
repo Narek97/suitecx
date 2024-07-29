@@ -1,0 +1,21 @@
+query GetPersonaDemographicInfos($getPersonaDemographicInfosInput: GetPersonaDemographicInfosInput!) {
+    getPersonaDemographicInfos(getPersonaDemographicInfosInput: $getPersonaDemographicInfosInput) {
+        id,
+        key,
+        personaId,
+        value,
+        type,
+        isPinned
+    }
+}
+
+query GetPinPersonaDemographicInfos($getPersonaDemographicInfosInput: GetPersonaDemographicInfosInput!) {
+    getPersonaDemographicInfos(getPersonaDemographicInfosInput: $getPersonaDemographicInfosInput) {
+        id,
+        key,
+        personaId,
+        value,
+        type,
+        isPinned
+    }
+}

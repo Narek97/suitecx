@@ -1,0 +1,24 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.search-icon-section {
+  .noun-project-icons-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 15px;
+    position: absolute;
+    width: 308px;
+    height: 120px;
+    border: 1px solid $BASE_BLUE_COLOR;
+    overflow: auto;
+    z-index: 1;
+    background-color: $BASE-WHITE-COLOR;
+  }
+  .noun-project-icon {
+    cursor: pointer;
+  }
+  .no-result {
+    @include absolute-center;
+  }
+}

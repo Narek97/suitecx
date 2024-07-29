@@ -1,0 +1,104 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.board-card {
+  position: relative;
+  background: $BASE_WHITE-COLOR;
+  width: calc(100% - 8px);
+  height: 170px;
+  padding: 16px 40px 16px 24px;
+  @include card-borders;
+  @include flex-center;
+  border-left: 1px solid transparent;
+  align-items: flex-start;
+
+  &:hover {
+    border-left: 1px solid $BASE_BLUE_COLOR;
+
+    .drag-handle-area {
+      display: block;
+      background: $BASE_BLUE_COLOR;
+
+      &--icon {
+        display: block;
+        background: $BASE_BLUE_COLOR;
+      }
+    }
+  }
+
+  &--menu {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+  }
+
+  &--name-block {
+    line-height: 46px;
+
+    &-input {
+      width: 92%;
+    }
+  }
+  &--analytics {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+  }
+
+  &--name {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+    color: $BASE_BLUE_COLOR;
+
+    &-text {
+      @include reduce-text(100%);
+      max-width: 84%;
+    }
+  }
+
+  &--left {
+    width: 294px;
+
+    .workspace--analytics {
+      gap: 16px;
+    }
+  }
+
+  &--right {
+    width: calc(100% - 294px);
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+
+    &-journies {
+      @include flex-center;
+      gap: 16px;
+    }
+
+    &-more-block {
+      min-width: 134px;
+      height: 134px;
+      border: 1px solid $BASE_EXTRA-LIGHT-GRAY-2;
+      border-radius: 4px;
+      font-weight: 500;
+      color: $BASE_BLUE_COLOR;
+      @include flex-center-center;
+
+      &:hover {
+        border-color: $BASE_BLUE_COLOR;
+      }
+    }
+
+    .no-maps-info {
+      height: 100%;
+      margin-left: 20px;
+      font-size: $BASE_FONT-SIZE;
+      color: $BASE_GRAY_COLOR_2;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

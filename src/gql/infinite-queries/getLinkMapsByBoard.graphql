@@ -1,0 +1,9 @@
+query GetLinkMapsByBoard($getMapsInput: GetMapsInput!) {
+  getLinkMapsByBoard(getMapsInput: $getMapsInput) {
+    count
+    maps {
+      mapId
+      title
+    }
+  }
+}

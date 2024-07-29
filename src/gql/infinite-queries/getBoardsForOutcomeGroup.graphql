@@ -1,0 +1,12 @@
+query GetBoardsForOutcomeGroup($getBoardsFourOutcomeGroupInput: GetBoardsFourOutcomeGroupInput!) {
+  getBoardsForOutcomeGroup(getBoardsFourOutcomeGroupInput: $getBoardsFourOutcomeGroupInput) {
+    limit
+    offset
+    count
+    boards {
+      id
+      name
+      isPinned
+    }
+  }
+}

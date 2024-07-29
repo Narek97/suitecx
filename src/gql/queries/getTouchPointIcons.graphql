@@ -1,0 +1,12 @@
+query GetTouchPointIcons($getTouchpointIconsInput: GetTouchpointIconsInput!) {
+  getTouchPointIcons(getTouchpointIconsInput: $getTouchpointIconsInput) {
+    count
+    attachments {
+      id
+      url
+      key
+      name
+      type
+    }
+  }
+}

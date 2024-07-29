@@ -1,0 +1,54 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.create-edit-form-block {
+  display: flex;
+  align-items: flex-start;
+  &--content {
+    width: 0;
+    display: flex;
+    gap: 16px;
+    transition: 0.5s;
+    &--open-btn {
+      min-width: 200px;
+    }
+    &-save-btn {
+      width: 80px;
+      opacity: 1;
+    }
+    &--closed-mode {
+      width: 10px;
+      opacity: 0;
+      visibility: hidden;
+      min-width: 10px;
+    }
+    &-input {
+      width: 180px;
+    }
+  }
+  &--open-content {
+    width: 480px;
+  }
+  .close-form {
+    width: 30px;
+    height: 30px;
+    &--btn {
+      margin: 2px 4px 4px 16px;
+      width: 100%;
+      height: 100%;
+      transition: 0.4s;
+    }
+    &--closed-view {
+      width: 50px;
+    }
+  }
+  &--open-btn {
+    min-width: 170px;
+    display: flex;
+    transition: 0.2s;
+    &--closed-mode {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+}

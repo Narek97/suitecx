@@ -1,0 +1,8 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.custom-error {
+  @include absolute-center;
+  color: red;
+  text-align: center;
+}

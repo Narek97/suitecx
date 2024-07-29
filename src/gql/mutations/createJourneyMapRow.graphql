@@ -1,0 +1,44 @@
+mutation CreateJourneyMapRow($createRowInput: CreateRowInput!) {
+  createJourneyMapRow(createRowInput: $createRowInput) {
+    boxesWithElements {
+      id
+      columnId
+      boxTextElement {
+        rowId
+        id
+        text
+      }
+      boxElements {
+        rowId
+        id
+        text
+      }
+      touchPoints {
+        id
+        title
+        iconUrl
+      }
+      metrics {
+        id
+        name
+        descriptionEnabled
+        commentsCount
+        description
+        type
+        value
+        goal
+        typeData
+      }
+      average
+    }
+    row {
+      id
+      index
+      isPersonaAverageDisabled
+      label
+      mapId
+      rowFunction
+      size
+    }
+  }
+}

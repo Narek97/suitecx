@@ -1,0 +1,13 @@
+query GetSelectedMapsForItem(
+  $getSelectedMapsForItemInput: GetSelectedMapsForItemInput!
+) {
+  getSelectedMapsForItem(
+    getSelectedMapsForItemInput: $getSelectedMapsForItemInput
+  ) {
+    maps {
+      id
+      boardId
+      title
+    }
+  }
+}

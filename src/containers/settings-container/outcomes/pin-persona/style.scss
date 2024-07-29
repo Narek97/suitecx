@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.pin-persona {
+  &-btn {
+    width: 30px;
+    height: 30px;
+    display: contents;
+    @include flex-center-center;
+  }
+}

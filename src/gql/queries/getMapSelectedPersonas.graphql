@@ -1,0 +1,15 @@
+query GetMapSelectedPersonas($mapId: Int!) {
+  getMapSelectedPersonas(mapId: $mapId) {
+    id
+    name
+    type
+    color
+    attachmentId
+    isSelected
+    journeys
+    attachment {
+      key
+      url
+    }
+  }
+}

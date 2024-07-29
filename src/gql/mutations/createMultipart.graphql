@@ -1,0 +1,11 @@
+mutation CreateMultipart($createMultipartInput: CreateMultipartInput!) {
+  createMultipart(createMultipartInput: $createMultipartInput) {
+    createMultipartData {
+      ServerSideEncryption
+      Bucket
+      Key
+      UploadId
+    }
+    key
+  }
+}

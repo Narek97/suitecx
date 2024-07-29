@@ -1,0 +1,100 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  @include main-scrollbar();
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+html,
+body,
+section{
+  width: 100%;
+  height: 100%;
+  background-color: $BASE-WHITE-COLOR;
+}
+
+button,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  all: unset;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+textarea,
+table {
+  @include main-scrollbar;
+}
+
+.base-page-header {
+  @include flex-center-between();
+  gap: 20px;
+}
+
+.base-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: $BASE_GRAY_COLOR;
+}
+
+
+.validation-error {
+  width: auto;
+  display: block;
+  margin-top: 8px;
+  min-height: 14px;
+  font-size: $BASE-FONT-SIZE;
+  color: $BASE-ERROR-COLOR;
+}
+
+img {
+  object-fit: cover;
+  height: auto;
+}
+
+.disabled-btn {
+  border: 1px solid #eeeeee !important;
+  background-color: #eeeeee !important;
+  color: #9b9b9b !important;
+}
+
+.attachments--file-uploader {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+
+  input {
+    width: 0;
+  }
+}

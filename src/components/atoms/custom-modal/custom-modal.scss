@@ -1,0 +1,61 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.custom-modal {
+  width: 80vw;
+  outline: none;
+  background-color: $BASE-WHITE-COLOR;
+  @include absolute-center;
+
+  .close-icon {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  &-header {
+    @include flex-center-center;
+    height: 40px;
+    background: #eeeeee;
+    &-title {
+      color: $BASE_GRAY_COLOR;
+      font-size: 18px;
+      font-weight: 500;
+      &:first-letter {
+        text-transform: uppercase;
+      }
+      @include reduce-text(85%);
+    }
+  }
+  &-content {
+    padding: 16px;
+    color: rgba(84, 94, 107, 1);
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &-footer {
+    @include modal-footer;
+    button {
+      margin-left: 8px;
+    }
+  }
+}
+
+.sm {
+  max-width: 400px;
+}
+
+.md {
+  max-width: 600px;
+}
+
+.lg {
+  max-width: 1104px;
+}
+
+.custom {
+  width: max-content;
+}

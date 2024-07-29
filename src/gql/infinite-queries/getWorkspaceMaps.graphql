@@ -1,0 +1,9 @@
+query GetWorkspaceMaps($getWorkspaceMapsInput: GetWorkspaceMapsInput!) {
+  getWorkspaceMaps(getWorkspaceMapsInput: $getWorkspaceMapsInput) {
+    count
+    maps {
+      id
+      title
+    }
+  }
+}

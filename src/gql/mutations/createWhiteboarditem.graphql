@@ -1,0 +1,6 @@
+mutation AddItemsIntoWhiteboard($createItemsInput: CreateItemsInput!){
+    addItemsIntoWhiteboard(createItemsInput: $createItemsInput){
+        id
+        data
+    }
+}

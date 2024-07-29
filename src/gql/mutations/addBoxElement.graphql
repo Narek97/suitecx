@@ -1,0 +1,10 @@
+mutation AddBoxElement($addBoxElementInput: AddBoxElementInput!) {
+  addBoxElement(addBoxElementInput: $addBoxElementInput) {
+    id
+    columnId
+    rowId
+    text
+    stepId
+    attachmentId
+  }
+}

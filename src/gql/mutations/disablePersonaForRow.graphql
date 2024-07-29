@@ -1,0 +1,3 @@
+mutation disablePersonaForRow($disablePersonaInput: DisablePersonaInput!) {
+  disablePersonaForRow(disablePersonaInput: $disablePersonaInput)
+}

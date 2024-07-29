@@ -1,0 +1,7 @@
+query GetColumnSteps($columnId: Int!) {
+  getColumnSteps(columnId: $columnId) {
+    id
+    columnId
+    name
+  }
+}

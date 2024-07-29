@@ -1,0 +1,12 @@
+mutation UpdateBoxElement($updateBoxDataInput: UpdateBoxDataInput!) {
+  updateBoxElement(updateBoxDataInput: $updateBoxDataInput) {
+    id
+    columnId
+    stepId
+    rowId
+    text
+    index
+    previousText
+    attachmentId
+  }
+}

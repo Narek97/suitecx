@@ -1,0 +1,8 @@
+mutation CreateJourneyMapColumn($createColumnInput: CreateColumnInput!) {
+  createJourneyMapColumn(createColumnInput: $createColumnInput) {
+    id
+    index
+    label
+    stepId
+  }
+}

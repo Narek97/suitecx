@@ -1,0 +1,3 @@
+mutation DeleteDemographicInfo($id: Int!) {
+  deleteDemographicInfo(id: $id)
+}

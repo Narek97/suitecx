@@ -1,0 +1,9 @@
+mutation UpdateDemographicInfo(
+  $updateDemographicInfoInput: UpdateDemographicInfoInput!
+) {
+  updateDemographicInfo(
+    updateDemographicInfoInput: $updateDemographicInfoInput
+  ) {
+    id
+  }
+}

@@ -1,0 +1,23 @@
+mutation CreateMapLink($addLinkInput: AddLinkInput!) {
+  addLink(addLinkInput: $addLinkInput) {
+    id
+    title
+    type
+    url
+    icon
+    index
+    commentsCount
+    linkedJourneyMapId
+    flippedText
+    rowId
+    mapPersonaImages {
+      color
+      key
+      url
+    }
+    personaImage {
+      key
+      url
+    }
+  }
+}

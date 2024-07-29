@@ -1,0 +1,3 @@
+query GetAllPinnedBoards($outcomeGroupId: Int!){
+    getAllPinnedBoards(outcomeGroupId: $outcomeGroupId)
+}

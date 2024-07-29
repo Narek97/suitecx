@@ -1,0 +1,3 @@
+mutation DeleteMapColumn($id: Int!) {
+  deleteMapColumn(id: $id)
+}

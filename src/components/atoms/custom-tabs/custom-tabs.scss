@@ -1,0 +1,21 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.custom-tabs {
+  width: 100%;
+  &--content {
+    position: relative;
+    .tabs-divider-line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #ffffff;
+    }
+  }
+
+  &--panel {
+    width: 100%;
+    padding: 0;
+  }
+}

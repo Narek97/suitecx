@@ -1,0 +1,13 @@
+query GetMapColumnsForOutcome(
+  $getMapColumnsForOutcomeInput: GetMapRowColumnsForOutcomeInput!
+) {
+  getMapColumnsForOutcome(
+    getMapColumnsForOutcomeInput: $getMapColumnsForOutcomeInput
+  ) {
+    count
+    columns {
+      id
+      label
+    }
+  }
+}

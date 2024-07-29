@@ -1,0 +1,3 @@
+mutation UpdatePersonaSection($updatePersonaSectionInput: UpdatePersonaSectionInput!){
+    updatePersonaSection(updatePersonaSectionInput: $updatePersonaSectionInput)
+}

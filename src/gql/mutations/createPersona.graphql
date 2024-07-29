@@ -1,0 +1,5 @@
+mutation CreatePersona($createPersonaInput: CreatePersonaInput!) {
+  createPersona(createPersonaInput: $createPersonaInput) {
+    id
+  }
+}

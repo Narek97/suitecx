@@ -1,0 +1,14 @@
+query GetItemNote($getItemNoteInput: GetItemNoteInput!) {
+  getItemNote(getItemNoteInput: $getItemNoteInput) {
+    text
+    owner {
+      color
+      emailAddress
+      firstName
+      lastName
+    }
+    id
+    updatedAt
+    itemId
+  }
+}

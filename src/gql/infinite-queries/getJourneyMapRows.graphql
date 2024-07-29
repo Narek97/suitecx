@@ -1,0 +1,175 @@
+query GetJourneyMapRows($getJourneyMapInput: GetJourneyMapInput!) {
+  getJourneyMap(getJourneyMapInput: $getJourneyMapInput) {
+    rowCount
+    rows {
+      id
+      isLocked
+      isCollapsed
+      isPersonaAverageDisabled
+      outcomeGroup {
+        id
+        icon
+        name
+        pluralName
+      }
+      boxes {
+        id
+        columnId
+        boxTextElement {
+          commentsCount
+          rowId
+          id
+          text
+        }
+        boxElements {
+          commentsCount
+          rowId
+          id
+          attachmentId
+          text
+          flippedText
+          digsiteUrl
+          rowId
+          persona {
+            id
+            name
+            type
+            attachment {
+              url
+              key
+            }
+          }
+        }
+        step {
+          id
+          name
+          index
+          columnId
+        }
+        touchPoints {
+          rowId
+          columnId
+          commentsCount
+          id
+          title
+          iconUrl
+          flippedText
+          bgColor
+          persona {
+            id
+            name
+            type
+            attachment {
+              url
+              key
+            }
+          }
+        }
+        outcomes {
+          id
+          title
+          description
+          createdAt
+          status
+          rowId
+          columnId
+          stepId
+          personaId
+          commentsCount
+          flippedText
+          outcomeGroupId
+          icon
+          persona {
+            id
+            name
+            type
+            attachment {
+              url
+              key
+            }
+          }
+        }
+        metrics {
+          rowId
+          columnId
+          id
+          name
+          commentsCount
+          descriptionEnabled
+          description
+          type
+          value
+          goal
+          typeData
+          flippedText
+          surveyId
+          questionId
+          source
+          startDate
+          endDate
+          dateRange
+          overall
+          nps
+          csat
+          ces
+          x
+          y
+          z
+          persona {
+            id
+            name
+            type
+            attachment {
+              url
+              key
+            }
+          }
+        }
+        links {
+          id
+          title
+          type
+          url
+          icon
+          index
+          commentsCount
+          linkedJourneyMapId
+          flippedText
+          rowId
+          mapPersonaImages {
+            color
+            key
+            url
+          }
+          personaImage {
+            key
+            url
+          }
+        }
+        average
+      }
+      rowWithPersonas {
+        isDisabledForThisRow
+        type
+        id
+        name
+        color
+
+        attachment {
+          key
+          url
+        }
+        personaStates {
+          stepId
+          rowId
+          boxId
+          columnId
+          state
+        }
+      }
+      rowFunction
+      label
+      size
+    }
+  }
+}

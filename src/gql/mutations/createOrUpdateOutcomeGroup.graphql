@@ -1,0 +1,17 @@
+mutation CreateOrUpdateOutcomeGroup(
+  $createOrUpdateOutcomeGroupInput: CreateOrUpdateOutcomeGroupInput!
+) {
+  createOrUpdateOutcomeGroup(
+    createOrUpdateOutcomeGroupInput: $createOrUpdateOutcomeGroupInput
+  ) {
+    id
+    name
+    pluralName
+    createdAt
+    icon
+    user {
+      firstName
+      lastName
+    }
+  }
+}

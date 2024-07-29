@@ -1,0 +1,24 @@
+query GetJourneyMap($getJourneyMapInput: GetJourneyMapInput!) {
+  getJourneyMap(getJourneyMapInput: $getJourneyMapInput) {
+    map {
+      title
+      boardId
+      rowCount
+      columnCount
+      board {
+        id
+        name
+        workspaceId
+        workspace {
+          id
+          name
+        }
+      }
+    }
+    columns {
+      id
+      label
+      size
+    }
+  }
+}

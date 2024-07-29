@@ -1,0 +1,99 @@
+fragment boardDataItem on WhiteboardDataItem {
+  id
+  zIndex
+  parentId
+  ownerId
+  file
+  dummy
+  selected
+  selectedUserId
+  selectedUser {
+    user {
+      userId
+      emailAddress
+    }
+    isSelected
+  }
+  data
+}
+query GetWhiteboardDataItems(
+  $getWhiteboardDataItemsInput: GetWhiteboardDataItemsInput!
+) {
+  getWhiteboardDataItems(
+    getWhiteboardDataItemsInput: $getWhiteboardDataItemsInput
+  ) {
+    RECT {
+      ...boardDataItem
+    }
+    TRIANGLE {
+      ...boardDataItem
+    }
+    ELLIPSE {
+      ...boardDataItem
+    }
+    STAR {
+      ...boardDataItem
+    }
+    ROUND_RECT {
+      ...boardDataItem
+    }
+    GROUP {
+      ...boardDataItem
+    }
+    LINE {
+      ...boardDataItem
+    }
+    ICON {
+      ...boardDataItem
+    }
+    SMART {
+      ...boardDataItem
+    }
+    IMAGE {
+      ...boardDataItem
+      uuid
+    }
+    TEXT {
+      ...boardDataItem
+    }
+    LINK {
+      ...boardDataItem
+    }
+    DRAW {
+      ...boardDataItem
+    }
+    NOTE {
+      ...boardDataItem
+    }
+    LINE {
+      ...boardDataItem
+    }
+    DB {
+      ...boardDataItem
+    }
+    TOP_LEFT_CIRCLE {
+      ...boardDataItem
+    }
+    TOP_RIGHT_CIRCLE {
+      ...boardDataItem
+    }
+    BOTTOM_LEFT_CIRCLE {
+      ...boardDataItem
+    }
+    BOTTOM_RIGHT_CIRCLE {
+      ...boardDataItem
+    }
+    POINTER {
+      ...boardDataItem
+    }
+    CIRCLE {
+      ...boardDataItem
+    }
+    TOP_ELLIPSE {
+      ...boardDataItem
+    }
+    BOTTOM_ELLIPSE {
+      ...boardDataItem
+    }
+  }
+}

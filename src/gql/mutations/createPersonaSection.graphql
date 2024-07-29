@@ -1,0 +1,7 @@
+mutation CreatePersonaSection(
+  $createPersonaSectionInput: CreatePersonaSectionInput!
+) {
+  createPersonaSection(createPersonaSectionInput: $createPersonaSectionInput) {
+    id
+  }
+}

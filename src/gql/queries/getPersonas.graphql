@@ -1,0 +1,17 @@
+query GetPersonas($getPersonasInput: GetPersonasInput!) {
+  getPersonas(getPersonasInput: $getPersonasInput) {
+    count
+    personas {
+      id
+      name
+      color
+      type
+      journeys
+      attachment {
+        id
+        url
+        key
+      }
+    }
+  }
+}

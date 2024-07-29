@@ -1,0 +1,13 @@
+query GetBoardsForItem($getBoardsForItemInput: GetBoardsForItemInput!) {
+  getBoardsForItem(getBoardsForItemInput: $getBoardsForItemInput) {
+    boards {
+      id
+      name
+      maps {
+        id
+        title
+        selected
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+mutation CreateOrUpdateFolder($folderInput: FolderInput!) {
+  createOrUpdateFolder(folderInput: $folderInput) {
+    id
+    name
+    workspaceId
+    whiteboardCount
+  }
+}

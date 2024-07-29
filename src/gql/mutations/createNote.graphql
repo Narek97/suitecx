@@ -1,0 +1,16 @@
+mutation createOrUpdateNote(
+  $createOrUpdateNoteInput: CreateOrUpdateNoteInput!
+) {
+  createOrUpdateNote(createOrUpdateNoteInput: $createOrUpdateNoteInput) {
+    id
+    text
+    itemType
+    owner {
+      color
+      firstName
+      lastName
+    }
+    createdAt
+    updatedAt
+  }
+}

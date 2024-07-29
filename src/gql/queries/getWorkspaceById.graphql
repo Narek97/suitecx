@@ -1,0 +1,23 @@
+query GetWorkspaceByIdForAtlas($id: Int!) {
+  getWorkspaceById(id: $id) {
+    id
+    feedbackId
+    name
+    defaultFolder {
+      id
+      name
+      ownerId
+      workspaceId
+      whiteboardCount
+    }
+  }
+}
+
+
+query GetWorkspaceById($id: Int!) {
+  getWorkspaceById(id: $id) {
+    id
+    feedbackId
+    name
+  }
+}

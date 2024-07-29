@@ -1,0 +1,28 @@
+mutation AddComment($addCommentInput: AddCommentInput!) {
+  addComment(addCommentInput: $addCommentInput) {
+    id
+    itemId
+    text
+    owner {
+      userId
+      color
+      emailAddress
+      firstName
+      lastName
+    }
+    replies {
+      id
+      text
+      itemId
+      updatedAt
+      owner {
+        userId
+        color
+        emailAddress
+        firstName
+        lastName
+      }
+    }
+    updatedAt
+  }
+}

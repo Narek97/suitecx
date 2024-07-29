@@ -1,0 +1,96 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+
+.outcomes {
+  .create-update-top-section {
+    @include flex-center;
+    align-items: flex-start;
+    padding: 16px 0 32px;
+    border-bottom: 1px solid $BASE_LIGHT-GRAY-COLOR;
+
+    &--icon {
+      width: 0;
+      height: 30px;
+      opacity: 0;
+      color: $BASE_GRAY_COLOR;
+      cursor: pointer;
+      button {
+        margin-right: 8px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .opened-icon-state {
+      min-width: 40px;
+      opacity: 1;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .custom-table {
+    margin-top: 18px;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      margin-bottom: 8px;
+
+      tr {
+        th {
+          text-transform: capitalize;
+          padding: 8px 16px;
+          white-space: nowrap;
+          background: #eeeeee;
+          color: $BASE_GRAY_COLOR;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid #d8d8d8;
+          &:nth-child(1) {
+            width: 8%;
+          }
+          &:nth-child(2) {
+            width: 70%;
+          }
+          &:nth-child(3) {
+            width: 8%;
+          }
+          &:nth-child(4) {
+            width: 8%;
+          }
+          &:nth-child(5) {
+            width: 6%;
+          }
+        }
+      }
+    }
+    .outcome-icon {
+      object-fit: cover;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.search-icons-placeholder-text {
+  color: $BASE_GRAY_COLOR;
+  text-align: center;
+  font-size: $BASE-FONT-SIZE;
+  font-weight: 300;
+  @include absolute-center;
+}
+
+.search-icon-section {
+  width: 308px;
+  height: 152px;
+}

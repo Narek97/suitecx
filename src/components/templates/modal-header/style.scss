@@ -1,0 +1,25 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.modal-header {
+  @include flex-center-center;
+  gap: 8px;
+  min-height: 40px;
+  background-color: #eeeeee;
+
+  &--info {
+    height: 50dvh;
+  }
+  &--title {
+    font-size: 18px;
+    font-weight: 500;
+    color: $BASE_GRAY_COLOR;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    @include reduce-text(85%);
+  }
+  &--question-mark {
+    @include flex-center-center;
+  }
+}

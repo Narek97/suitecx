@@ -1,0 +1,5 @@
+mutation CreateJourneyMap($createJourneyMapInput: CreateJourneyMapInput!) {
+  createJourneyMap(createJourneyMapInput: $createJourneyMapInput) {
+    mapId
+  }
+}

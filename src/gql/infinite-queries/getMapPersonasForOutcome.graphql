@@ -1,0 +1,11 @@
+query GetMapPersonasForOutcome($getMapPersonasInput: GetMapPersonasInput!) {
+  getMapPersonasForOutcome(getMapPersonasInput: $getMapPersonasInput) {
+    offset
+    limit
+    count
+    personas {
+      id
+      name
+    }
+  }
+}

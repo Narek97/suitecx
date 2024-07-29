@@ -1,0 +1,9 @@
+.workspaces-container{
+  height: calc(100dvh - 176px);
+  padding-right: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}

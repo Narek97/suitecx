@@ -1,0 +1,39 @@
+mutation CreateUpdateOutcome(
+  $createUpdateOutcomeInput: CreateUpdateOutcomeInput!
+) {
+  createUpdateOutcome(createUpdateOutcomeInput: $createUpdateOutcomeInput) {
+    id
+    title
+    description
+    createdAt
+    status
+    rowId
+    columnId
+    stepId
+    personaId
+    commentsCount
+    flippedText
+    outcomeGroupId
+    icon
+    column {
+      label
+    }
+    map {
+      id
+      title
+    }
+    user {
+      firstName
+      lastName
+    }
+    persona {
+      id
+      name
+      type
+      attachment {
+        url
+        key
+      }
+    }
+  }
+}

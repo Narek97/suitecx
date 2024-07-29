@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.workspace-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1190px;
+  min-height: 88px;
+  padding: 16px 18px;
+  @include card-borders;
+
+  &--info {
+    min-height: 54px;
+    @include flex-column-between;
+
+    &--title {
+      font-size: 24px;
+      color: $BASE_BLUE_COLOR;
+    }
+
+    &--day {
+      margin-top: 14px;
+      font-size: 12px;
+    }
+
+    &--description {
+      svg {
+        min-width: 14px;
+        min-height: 14px;
+      }
+
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      margin-top: 24px;
+    }
+  }
+}

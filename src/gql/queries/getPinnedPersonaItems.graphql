@@ -1,0 +1,23 @@
+query GetPinnedPersonaItems($pinnedPersonaItemsInput: PinInput!) {
+  getPinnedPersonaItems(pinnedPersonaItemsInput: $pinnedPersonaItemsInput) {
+    demographicInfos {
+      id
+      key
+      value
+    }
+    pinnedSections {
+      id
+      w
+      h
+      x
+      y
+      i
+      section {
+        id
+        key
+        color
+        content
+      }
+    }
+  }
+}

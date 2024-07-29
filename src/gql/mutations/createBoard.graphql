@@ -1,0 +1,9 @@
+mutation CreateBoard($createBoardInput: CreateBoardInput!){
+    createBoard(createBoardInput: $createBoardInput){
+        id,
+        name,
+        defaultMapId
+        createdAt
+        updatedAt
+    }
+}

@@ -1,0 +1,12 @@
+query GetProjects($orgId: Int!) {
+  getProjects(orgId: $orgId) {
+  pro_project_id
+    pro_acc_id
+    pro_add_date
+    pro_mod_date
+    pro_project_name
+    pro_project_desc
+    pro_project_id
+  }
+}
+

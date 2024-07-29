@@ -1,0 +1,94 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.custom-date-picker {
+  //.react-datepicker__input-container {
+  //  display: none;
+  //}
+  .react-datepicker__triangle {
+    display: none;
+  }
+  .react-datepicker__current-month {
+    display: none;
+  }
+  .react-datepicker {
+    border: none;
+  }
+  .react-datepicker__header {
+    background-color: transparent;
+    border: none;
+  }
+  .react-datepicker__month-container {
+    width: 252px;
+  }
+  .react-datepicker__month {
+    margin: 0;
+  }
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    text-align: center;
+    font-size: 14px;
+    width: 36px;
+    margin: 0;
+    color: $BASE_GRAY_COLOR;
+  }
+
+  .react-datepicker__day-names {
+    background-color: $BASE-EXTRA-LIGHT-GRAY-2;
+  }
+
+  .react-datepicker__day-name {
+    line-height: 40px;
+  }
+
+  .react-datepicker__day {
+    font-size: 12px;
+    line-height: 30px;
+    border: 0.5px solid $BASE-EXTRA-LIGHT-GRAY-2;
+  }
+
+  .react-datepicker__header__dropdown {
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .react-datepicker__year-dropdown-container,
+  .react-datepicker__month-dropdown-container {
+    font-size: 14px;
+    margin: 0 30px;
+    color: $BASE_GRAY_COLOR;
+  }
+
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__day--selected,
+  .react-datepicker__day--in-range {
+    color: $BASE-WHITE-COLOR;
+    background-color: $BASE_BLUE_COLOR;
+    border-radius: 0;
+  }
+  .react-datepicker__day--keyboard-selected {
+    &:hover {
+      color: $BASE-WHITE-COLOR;
+      background-color: $BASE_BLUE_COLOR;
+    }
+  }
+
+  .react-datepicker__navigation-icon::before {
+    border-width: 2px 2px 0 0;
+    top: 8px;
+    height: 6px;
+    width: 6px;
+    border-color: $BASE_GRAY_COLOR;
+  }
+
+  .react-datepicker__year-read-view--down-arrow,
+  .react-datepicker__month-read-view--down-arrow {
+    border-width: 2px 2px 0 0;
+    top: 2px;
+    border-color: $BASE_GRAY_COLOR;
+  }
+
+  .react-datepicker__day--disabled {
+    background-color: $BASE-LIGHT-GRAY-COLOR;
+  }
+}

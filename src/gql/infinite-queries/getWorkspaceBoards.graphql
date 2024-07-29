@@ -1,0 +1,9 @@
+query GetWorkspaceBoards($getWorkspaceBoardsInput: GetWorkspaceBoardsInput!) {
+  getWorkspaceBoards(getWorkspaceBoardsInput: $getWorkspaceBoardsInput) {
+    boards {
+      id
+      name
+    }
+    count
+  }
+}

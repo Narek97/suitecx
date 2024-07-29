@@ -1,0 +1,5 @@
+mutation UpdateItemFlippedText(
+  $updateItemFlippedTextInput: UpdateItemFlippedTextInput!
+) {
+  updateItemFlippedText(updateItemFlippedTextInput: $updateItemFlippedTextInput)
+}

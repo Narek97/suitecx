@@ -1,0 +1,35 @@
+query GetItemComments($getItemCommentsInput: GetItemCommentsInput!) {
+  getItemComments(getItemCommentsInput: $getItemCommentsInput) {
+    limit
+    offset
+    count
+    comments {
+      text
+      owner {
+        id
+        userId
+        color
+        emailAddress
+        firstName
+        lastName
+      }
+      replies {
+        text
+        owner {
+          id
+          userId
+          color
+          emailAddress
+          firstName
+          lastName
+        }
+        itemId
+        id
+        updatedAt
+      }
+      itemId
+      id
+      updatedAt
+    }
+  }
+}

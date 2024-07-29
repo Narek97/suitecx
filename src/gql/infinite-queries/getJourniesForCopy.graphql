@@ -1,0 +1,9 @@
+query GetJourneysForCopy($getMapsInput: GetMapsInput!) {
+  getMaps(getMapsInput: $getMapsInput) {
+    count
+    maps {
+      title
+      id
+    }
+  }
+}

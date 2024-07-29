@@ -1,0 +1,7 @@
+mutation UpdateBoard($updateBoardInput: UpdateBoardInput!) {
+  updateBoard(updateBoardInput: $updateBoardInput) {
+    id
+    name
+    defaultMapId
+  }
+}

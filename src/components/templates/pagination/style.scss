@@ -1,0 +1,56 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.pagination-section {
+  &--selected-pages {
+    position: relative;
+    width: 168px;
+    text-align: center;
+    margin: auto;
+
+    &-numbers {
+      padding: 20px 0;
+      margin: 0 43px;
+      font-size: $MEDIUM-FONT-SIZE;
+      color: #8e9092;
+      cursor: pointer;
+    }
+
+    &-arrow-left,
+    &-arrow-right {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      cursor: pointer;
+    }
+
+    &-arrow-left {
+      left: 0;
+    }
+
+    &-arrow-right {
+      right: 0;
+    }
+  }
+}
+
+.popover-content {
+  color: $BASE_GRAY_COLOR;
+  background: $BASE-WHITE-COLOR;
+  z-index: 10;
+  width: 200px;
+  max-height: 200px;
+  padding: 0 !important;
+  text-align: center;
+  &-item {
+    font-size: $MEDIUM-FONT-SIZE;
+    width: 100%;
+    padding: 12px 0 !important;
+    cursor: pointer;
+    color: #8e9092;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}

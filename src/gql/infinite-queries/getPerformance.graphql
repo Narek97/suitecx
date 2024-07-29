@@ -1,0 +1,15 @@
+query GetPerformanceLogs($paginationInput: PaginationInput!) {
+  getPerformanceLogs(paginationInput: $paginationInput) {
+    count
+    performanceLogs {
+      id
+      path
+      createdAt
+      responseTime
+      queryCount
+      responseTime
+      sqlRowQueries
+      payloadSize
+    }
+  }
+}

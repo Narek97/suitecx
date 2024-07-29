@@ -1,0 +1,6 @@
+mutation SetMapForItem($setMapForItemInput: SetMapForItemInput!){
+    setMapForItem(setMapForItemInput: $setMapForItemInput){
+        success
+    }
+}
+

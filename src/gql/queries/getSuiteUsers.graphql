@@ -1,0 +1,12 @@
+query getSuiteUsers($orgId: Int!) {
+  getSuiteUsers(orgId: $orgId) {
+    orgName
+    users {
+      user_id
+      user_fname
+      user_email
+      user_date_added
+      user_status
+    }
+  }
+}

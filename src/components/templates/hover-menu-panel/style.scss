@@ -1,0 +1,44 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.hover-menu-panel {
+  @include hover-menu;
+  z-index: 22;
+  height: calc(100% - 48px);
+  border-right: 1px solid $BASE-EXTRA-LIGHT-GRAY-2;
+  &--nav-link {
+    @include hover-menu-item;
+    &-icon {
+      min-width: 16px;
+      height: 16px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &--nav-link-name {
+    @include reduce-text(100%);
+    font-size: 14px;
+    color: $BASE_GRAY_COLOR;
+  }
+
+  .active {
+    background: $BASE-WHITE-COLOR;
+
+    .hover-menu-panel--nav-link-name {
+      color: $BASE_BLUE_COLOR;
+    }
+
+    svg {
+      @include svg-fill($BASE_BLUE_COLOR);
+    }
+  }
+
+  &--top {
+    height: calc(100dvh - 200px);
+    overflow-y: auto;
+  }
+
+}

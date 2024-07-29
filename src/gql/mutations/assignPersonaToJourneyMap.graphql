@@ -1,0 +1,5 @@
+mutation ConnectPersonasToMap(
+  $connectPersonasToMapInput: ConnectPersonasToMapInput!
+) {
+  connectPersonasToMap(connectPersonasToMapInput: $connectPersonasToMapInput)
+}

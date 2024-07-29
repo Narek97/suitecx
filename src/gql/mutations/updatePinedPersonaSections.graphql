@@ -1,0 +1,7 @@
+mutation UpdatePinedPersonaSections(
+  $updatePinnedSectionsInput: UpdatePinnedSectionsInput!
+) {
+  updatePinedPersonaSections(
+    updatePinnedSectionsInput: $updatePinnedSectionsInput
+  )
+}

@@ -1,0 +1,414 @@
+@import 'src/assets/styles/variables';
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin line-clamp($clamp) {
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin reduce-text($width) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: $width;
+}
+
+@mixin main-scrollbar($color: $BASE_GRAY_COLOR_2) {
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: $color;
+  }
+}
+
+@mixin none-scrollbar() {
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: transparent;
+  }
+}
+
+@mixin svg-fill($color) {
+  path {
+    fill: $color;
+  }
+}
+
+@mixin capitalize-placeholder {
+  &::placeholder {
+    text-transform: capitalize;
+  }
+  ::-webkit-input-placeholder {
+    text-transform: capitalize;
+  }
+
+  :-moz-placeholder {
+    text-transform: capitalize;
+  }
+
+  ::-moz-placeholder {
+    text-transform: capitalize;
+  }
+
+  :-ms-input-placeholder {
+    text-transform: capitalize;
+  }
+}
+
+@mixin hover-menu {
+  @include flex-column-between;
+  @include main-scrollbar;
+  position: fixed;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #eeeeee;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 8;
+  transition: 0.3s;
+
+  &:hover {
+    width: 144px;
+  }
+}
+
+@mixin hover-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 12px 12px 16px;
+  line-height: 24px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $BASE-LIGHT-GRAY-COLOR;
+  }
+}
+
+@mixin base-round-btn($width: 20px, $height: 20px, $bgColor: #878f99) {
+  @include flex-center-center;
+  max-width: $width;
+  min-width: $width;
+  max-height: $height;
+  min-height: $height;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: $bgColor;
+}
+
+@mixin round-box(
+  $width: 20px,
+  $height: 20px,
+  $bgColor: transparent,
+  $borderStyle: none,
+  $borderColor: transparent
+) {
+  @include flex-center-center;
+  min-width: $width;
+  max-width: $width;
+  min-height: $height;
+  max-height: $height;
+  cursor: pointer;
+  border: 1px $borderStyle $borderColor;
+  border-radius: 50%;
+  background-color: $bgColor;
+}
+
+@mixin base-shadow {
+  box-shadow: 0 0 4px rgba(44, 44, 44, 0.52);
+}
+
+@mixin file-block {
+  @include flex-center-center;
+  width: 100%;
+  height: 100%;
+  color: #8e9092;
+  background-color: $BASE_WHITE_COLOR;
+}
+
+@mixin modal-footer {
+  @include flex-center;
+  justify-content: flex-end;
+  background-color: $BASE-WHITE-COLOR;
+  .cancel-button {
+    margin-right: 14px;
+  }
+}
+
+@mixin add-btn {
+  &-icon {
+    margin-right: 24px;
+    @include svg-fill(#417ecf);
+  }
+  &-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: $BASE_BLUE_COLOR;
+  }
+}
+
+@mixin setting-page-label {
+  display: block;
+  font-size: 14px;
+  color: $BASE_GRAY_COLOR;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+@mixin touch-point-history-text {
+  font-size: $MEDIUM-FONT-SIZE;
+  font-weight: 500;
+}
+
+@mixin performance-metrics-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+@mixin persona-map-settings-delete-btn {
+  @include base-round-btn;
+  margin-left: 18px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translate(0, -50%) scale(0.8);
+  transition: 0.4s;
+}
+
+@mixin persona-map-settings-delete-btn-hover {
+  opacity: 1;
+  transform: translate(0, -50%) scale(1);
+  transition: 0.4s;
+}
+
+@mixin persona-map-settings-input-page {
+  &-content {
+    //width: 90%;
+    max-width: 400px;
+    width: 100%;
+    @include flex-center;
+    margin-bottom: 16px;
+    position: relative;
+    &-input {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 40px;
+      border-radius: 4px;
+      input {
+        width: 100%;
+      }
+    }
+    &-label {
+      display: inline-block;
+      color: #545e6b;
+      margin-bottom: 8px;
+    }
+  }
+  .item-delete-btn {
+    @include persona-map-settings-delete-btn;
+  }
+  &:hover {
+    .item-delete-btn {
+      @include persona-map-settings-delete-btn-hover;
+    }
+  }
+}
+
+@mixin board-header-column {
+  @include flex-center-center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $BASE-WHITE-COLOR;
+  background-color: $BASE_GRAY_COLOR_2;
+}
+
+@mixin journey-map-add-button {
+  @include base-round-btn(14px, 14px, transparent);
+  border: 1px solid #1b87e6;
+  border-radius: 2px;
+  display: flex;
+  visibility: hidden;
+  background-color: $BASE-WHITE-COLOR;
+  &:hover {
+    background: #1b87e6;
+    @include svg-fill($BASE_WHITE-COLOR);
+  }
+}
+
+@mixin card-borders {
+  border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+  border-left: 6px solid $BASE-LIGHT-GRAY-COLOR;
+  border-radius: 4px;
+  color: $BASE_GRAY_COLOR;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $BASE_BLUE_COLOR;
+    border-left: 6px solid $BASE_BLUE_COLOR;
+    .custom-vertical-menu {
+      display: flex;
+    }
+  }
+}
+
+@mixin journey-map-item-loading($width: 100%, $height: 100%) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-image: linear-gradient(
+    90deg,
+    rgba(221, 221, 221, 0.6) 0px,
+    rgba(232, 232, 232, 0.6) 40px,
+    rgba(221, 221, 221, 0.6) 80px
+  );
+  background-size: 600px;
+  animation: shine-avatar 2s infinite linear;
+  cursor: not-allowed;
+  z-index: 10;
+}
+
+@mixin gradient-animation() {
+  animation: gradient 1s ease infinite;
+  @keyframes gradient {
+    0% {
+      background: $BASE_LIGHT-GRAY-COLOR;
+    }
+    50% {
+      background: #ece9e9;
+    }
+    100% {
+      background: $BASE_LIGHT-GRAY-COLOR;
+    }
+  }
+}
+
+@mixin base-modal-footer {
+  .base-modal-footer {
+    @include flex-center;
+    justify-content: flex-end;
+    border-top: 1px solid $BASE-LIGHT-GRAY-COLOR;
+    padding-top: 16px;
+    margin-top: 16px;
+    gap: 4px;
+
+    &--cancel-btn {
+      width: 98px;
+      height: 32px;
+      text-align: center;
+      color: $BASE_BLUE_COLOR;
+    }
+  }
+}
+@mixin base-divider() {
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+  background-color: $BASE-LIGHT-GRAY-COLOR;
+}
+
+
+@mixin map-card-header-hover(){
+  &:hover {
+    .custom-vertical-menu {
+      display: flex;
+    }
+
+    .card-header--note,
+    .card-header--comment {
+      visibility: visible;
+    }
+
+    .card-header--base-icon {
+      display: none;
+    }
+
+    .card-header--drag-icon {
+      display: block;
+    }
+  }
+}
+
+@mixin map-row(){
+  display: flex;
+  gap: 2px;
+  min-height: 84px;
+
+  &--add-btn {
+    min-height: 48px;
+  }
+
+  &--column{
+    position: relative;
+    padding: 8px;
+    background-color: $BASE-WHITE-COLOR;
+    border-bottom: 2px solid $BASE-EXTRA-LIGHT-GRAY-2;
+
+    &:hover{
+      .add-row-box-element-button{
+        visibility: visible;
+      }
+    }
+
+    &--item{
+      height: 100%;
+    }
+  }
+
+  &--card{
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}

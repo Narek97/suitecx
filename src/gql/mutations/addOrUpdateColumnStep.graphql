@@ -1,0 +1,18 @@
+mutation AddOrUpdateColumnStep(
+  $addOrUpdateColumnStepInput: AddOrUpdateColumnStepInput!
+) {
+  addOrUpdateColumnStep(
+    addOrUpdateColumnStepInput: $addOrUpdateColumnStepInput
+  ) {
+    columnStep {
+      id
+      columnId
+      index
+    }
+    createdColumnStep {
+      id
+      columnId
+      index
+    }
+  }
+}

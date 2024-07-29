@@ -1,0 +1,14 @@
+query GetErrorLogs($paginationInput: PaginationInput!) {
+  getErrorLogs(paginationInput: $paginationInput) {
+    count
+    errorLogs {
+      createdAt
+      updatedAt
+      id
+      status
+      message
+      type
+      path
+    }
+  }
+}

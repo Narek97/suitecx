@@ -1,0 +1,35 @@
+query GetOutcomeGroup(
+  $getOutcomeGroupInput: GetOutcomeGroupInput!
+  $getOutcomesInput: GetOutcomesInput!
+) {
+  getOutcomeGroup(getOutcomeGroupInput: $getOutcomeGroupInput) {
+    id
+    name
+    pluralName
+    outcomes(getOutcomesInput: $getOutcomesInput) {
+      id
+      title
+      description
+      createdAt
+      status
+      row {
+        label
+      }
+      column {
+        label
+      }
+      stepId
+      columnId
+      personaId
+      user {
+        firstName
+        lastName
+      }
+      map {
+        id
+        title
+      }
+    }
+    outcomesCount(list: OUTCOME_GROUP_LEVEL)
+  }
+}

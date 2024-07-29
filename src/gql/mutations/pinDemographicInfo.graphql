@@ -1,0 +1,4 @@
+mutation PinDemographicInfo($pinDemographicInfoInput: PinInput!){
+    pinDemographicInfo(pinDemographicInfoInput: $pinDemographicInfoInput)
+}
+

@@ -1,0 +1,8 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.error-logs {
+  &--empty-page {
+    @include absolute-center;
+  }
+}

@@ -1,0 +1,13 @@
+mutation CreateWhiteboard($createWhiteboardInput: CreateWhiteboardInput!) {
+  createWhiteboard(createWhiteboardInput: $createWhiteboardInput) {
+    id
+    name
+    ownerId
+    canvasId
+    isLocked
+    sharingPolicy
+    type
+    helpLink
+    folderId
+  }
+}

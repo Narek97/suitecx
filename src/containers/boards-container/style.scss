@@ -1,0 +1,22 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.boards {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px 64px;
+  color: $BASE_GRAY_COLOR;
+
+  &--body {
+    position: relative;
+    flex: 1;
+    margin: 10px 0;
+    padding-right: 10px;
+    overflow: auto;
+  }
+
+  .create-edit-block {
+    border-bottom: 1px solid $BASE-LIGHT-GRAY-COLOR;
+  }
+}

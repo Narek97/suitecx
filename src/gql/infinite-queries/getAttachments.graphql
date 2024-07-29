@@ -1,0 +1,17 @@
+query GetAttachments($getAttachmentsInput: GetAttachmentsInput!) {
+  getAttachments(getAttachmentsInput: $getAttachmentsInput) {
+    count
+    defaults {
+      id
+      type
+      key
+      relatedId
+    }
+    nonDefaults {
+      id
+      type
+      key
+      relatedId
+    }
+  }
+}

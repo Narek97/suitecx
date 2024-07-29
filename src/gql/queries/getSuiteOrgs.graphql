@@ -1,0 +1,9 @@
+query GetSuiteOrgs {
+  getSuiteOrgs {
+    acc_id
+    acc_date_added
+    acc_name
+    qp_org_id
+    acc_status
+  }
+}

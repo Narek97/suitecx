@@ -1,0 +1,21 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+
+.empty-data-info {
+  @include flex-center-center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  min-height: 330px;
+  color: $BASE_GRAY_COLOR;
+  &--icon {
+    margin-top: 24px;
+  }
+  &--message {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 32px;
+    color: #8e9092;
+  }
+}

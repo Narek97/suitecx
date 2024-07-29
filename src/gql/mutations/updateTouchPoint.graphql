@@ -1,0 +1,6 @@
+mutation UpdateTouchPoint($updateTouchPointInput: UpdateTouchPointInput!) {
+    updateTouchPoint(updateTouchPointInput: $updateTouchPointInput){
+        id
+        index
+    }
+}

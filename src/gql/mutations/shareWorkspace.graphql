@@ -1,0 +1,3 @@
+mutation shareWorkspace($shareWorkspaceInput: ShareWorkspaceInput!) {
+  shareWorkspace(shareWorkspaceInput: $shareWorkspaceInput)
+}

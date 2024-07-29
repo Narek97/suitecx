@@ -1,0 +1,3 @@
+mutation DeleteColumnStep($id: Int!) {
+  removeColumnStep(id: $id)
+}

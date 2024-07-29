@@ -1,0 +1,3 @@
+mutation PinPersonaSection($pinSectionInput: PinInput!) {
+  pinPersonaSection(pinSectionInput: $pinSectionInput)
+}

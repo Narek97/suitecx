@@ -1,0 +1,3 @@
+mutation UpdateJourneyMap($updateJourneyMapInput: UpdateJourneyMapInput!) {
+    updateJourneyMap(updateJourneyMapInput: $updateJourneyMapInput)
+}

@@ -1,0 +1,19 @@
+query GetWorkspacesByOrganizationId($getWorkspacesInput: GetWorkspacesInput!){
+    getWorkspacesByOrganizationId(
+        getWorkspacesInput: $getWorkspacesInput
+    ){
+        limit
+        offset
+        count
+        workspaces{
+            id
+            name
+            description
+            boardsCount
+            journeyMapCount
+            personasCount
+            personasCount
+            createdAt
+        }
+    }
+}

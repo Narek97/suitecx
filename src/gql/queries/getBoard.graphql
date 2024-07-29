@@ -1,0 +1,13 @@
+query GetWhiteboard($id: Int!){
+    getWhiteboard(id: $id){
+        id,
+        name,
+        ownerId,
+        canvasId,
+        isLocked,
+        sharingPolicy,
+        type,
+        helpLink,
+        folderId,
+    }
+}

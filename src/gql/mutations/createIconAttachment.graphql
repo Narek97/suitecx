@@ -1,0 +1,3 @@
+mutation CreateIconAttachment($createIconInput: CreateIconInput!){
+    createIconAttachment(createIconInput: $createIconInput)
+}

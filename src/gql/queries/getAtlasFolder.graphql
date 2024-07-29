@@ -1,0 +1,12 @@
+query GetFolders($getFoldersInput: GetFoldersInput!) {
+  getFolders(getFoldersInput: $getFoldersInput) {
+    count
+    folders {
+      id
+      name
+      ownerId
+      workspaceId
+      whiteboardCount
+    }
+  }
+}

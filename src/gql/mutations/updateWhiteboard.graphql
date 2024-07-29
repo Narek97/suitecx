@@ -1,0 +1,10 @@
+mutation UpdateWhiteboard($updateWhiteboardInput: UpdateWhiteboardInput!) {
+  updateWhiteboard(updateWhiteboardInput: $updateWhiteboardInput) {
+    id
+    canvasId
+    isLocked
+    helpLink
+    name
+    folderId
+  }
+}

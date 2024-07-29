@@ -1,0 +1,9 @@
+mutation CompleteMultiPart($completeMultiPartInput: CompleteMultiPartInput!){
+    completeMultiPart(completeMultiPartInput: $completeMultiPartInput){
+        id,
+        key,
+        name
+    }
+}
+
+

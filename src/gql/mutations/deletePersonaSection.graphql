@@ -1,0 +1,3 @@
+mutation DeletePersonaSection($id: Int!) {
+  deletePersonaSection(id: $id)
+}

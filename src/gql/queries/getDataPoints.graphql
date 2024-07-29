@@ -1,0 +1,30 @@
+query GetDataPoints($getDataPointsInput: GetDataPointsInput!) {
+  getDataPoints(getDataPointsInput: $getDataPointsInput) {
+    offset
+    limit
+    count
+    dataPoints {
+        ... on NPSPoint {
+            id
+            date
+            passive
+            promoter
+            detractor
+        }
+        ... on CESPoint {
+            id
+            date
+            neutral
+            difficult
+            easy
+        }
+        ... on CSATPoint {
+            id
+            date
+            dissatisfied
+            satisfied
+            neutral
+        }
+    }
+  }
+}

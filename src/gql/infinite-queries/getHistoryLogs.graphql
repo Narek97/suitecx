@@ -1,0 +1,14 @@
+query getHistoryLogs($getHistoryLogInput: GetHistoryLogInput!) {
+  getHistoryLogs(getHistoryLogInput: $getHistoryLogInput) {
+    historyLogs {
+      updatedAt
+      id
+      user
+      logType
+      from
+      to
+      action
+    }
+    count
+  }
+}

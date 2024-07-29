@@ -1,0 +1,17 @@
+query GetInterviewsByWorkspaceId($getInterviewsInput: GetInterviewsInput!) {
+    getInterviewsByWorkspaceId(getInterviewsInput: $getInterviewsInput) {
+        count
+        offset
+        limit
+        interviews{
+            id
+            boardId
+            name
+            journeyType
+            text
+            mapId
+            createdAt
+            updatedAt
+        }
+    }
+}

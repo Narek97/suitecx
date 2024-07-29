@@ -1,0 +1,19 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.create-edit-block {
+  @include flex-center;
+  border-bottom: 1px solid $BASE_LIGHT-GRAY-COLOR;
+  padding: 16px 0 32px;
+
+  &--content {
+    width: 0;
+    display: flex;
+    gap: 16px;
+    transition: 0.3s;
+  }
+
+  &--open-content {
+    width: 440px;
+  }
+}

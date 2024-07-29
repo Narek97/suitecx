@@ -1,0 +1,17 @@
+query GetMe{
+    getMe{
+        emailAddress
+        firstName
+        lastName
+        userID
+        orgID
+        isAdmin
+        primaryUserAPIKey
+        orgLanguage
+        accountLanguage
+        apiToken
+        businessType{
+            value
+        }
+    }
+}

@@ -1,0 +1,3 @@
+query GetNounProjectIcons($category: String! $limit: Int!) {
+    getNounProjectIcons(category: $category limit: $limit)
+}

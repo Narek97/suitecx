@@ -1,0 +1,269 @@
+export enum ActionsEnum {
+  CREATE = 'CREATE',
+  UPDATE = 'UPDATE',
+  DRAG = 'DRAG',
+  DELETE = 'DELETE',
+  DISABLE = 'DISABLE',
+  ENABLE = 'ENABLE',
+  'CREATE-DELETE' = 'CREATE-DELETE',
+}
+
+export enum UndoRedoEnum {
+  UNDO = 'UNDO',
+  REDO = 'REDO',
+}
+
+export enum menuViewTypeEnum {
+  VERTICAL = 'VERTICAL',
+  HORIZONTAL = 'HORIZONTAL',
+}
+export enum menuItemIconPositionEnum {
+  START = 'START',
+  END = 'END',
+}
+
+export enum CommentEventsEnum {
+  JOIN_ITEM_COMMENT_EVENT = 'JOIN_ITEM_COMMENT_EVENT',
+  LEAVE_ITEM_COMMENT_EVENT = 'LEAVE_ITEM_COMMENT_EVENT',
+  ITEM_COMMENT_EVENT = 'ITEM_COMMENT_EVENT',
+}
+
+export enum JourneyMapEventsEnum {
+  COMMENTS_COUNT = 'COMMENTS_COUNT',
+  BOX_ELEMENT = 'BOX_ELEMENT',
+  UPDATE_PERSONA_STATES = 'UPDATE_PERSONA_STATES',
+  INPUT_CHANGE_EVENT = 'INPUT_CHANGE_EVENT',
+  JOURNEY_MAP_EVENT = 'JOURNEY_MAP_EVENT',
+  JOURNEY_MAP_STEP_EVENT = 'JOURNEY_MAP_STEP_EVENT',
+  STEPS = 'STEPS',
+  INTERACTIONS = 'INTERACTIONS',
+  JOIN_INPUT_CHANGE_EVENT = 'JOIN_INPUT_CHANGE_EVENT',
+  DISABLE_ENABLE_FIELD = 'DISABLE_ENABLE_FIELD',
+  JOIN_MAP = 'JOIN_MAP',
+  COLUMN = 'COLUMN',
+  ROW = 'ROW',
+  MAP_ROW = 'MAP_ROW',
+  TEXT_FIELD_TYPING = 'TEXT_FIELD_TYPING',
+  TEXT_FIELD_LEAVING = 'TEXT_FIELD_LEAVING',
+  UPDATE_COLUMN_LABEL = 'UPDATE_COLUMN_LABEL',
+  LEAVE_JOURNEY_MAP = 'LEAVE_MAP',
+  BOARD_EVENT = 'BOARD_EVENT',
+  BOX = 'BOX',
+  TEXT = 'TEXT',
+  IMAGE = 'IMAGE',
+}
+
+export enum WorkspaceAnalyticsEnumType {
+  SMALL = 'SMALL',
+  BIG = 'BIG',
+}
+
+export enum JourneyViewTypeEnum {
+  STANDARD = 'STANDARD',
+  BOARD = 'BOARD',
+}
+
+export enum JourneyMapRowActionEnum {
+  STEPS = 'STEPS',
+  SENTIMENT = 'SENTIMENT',
+  DIVIDER = 'DIVIDER',
+  PROS = 'PROS',
+  CONS = 'CONS',
+  INTERACTIONS = 'INTERACTIONS',
+  LIST_ITEM = 'LIST_ITEM',
+  INSIGHTS = 'INSIGHTS',
+  OPPORTUNITIES = 'OPPORTUNITIES',
+  TEXT = 'TEXT',
+  IMAGE = 'IMAGE',
+  BOX_ELEMENT = 'BOX_ELEMENT',
+  BOX_TEXT_ELEMENT = 'BOX_TEXT_ELEMENT',
+  TOUCHPOINTS = 'TOUCHPOINTS',
+  METRICS = 'METRICS',
+  OUTCOMES = 'OUTCOMES',
+  LINKS = 'LINKS',
+  BACK_CARD = 'BACK_CARD',
+  ROW_LABEL = 'ROW_LABEL',
+  ROW_DISABLE = 'ROW_DISABLE',
+  ROW_COLLAPSE = 'ROW_COLLAPSE',
+}
+
+export enum PersonaTypeEnum {
+  Customer = 'CUSTOMER',
+  Employee = 'EMPLOYEE',
+  Others = 'OTHERS',
+}
+
+export enum PersonaGenderEnum {
+  MALE = 'Male',
+  FEMALE = 'Female',
+}
+
+export enum SelectedPersonasViewModeEnum {
+  MAP = 'MAP',
+  SENTIMENT = 'SENTIMENT',
+}
+
+// WhiteBoard
+export enum EventsEnum {
+  JOIN_BOARD = 'JOIN_BOARD',
+  LEAVE_BOARD = 'LEAVE_BOARD',
+  BOARD_EVENT = 'BOARD_EVENT',
+  JOIN_WHITE_BOARD = 'JOIN_WHITE_BOARD',
+  LEAVE_WHITE_BOARD = 'LEAVE_WHITE_BOARD',
+  WHITEBOARD_EVENT = 'WHITEBOARD_EVENT',
+  ITEM_SELECT_EVENT = 'ITEM_SELECT_EVENT',
+  TRANSFORMER = 'TRANSFORMER',
+  DISCONNECT = 'DISCONNECT',
+  DISABLE_ELEMENTS = 'DISABLE_ELEMENTS',
+  ENABLE_ELEMENTS = 'ENABLE_ELEMENTS',
+  DELETE_ELEMENT = 'DELETE_ELEMENT',
+  UPDATE_ELEMENT = 'UPDATE_ELEMENT',
+  MOUSE_ELEMENT = 'MOUSE_ELEMENT',
+  MOUSE_TRACKING_EVENT = 'MOUSE_TRACKING_EVENT',
+  JOIN_PERSONA_SECTION_EVENT = 'JOIN_PERSONA_SECTION_EVENT',
+  PERSONA_SECTION_EVENT = 'PERSONA_SECTION_EVENT',
+}
+
+export enum ShapesEnum {
+  RECT = 'RECT',
+  TRIANGLE = 'TRIANGLE',
+  ELLIPSE = 'ELLIPSE',
+  STAR = 'STAR',
+  ROUND_RECT = 'ROUND_RECT',
+  IMAGE = 'IMAGE',
+  TEXTAREA = 'TEXT',
+  LINK = 'LINK',
+  DRAW = 'DRAW',
+  PALM = 'PALM',
+  STICKY_NOTE = 'NOTE',
+  GROUP = 'GROUP',
+  LINE = 'LINE',
+  ICON = 'ICON',
+  DB = 'DB',
+  TOP_LEFT_CIRCLE = 'TOP_LEFT_CIRCLE',
+  TOP_RIGHT_CIRCLE = 'TOP_RIGHT_CIRCLE',
+  BOTTOM_LEFT_CIRCLE = 'BOTTOM_LEFT_CIRCLE',
+  BOTTOM_RIGHT_CIRCLE = 'BOTTOM_RIGHT_CIRCLE',
+  POINTER = 'POINTER',
+  CIRCLE = 'CIRCLE',
+  TOP_ELLIPSE = 'TOP_ELLIPSE',
+  BOTTOM_ELLIPSE = 'BOTTOM_ELLIPSE',
+  FULL_CIRCLE = 'FULL_CIRCLE',
+  TOP_LEFT_ELLIPSE = 'TOP_LEFT_ELLIPSE',
+  TOP_RIGHT_ELLIPSE = 'TOP_RIGHT_ELLIPSE',
+  BOTTOM_LEFT_ELLIPSE = 'BOTTOM_LEFT_ELLIPSE',
+  BOTTOM_RIGHT_ELLIPSE = 'BOTTOM_RIGHT_ELLIPSE',
+  FULL_ELLIPSE = 'FULL_ELLIPSE',
+}
+
+export enum ArrowTypeEnum {
+  DEFAULT = 'DEFAULT',
+  RECT = 'RECT',
+  CIRCLE = 'CIRCLE',
+}
+
+export enum ArrowEndingShapesEnum {
+  LINE = 'LINE',
+  ARROW = 'ARROW',
+  DOUBLE_ARROW = 'DOUBLE_ARROW',
+}
+
+export enum DashTypeEnum {
+  WIRE = 'WIRE',
+  DASHED = 'DASHED',
+  DOTTED = 'DOTTED',
+}
+
+export enum CreateShapesEnum {
+  BULK_CREATE = ' BULK_CREATE',
+  CREATE_RECT = 'CREATE_RECT',
+  CREATE_TRIANGLE = 'CREATE_TRIANGLE',
+  CREATE_ELLIPSE = 'CREATE_ELLIPSE',
+  CREATE_STAR = 'CREATE_STAR',
+  CREATE_ROUND_RECT = 'CREATE_ROUND_RECT',
+  CREATE_IMAGE = 'CREATE_IMAGE',
+  CREATE_TEXTAREA = 'CREATE_TEXTAREA',
+  CREATE_LINK = 'CREATE_LINK',
+  CREATE_DRAW = 'CREATE_DRAW',
+  CREATE_STICKY_NOTE = 'CREATE_STICKY_NOTE',
+  CREATE_LINE = 'CREATE_LINE',
+  CREATE_ICON = 'CREATE_ICON',
+  CREATE_DB = 'CREATE_DB',
+}
+export enum BoardEmojisEnum {
+  SMILE = 'Smiles',
+  FLAGS = 'Flags',
+  SYMBOLS = 'Symbols',
+}
+
+export enum BoardDBShapesUrlEnum {
+  DB = 'diagrams/db',
+  ARROW_LEFT = 'diagrams/arrow-left',
+  ARROW_RIGHT = 'diagrams/arrow-right',
+  LEFT_CURLY_BRACE = 'diagrams/left-curly-brace',
+  RIGHT_CURLY_BRACE = 'diagrams/right-curly-brace',
+}
+
+export enum ColorToolEnum {
+  TOOL_COLOR = 'TOOL_COLOR',
+  TOOL_TEXT_COLOR = 'TOOL_TEXT_COLOR',
+  NOTE_COLOR = 'NOTE_COLOR',
+}
+
+export enum BoardFileTypeEnum {
+  IMAGE = 'IMAGE',
+}
+
+export enum TouchpointIconsEnum {
+  ALL = 'ALL',
+  COMMUNICATION = 'COMMUNICATION',
+  SOCIAL_MEDIA = 'SOCIAL_MEDIA',
+  SALES_MARKETING = 'SALES_MARKETING',
+  FINANCE = 'FINANCE',
+  RETAIL = 'RETAIL',
+  HEALTHCARE = 'HEALTHCARE',
+  HUMAN_RESOURCES = 'HUMAN_RESOURCES',
+  CUSTOM = 'CUSTOM',
+}
+
+export enum ImageSizeEnum {
+  XSM = 'XSM',
+  SM = 'SM',
+  MD = 'MD',
+  MDS = 'MDS',
+  MDL = 'MDL',
+  LG = 'LG',
+}
+
+export enum JourneyMapHeaderIconEnum {
+  SHARE = 'SHARE',
+  EXPORT = 'EXPORT',
+}
+
+export enum JourneyMapHeaderExportEnum {
+  IMAGE = 'IMAGE',
+  'PDF' = 'PDF',
+}
+
+export enum OutcomeLevelEnum {
+  WORKSPACE = 'WORKSPACE',
+  MAP = 'MAP',
+}
+
+export enum HostEnum {
+  LOCALHOST = 'localhost',
+  DEVELOPMENT = 'development',
+  PRODUCTION = 'production',
+}
+
+export enum CopyMapLevelTemplateEnum {
+  ORGS = 'ORGS',
+  WORKSPACES = 'WORKSPACES',
+  BOARDS = 'BOARDS',
+  MAPS = 'MAPS',
+}
+
+export enum MapCopyLevelEnum {
+  ORG = 'ORG',
+  WORKSPACE = 'WORKSPACE',
+}

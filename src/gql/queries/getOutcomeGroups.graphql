@@ -1,0 +1,16 @@
+query GetOutcomeGroups($getOutcomeGroupsInput: GetOutcomeGroupsInput!) {
+  getOutcomeGroups(getOutcomeGroupsInput: $getOutcomeGroupsInput) {
+    outcomeGroups {
+      name
+      pluralName
+      id
+      createdAt
+      icon
+      isDefault
+      user {
+        firstName
+        lastName
+      }
+    }
+  }
+}

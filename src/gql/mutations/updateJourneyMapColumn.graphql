@@ -1,0 +1,3 @@
+mutation UpdateJourneyMapColumn($updateColumnInput: UpdateColumnInput!) {
+  updateJourneyMapColumn(updateColumnInput: $updateColumnInput)
+}

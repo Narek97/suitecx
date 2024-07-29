@@ -1,0 +1,8 @@
+query getCXMapList($getMapsInput: GetMapsInput!) {
+  getMaps(getMapsInput: $getMapsInput) {
+    maps {
+      title
+      id
+    }
+  }
+}

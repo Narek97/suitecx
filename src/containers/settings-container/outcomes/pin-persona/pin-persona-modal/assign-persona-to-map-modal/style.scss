@@ -1,0 +1,70 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.pin-persona-error {
+  &--text {
+    padding: 20px 20px 60px;
+    color: $BASE-ERROR-COLOR;
+  }
+}
+
+.info-text {
+  color: $BASE_GRAY_COLOR;
+  margin: 22px 0 0 22px;
+}
+.pinned-boards {
+  color: $BASE_GRAY_COLOR;
+  margin: 16px 0 0 22px;
+  &-count {
+    font-weight: 500;
+    margin: 0 4px;
+    color: $BASE_BLUE_COLOR;
+  }
+}
+
+.workspaces-list {
+  padding: 8px;
+  height: 430px;
+
+  &--content {
+    &-workspaces {
+      height: 380px;
+      padding: 16px;
+
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 8px;
+        height: 8px;
+      }
+
+      &-item {
+        margin-bottom: 16px;
+        @include flex-center-between;
+        border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 10px 12px 12px;
+        color: $BASE_GRAY_COLOR;
+        border-left: 6px solid $BASE-LIGHT-GRAY-COLOR;
+        &:hover {
+          border: 1px solid $BASE_BLUE_COLOR;
+          border-left: 6px solid $BASE_BLUE_COLOR;
+        }
+      }
+    }
+  }
+}
+
+.assign-modal-header {
+  @include flex-center;
+
+  .question-sign {
+    margin-left: 8px;
+    @include base-round-btn(16px, 16px, $DARK_BLUE);
+    font-size: 12px;
+    color: $BASE_WHITE-COLOR;
+    font-weight: 500;
+  }
+}

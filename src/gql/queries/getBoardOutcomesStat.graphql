@@ -1,0 +1,12 @@
+query GetBoardOutcomesStat($boardId: Int!, $limit: Int) {
+  getBoardOutcomesStat(boardId: $boardId, limit: $limit) {
+    journeysCount
+    personasCount
+    outcomeStats {
+      count
+      icon
+      id
+      name
+    }
+  }
+}

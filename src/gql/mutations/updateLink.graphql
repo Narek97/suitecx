@@ -1,0 +1,23 @@
+mutation UpdateMapLink($editLinkInput: EditLinkInput!) {
+  editLink(editLinkInput: $editLinkInput) {
+    id
+    title
+    type
+    url
+    icon
+    index
+    commentsCount
+    linkedJourneyMapId
+    flippedText
+    rowId
+    mapPersonaImages {
+      color
+      key
+      url
+    }
+    personaImage {
+      key
+      url
+    }
+  }
+}

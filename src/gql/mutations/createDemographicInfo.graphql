@@ -1,0 +1,9 @@
+mutation CreateDemographicInfo($createDemographicInfoInput: CreateDemographicInfoInput!){
+    createDemographicInfo(createDemographicInfoInput: $createDemographicInfoInput){
+        id
+        key
+        value
+        personaId
+        type
+    }
+}

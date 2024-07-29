@@ -1,0 +1,8 @@
+query GetMapOutcomeGroupsForRowCreation($mapId: Int!) {
+  getMapOutcomeGroupsForRowCreation(mapId: $mapId) {
+    id
+    name
+    pluralName
+    icon
+  }
+}

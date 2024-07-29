@@ -1,0 +1,3 @@
+mutation DeleteWhiteboardItems($deleteItemsInput: DeleteItemsInput!) {
+    deleteItems(deleteItemsInput: $deleteItemsInput)
+}

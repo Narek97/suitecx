@@ -1,0 +1,38 @@
+mutation UpdateMetrics($updateMetricsInput: UpdateMetricsInput!, $updateDataPointsInput:UpdateDataPointsInput) {
+  updateMetrics(updateMetricsInput: $updateMetricsInput, updateDataPointsInput:$updateDataPointsInput) {
+    id
+    rowId
+    columnId
+    name
+    commentsCount
+    descriptionEnabled
+    description
+    type
+    value
+    goal
+    typeData
+    flippedText
+    surveyId
+    questionId
+    source
+    startDate
+    endDate
+    dateRange
+    overall
+    nps
+    csat
+    ces
+    x
+    y
+    z
+    persona {
+      id
+      name
+      type
+      attachment {
+        url
+        key
+      }
+    }
+  }
+}

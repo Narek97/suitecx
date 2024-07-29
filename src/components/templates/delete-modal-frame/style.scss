@@ -1,0 +1,5 @@
+@import 'src/assets/styles/mixins';
+
+.delete-modal-frame{
+  @include base-modal-footer();
+}

@@ -1,0 +1,6 @@
+mutation DeleteMetrics($id: Int!) {
+  deleteMetrics(id: $id) {
+    rowId
+    columnId
+  }
+}

@@ -1,0 +1,3 @@
+mutation CopyMap($copyMapInput: CopyMapInput!) {
+  copyMap(copyMapInput: $copyMapInput)
+}

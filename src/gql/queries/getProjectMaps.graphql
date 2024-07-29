@@ -1,0 +1,8 @@
+query GetProjectMaps($projectId: Int!) {
+  getProjectMaps(projectId: $projectId) {
+    c_id
+    cs_name
+    cs_project_id
+    cs_added_date
+  }
+}

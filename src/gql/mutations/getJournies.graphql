@@ -1,0 +1,36 @@
+query GetJournies($getMapsInput: GetMapsInput!) {
+  getMaps(getMapsInput: $getMapsInput) {
+    count
+    board {
+      name
+      lastUpdatedBy
+      updatedAt
+      workspace {
+        id
+        name
+      }
+    }
+    maps {
+      title
+      id
+      type
+      createdAt
+      updatedAt
+      owner {
+        firstName
+        lastName
+        emailAddress
+      }
+      selectedPersonas {
+        attachment {
+          url
+          key
+        }
+        type
+        name
+        color
+        id
+      }
+    }
+  }
+}
