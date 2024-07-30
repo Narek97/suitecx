@@ -14,9 +14,7 @@ export const axiosRequest =
           query,
           variables,
         },
-        {
-          headers,
-        },
+        { headers: headers },
       )
       .then(res => {
         if (res.data.errors) {

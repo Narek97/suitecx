@@ -68,7 +68,16 @@ const SearchNounProjectIcon: FC<ISearchNounProjectIcon> = ({ onIconSelect }) => 
                         key={icon.id}
                         className={'noun-project-icon'}
                         onClick={() => onHandleIconSelect(icon)}>
-                        <Image src={icon.thumbnail_url} alt={icon.term} width={16} height={16} />
+                        <Image
+                          src={icon.thumbnail_url}
+                          alt={icon.term}
+                          width={16}
+                          height={16}
+                          style={{
+                            width: '16px',
+                            height: '16px',
+                          }}
+                        />
                       </li>
                     ))
                   ) : (

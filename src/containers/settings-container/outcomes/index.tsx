@@ -226,7 +226,16 @@ const Outcomes = () => {
               <div>
                 <Tooltip title={'Select an icon'} placement="bottom" arrow>
                   <div className={'selected-icon'}>
-                    <Image src={iconUrl} alt="Selected File Preview" width={30} height={30} />
+                    <Image
+                      src={iconUrl}
+                      alt="Selected File Preview"
+                      width={30}
+                      height={30}
+                      style={{
+                        width: '30px',
+                        height: '30px',
+                      }}
+                    />
                   </div>
                 </Tooltip>
               </div>

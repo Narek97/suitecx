@@ -1,0 +1,11 @@
+mutation CreateAiJourneyModel($createAiJourneyInput: CreateAiJourneyInput!) {
+    createAiJourneyModel(createAiJourneyInput: $createAiJourneyInput){
+        id
+        attachmentUrl
+        name
+        prompt
+        universal
+        selectedOrgIds
+        transcriptPlace
+    }
+}

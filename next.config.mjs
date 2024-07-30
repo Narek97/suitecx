@@ -25,6 +25,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'suitecx.s3.us-east-2.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
   webpack(config, { isServer }) {

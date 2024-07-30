@@ -7,7 +7,7 @@ query GetInterviewsByWorkspaceId($getInterviewsInput: GetInterviewsInput!) {
             id
             boardId
             name
-            journeyType
+            aiJourneyModelId
             text
             mapId
             createdAt

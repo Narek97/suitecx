@@ -8,5 +8,6 @@ mutation CreateInterview($createInterviewInput: CreateInterviewInput!){
         mapId
         createdAt
         updatedAt
+        aiJourneyModelId
     }
 }

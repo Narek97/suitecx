@@ -1,4 +1,6 @@
 'use client';
+import AiModel from '@/containers/admin-container/ai-model';
+import CopyMap from '@/containers/admin-container/copy-map';
 import React, { useMemo } from 'react';
 import { useQueryParam } from '@/hooks/useQueryParam';
 import { useRecoilValue } from 'recoil';
@@ -35,8 +37,8 @@ const AdminContainer = () => {
     if (USERS_FOR_COPY_ACTION.includes(user?.userID!)) {
       return [
         ...basePanels,
-        // { page: <CopyMap />, value: 'copy-map' },
-        // { page: <AiModel />, value: 'ai-model' },
+        { page: <CopyMap />, value: 'copy-map' },
+        { page: <AiModel />, value: 'ai-model' },
       ];
     }
     return basePanels;

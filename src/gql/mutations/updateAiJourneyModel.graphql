@@ -1,0 +1,11 @@
+mutation UpdateAiJourneyModel($updateAiJourneyInput: UpdateAiJourneyInput!) {
+    updateAiJourneyModel(updateAiJourneyInput: $updateAiJourneyInput) {
+        id
+        attachmentUrl
+        name
+        prompt
+        universal
+        selectedOrgIds
+        transcriptPlace
+    }
+}

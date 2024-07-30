@@ -50,7 +50,16 @@ const WorkspaceAnalytics: FC<IWorkspaceAnalytics> = ({
           </p>
           <span className={'workspace--analytics--item--name'}>{outcomeItem?.name}</span>
           <div className={'workspace--analytics--item--icon'}>
-            <Image src={outcomeItem?.icon} alt={'outcome_image'} width={12} height={12} />
+            <Image
+              src={outcomeItem?.icon}
+              alt={'outcome_image'}
+              width={12}
+              height={12}
+              style={{
+                width: '12px',
+                height: '12px',
+              }}
+            />
             {/*{showType !== 'horizontal-type' && <span> {item.name}</span>}*/}
           </div>
         </li>

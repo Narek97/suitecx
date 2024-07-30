@@ -1,0 +1,53 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.custom-file-uploader {
+  @include file-block;
+  flex-direction: column;
+  font-size: 12px;
+  border: 4px solid $BASE-WHITE-COLOR;
+
+  &-progress {
+    width: 80%;
+
+    &-percentage {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.custom-file-uploader2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    @include absolute-center();
+  }
+
+  &--title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    color: $BASE_GRAY_COLOR;
+  }
+
+  &--btn {
+    @include flex-center-center;
+    gap: 10px;
+    padding: 8px 16px;
+    margin-top: 8px;
+    font-size: 14px;
+    border: 1px solid $BASE_BLUE_COLOR;
+    border-radius: 2px;
+    color: $BASE_BLUE_COLOR;
+  }
+
+  &--btn-title {
+    @include reduce-text(70px);
+  }
+}

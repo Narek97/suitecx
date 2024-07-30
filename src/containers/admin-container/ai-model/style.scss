@@ -1,0 +1,11 @@
+.ai-model{
+  margin-top: 20px;
+  &--list {
+    height: calc(100dvh - 330px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+    overflow: auto;
+  }
+}

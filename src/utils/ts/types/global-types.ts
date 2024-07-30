@@ -129,3 +129,22 @@ export type NoteType = {
     lastName: string;
   };
 };
+
+export type DropdownMultiSelectItemType = {
+  id: number;
+  name: string;
+  value: string | number;
+};
+
+export type DropdownSelectItemType = {
+  id?: number;
+  name?: string | ReactNode;
+  label?: string;
+  value: string | number | null;
+};
+
+export type DropdownWithCategorySelectItemType = {
+  id?: number;
+  headerTitle?: string | ReactNode;
+  group: DropdownSelectItemType[];
+};

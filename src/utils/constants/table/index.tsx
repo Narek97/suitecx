@@ -42,7 +42,18 @@ const WORKSPACE_OUTCOMES_COLUMNS: Array<TableColumnType> = [
     isAscDescSortable: false,
     renderFunction: ({ icon }) => (
       <div className={'outcome-icon'}>
-        {icon && <Image src={icon} alt="icon" width={30} height={30} />}
+        {icon && (
+          <Image
+            src={icon}
+            alt="icon"
+            width={30}
+            height={30}
+            style={{
+              width: '30px',
+              height: '30px',
+            }}
+          />
+        )}
       </div>
     ),
   },

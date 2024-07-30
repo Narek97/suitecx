@@ -1,0 +1,45 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.create-update-ai-model-modal {
+  padding: 16px;
+  color: #545e6b;
+  @include base-modal-footer;
+
+  &--prompt-info {
+    font-style: italic;
+    color: $BASE-ERROR-COLOR;
+    margin-bottom: 10px;
+  }
+
+  &--file-upload {
+    position: relative;
+    height: 100px;
+    border: 1px dashed $BASE-LIGHT-GRAY-COLOR;
+    &:hover {
+      .create-update-ai-model-modal--delete-file-icon {
+        visibility: visible;
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+
+  &--delete-file-icon {
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    right: calc(50% - 88px);
+    padding: 2px;
+    z-index: 2;
+  }
+
+  &--content-input,
+  &--content-dropdown {
+    margin-bottom: 20px;
+    &--label {
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  }
+}

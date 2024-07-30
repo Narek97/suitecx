@@ -1,0 +1,17 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.custom-multi-select-dropdown {
+  position: relative;
+  .select-placeholder {
+    color: $BASE_GRAY_COLOR_2;
+    font-size: 12px;
+  }
+  &--menu-item {
+    @include reduce-text(100%);
+  }
+  &--selected-menu-item{
+    background-color: #deebf7 !important;
+    border-bottom: 1px solid $BASE-WHITE-COLOR !important;
+  }
+}

@@ -1,0 +1,16 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.copy-map-modal {
+  &--info {
+    color: $BASE_GRAY_COLOR;
+    margin: 16px 0 0 22px;
+    font-weight: 600;
+  }
+  &--footer {
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}

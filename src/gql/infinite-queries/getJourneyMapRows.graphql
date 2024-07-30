@@ -22,6 +22,15 @@ query GetJourneyMapRows($getJourneyMapInput: GetJourneyMapInput!) {
           text
         }
         boxElements {
+          attachment{
+            imgScaleType
+          }
+          attachmentPosition{
+            width
+            height
+            x
+            y
+          }
           commentsCount
           rowId
           id

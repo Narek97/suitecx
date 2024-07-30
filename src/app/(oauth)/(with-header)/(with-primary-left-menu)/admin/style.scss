@@ -10,12 +10,11 @@
   .error-logs,
   .performance-logs,
   .org-users,
-  .map-copy,
-  .ai-model {
+  .copy-map{
     margin-top: 20px;
     height: calc(100dvh - 220px);
   }
-  .map-copy {
+  .copy-map {
     .custom-table {
       tr:hover {
         td {

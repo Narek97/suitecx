@@ -8,8 +8,8 @@ query GetMe{
         isAdmin
         primaryUserAPIKey
         orgLanguage
-        accountLanguage
         apiToken
+        accountLanguage
         businessType{
             value
         }

@@ -1,0 +1,5 @@
+mutation UpdateAttachmentCroppedArea($updateAttachmentCroppedAreaInput: UpdateAttachmentCroppedAreaInput!) {
+    updateAttachmentCroppedArea(updateAttachmentCroppedAreaInput: $updateAttachmentCroppedAreaInput){
+        key
+    }
+}

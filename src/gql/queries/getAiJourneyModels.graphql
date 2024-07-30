@@ -1,0 +1,14 @@
+query GetAiJourneyModels($getAiJourneyModelsInput: GetAiJourneyModelsInput!){
+    getAiJourneyModels(getAiJourneyModelsInput: $getAiJourneyModelsInput){
+        count
+        aiJourneyModels{
+            id
+            attachmentUrl
+            name
+            prompt
+            universal
+            selectedOrgIds
+            transcriptPlace
+        }
+    }
+}
