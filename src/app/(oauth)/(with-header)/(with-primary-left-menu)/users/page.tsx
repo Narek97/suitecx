@@ -1,0 +1,18 @@
+import UserContainer from '@/containers/users-container';
+import React from 'react';
+import './style.scss';
+
+const Page = () => {
+  return (
+    <div className={'users'}>
+      <div className={'base-page-header'}>
+        <h3 className={'base-title'}>Users</h3>
+      </div>
+      <div className={'users--main'}>
+        <UserContainer />
+      </div>
+    </div>
+  );
+};
+
+export default Page;
