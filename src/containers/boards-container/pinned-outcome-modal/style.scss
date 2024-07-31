@@ -1,0 +1,28 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.outcomes-section {
+  padding: 8px;
+  height: 430px;
+  &--content-outcomes {
+    height: 366px;
+    overflow: auto;
+    padding: 16px;
+    border-bottom: 1px solid $BASE-EXTRA-LIGHT-GRAY-2;
+    &-item {
+      @include flex-center-between;
+      border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      padding: 10px 12px 12px;
+      color: $BASE_GRAY_COLOR;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $BASE_BLUE_COLOR;
+      }
+      &--name {
+        @include reduce-text(200px);
+      }
+    }
+  }
+}

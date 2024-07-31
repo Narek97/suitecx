@@ -1,4 +1,6 @@
 'use client';
+import BoardDeleteModal from '@/containers/boards-container/board-delete-modal';
+import BoardPinnedOutcomesModal from '@/containers/boards-container/pinned-outcome-modal';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import './style.scss';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
@@ -43,10 +45,6 @@ const BoardsContainer = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isOpenCreateUpdateBoard, setIsOpenCreateUpdateBoard] = useState<boolean>(false);
   const [boardName, setBoardName] = useState<string>('');
-
-
-  console.log(isOpenBoardDeleteModal);
-  console.log(isOpenAllPinnedOutcomesModal);
 
   const nameInputRef = useRef<HTMLInputElement>(null);
   const { workspaceID } = useParams();
@@ -158,23 +156,23 @@ const BoardsContainer = () => {
     }
   };
 
-  // const onHandleFilterBoard = useCallback(
-  //   (id: number) => {
-  //     setBoards(prev => prev.filter(board => board.id !== id));
-  //     setBoardsCount(prev => prev - 1);
-  //     if (
-  //       currentPage !== 1 &&
-  //       currentPage === Math.ceil(boardsCount / BOARDS_LIMIT) &&
-  //       boardsData.slice((currentPage - 1) * BOARDS_LIMIT, currentPage * BOARDS_LIMIT).length === 1
-  //     ) {
-  //       setCurrentPage(prev => prev - 1);
-  //     }
-  //     if ((boards.length - 1) % BOARDS_LIMIT === 0) {
-  //       setOffset(prev => prev + 1);
-  //     }
-  //   },
-  //   [boards.length, boardsCount, boardsData, currentPage],
-  // );
+  const onHandleFilterBoard = useCallback(
+    (id: number) => {
+      setBoards(prev => prev.filter(board => board.id !== id));
+      setBoardsCount(prev => prev - 1);
+      if (
+        currentPage !== 1 &&
+        currentPage === Math.ceil(boardsCount / BOARDS_LIMIT) &&
+        boardsData.slice((currentPage - 1) * BOARDS_LIMIT, currentPage * BOARDS_LIMIT).length === 1
+      ) {
+        setCurrentPage(prev => prev - 1);
+      }
+      if ((boards.length - 1) % BOARDS_LIMIT === 0) {
+        setOffset(prev => prev + 1);
+      }
+    },
+    [boards.length, boardsCount, boardsData, currentPage],
+  );
 
   const onHandleUpdateBoardByType = (newBoard: BoardType, type: ActionsEnum) => {
     if (type === ActionsEnum.CREATE) {
@@ -244,6 +242,22 @@ const BoardsContainer = () => {
 
   return (
     <div className={'boards'} data-testid={'boards-test-id'}>
+      {isOpenBoardDeleteModal && (
+        <BoardDeleteModal
+          isOpen={isOpenBoardDeleteModal}
+          boardID={selectedBoard?.id!}
+          handleClose={onToggleBoardDeleteModal}
+          onHandleFilterBoard={onHandleFilterBoard}
+        />
+      )}
+      {isOpenAllPinnedOutcomesModal && selectedBoard?.id && (
+        <BoardPinnedOutcomesModal
+          handleClose={onToggleAllPinnedOutcomesModal}
+          isOpen={isOpenAllPinnedOutcomesModal}
+          boardId={selectedBoard?.id}
+        />
+      )}
+
       <div className={'boards--header'}>
         <h3 className={'base-title'}>{boardTitle}</h3>
 

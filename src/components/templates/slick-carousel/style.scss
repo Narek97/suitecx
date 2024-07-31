@@ -1,0 +1,32 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.slick-carousel {
+  .slick-slider {
+    @include flex-center-center;
+    gap: 20px;
+  }
+
+  &--slick-slide,
+  .slick-slide {
+    min-width: 160px;
+  }
+
+  &--slick-track,
+  .slick-track {
+    @include flex-center-center;
+    gap: 20px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: initial;
+    transform: none !important;
+  }
+
+  .slick-arrow {
+    &:before {
+      content: '';
+    }
+  }
+}

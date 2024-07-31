@@ -1,6 +1,7 @@
-"use client"
+'use client';
+import ErrorBoundary from '@/components/templates/error-boundary';
 import React, { useCallback, useMemo, useState } from 'react';
-import "./style.scss"
+import './style.scss';
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
@@ -141,8 +142,6 @@ const AiModel = () => {
     return <CustomError error={errorAiModels?.message} />;
   }
 
-
-
   return (
     <div className={'ai-model'}>
       {isOpenCreateUpdateModal && (
@@ -182,12 +181,14 @@ const AiModel = () => {
                   currentPage * AI_MODEL_LIMIT,
                 ) || []
               ).map(aiModel => (
-                <AiModelCard
-                  key={aiModel.id}
-                  aiModel={aiModel}
-                  onHandleDelete={onToggleDeleteModal}
-                  onHandleEdit={onToggleCreateUpdateModal}
-                />
+                <ErrorBoundary key={aiModel.id}>
+                  <AiModelCard
+                    key={aiModel.id}
+                    aiModel={aiModel}
+                    onHandleDelete={onToggleDeleteModal}
+                    onHandleEdit={onToggleCreateUpdateModal}
+                  />
+                </ErrorBoundary>
               ))}
             </div>
           ) : (

@@ -38,6 +38,8 @@
     }
   }
   .view-all {
+    @include flex-center;
+    gap: 4px;
     font-size: 20px;
     &:hover {
       color: $BASE_BLUE_COLOR;

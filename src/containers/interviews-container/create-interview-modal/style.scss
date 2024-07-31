@@ -1,0 +1,54 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.create-interview-modal {
+  padding: 16px;
+  color: #545e6b;
+  @include base-modal-footer;
+  &--content-input,
+  &--content-dropdown {
+    margin-bottom: 20px;
+    &--label {
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  }
+
+  &--content-top {
+    display: flex;
+    gap: 20px;
+  }
+
+  &--content-top-item {
+    width: 50%;
+  }
+
+  &--slider-card {
+    height: 180px;
+    border: 1px solid $BASE-EXTRA-LIGHT-GRAY-2;
+    padding: 10px;
+    cursor: pointer;
+    img {
+      object-fit: contain;
+    }
+    &--title {
+      @include reduce-text(100%);
+      margin: 6px 0;
+      font-weight: 500;
+    }
+
+    &--description {
+      @include line-clamp(3);
+      font-weight: 300;
+    }
+  }
+  &--logo-block {
+    @include flex-center-center;
+    width: 100%;
+    height: 80px;
+  }
+
+  &--slider-selected-card {
+    border: 1px solid $BASE_BLUE_COLOR;
+  }
+}

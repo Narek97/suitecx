@@ -3,6 +3,9 @@
 .settings {
   padding: 32px 64px;
 
+  &--main{
+    margin-top: 32px;
+  }
   .tabs-divider-line {
     width: 162px !important;
   }

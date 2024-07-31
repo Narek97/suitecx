@@ -9,7 +9,6 @@ import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { ORGS_TABLE_COLUMNS } from '@/utils/constants/table';
 import { CopyMapLevelTemplateEnum, MapCopyLevelEnum } from '@/utils/ts/enums/global-enums';
 import { Box } from '@mui/material';
-import { useQueryClient } from '@tanstack/react-query';
 import React, { useMemo, useState } from 'react';
 import './style.scss';
 import CustomTable from '@/components/atoms/custom-table/custom-table';

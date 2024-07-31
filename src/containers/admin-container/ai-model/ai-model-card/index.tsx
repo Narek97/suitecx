@@ -49,7 +49,7 @@ const AiModelCard: FC<IAiModelCard> = ({ aiModel, onHandleDelete, onHandleEdit }
           alt="Img"
           width={500}
           height={500}
-          style={{ width: '100%', height: '100px' }}
+          style={{ width: '100%', height: '100px', objectFit: 'contain' }}
         />
       ) : (
         <div className={'ai-model-card--logo-block'}>

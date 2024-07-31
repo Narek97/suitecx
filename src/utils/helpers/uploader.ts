@@ -3,7 +3,6 @@ import { CreateMultipartDocument } from '@/gql/mutations/generated/createMultipa
 import { GetPreSignedUrlDocument } from '@/gql/mutations/generated/getPresignedUrl.generated';
 import { fetchData } from '@/utils/helpers/custom-gql-fetcher';
 
-
 export class UploadFile {
   chunkSize: number;
   threadsQuantity: number;

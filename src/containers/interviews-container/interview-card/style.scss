@@ -1,0 +1,29 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.interview-card {
+  position: relative;
+  width: 284px;
+  height: 200px;
+  padding: 16px;
+  @include card-borders;
+  cursor: initial;
+
+  &--name {
+    font-size: 14px;
+    line-height: 20px;
+    color: $BASE_BLUE_COLOR;
+    @include reduce-text(200px);
+  }
+
+  &--text {
+    line-height: 20px;
+    @include line-clamp(7);
+  }
+
+  &--menu {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+}

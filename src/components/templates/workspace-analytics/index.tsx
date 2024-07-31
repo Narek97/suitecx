@@ -68,14 +68,14 @@ const WorkspaceAnalytics: FC<IWorkspaceAnalytics> = ({
         typeof pinnedOutcomeGroupCount === 'number' &&
         pinnedOutcomeGroupCount > 3 &&
         outcomeGroups && (
-          <li className={`view-all ${fontSize || ''}`}>
-            <button
-              onClick={e => {
-                e.stopPropagation();
-                viewAll();
-              }}>
-              +{pinnedOutcomeGroupCount - outcomeGroups.length!}
-            </button>
+          <li
+            className={`view-all ${fontSize || ''}`}
+            onClick={e => {
+              e.stopPropagation();
+              viewAll();
+            }}>
+            <span>+</span>
+            <span>{pinnedOutcomeGroupCount - outcomeGroups.length!}</span>
           </li>
         )}
     </ul>

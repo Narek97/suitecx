@@ -87,6 +87,7 @@ const BoardCard: FC<IBoardCard> = memo(
         data-testid={`board-card-${board?.id}`}
         onClick={onNavigateWhiteboardPage}>
         <DragHandle />
+
         <div className={'board-card--left'}>
           <div className={'board-card--name-block'}>
             {isTitleEditMode ? (

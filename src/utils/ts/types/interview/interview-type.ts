@@ -1,4 +1,4 @@
-export type interviewType = {
+export type InterviewType = {
   id: number;
   mapId: number;
   name: string;

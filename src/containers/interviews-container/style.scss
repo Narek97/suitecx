@@ -1,0 +1,16 @@
+.interviews-container{
+  padding: 8px 32px;
+  &--create-section{
+    padding: 16px 0 32px;
+    border-bottom: 1px solid #D8D8D8;
+  }
+  &--body{
+    padding: 0 26px;
+    margin-top: 20px;
+    &--list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+}

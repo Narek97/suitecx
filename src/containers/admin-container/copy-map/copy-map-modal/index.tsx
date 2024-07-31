@@ -5,14 +5,12 @@ import { useCopyMapMutation } from '@/gql/mutations/generated/copyMap.generated'
 import { DeleteErrorLogsMutation } from '@/gql/mutations/generated/deleteErrorLogs.generated';
 import { copyMapState } from '@/store/atoms/copyMap.atom';
 import { snackbarState } from '@/store/atoms/snackbar.atom';
-import { getPageContentByKey } from '@/utils/helpers/get-page-content-by-key';
 import { CopyMapLevelTemplateEnum, MapCopyLevelEnum } from '@/utils/ts/enums/global-enums';
+import { useParams } from 'next/navigation';
 import React, { FC } from 'react';
 import './style.scss';
-import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { useQueryClient } from '@tanstack/react-query';
-
 
 interface IAssignPersonaToMapModal {
   isOpen: boolean;
@@ -61,17 +59,11 @@ const CopyMapModal: FC<IAssignPersonaToMapModal> = ({ isOpen, orgId, handleClose
         },
         {
           onSuccess: async () => {
-            // setSnackbarItem({
-            //   time: 9999999,
-            //   title: 'Copy action done!',
-            //   text: 'The map was copied to the selected board successfully.',
-            //   severity: 'success',
-            // });
-            setSnackbarItem(prev=>({
+            setSnackbarItem(prev => ({
               ...prev,
               open: true,
-              message:'The map was copied to the selected board successfully.'
-            }))
+              message: 'The map was copied to the selected board successfully.',
+            }));
 
             setCopyMapDetailsData({
               orgId: null,
@@ -82,7 +74,7 @@ const CopyMapModal: FC<IAssignPersonaToMapModal> = ({ isOpen, orgId, handleClose
               isProcessing: false,
             });
             if (copyMapData?.boardId === +boardID!) {
-            await  queryClient.invalidateQueries(['GetJournies']);
+              await queryClient.invalidateQueries(['GetJournies']);
             }
             handleClose();
           },

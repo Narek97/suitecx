@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import SettingsContainer from '../../../../../containers/settings-container';
+import SettingsContainer from '@/containers/settings-container';
 
 const Page = () => {
   return (

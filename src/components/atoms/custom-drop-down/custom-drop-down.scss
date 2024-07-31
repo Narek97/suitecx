@@ -1,0 +1,12 @@
+@import 'src/assets/styles/mixins';
+
+.custom-dropdown {
+  position: relative;
+  .select-placeholder {
+    color: $BASE_GRAY_COLOR_2;
+    font-size: 12px;
+  }
+  &--menu-item {
+    @include reduce-text(100%);
+  }
+}

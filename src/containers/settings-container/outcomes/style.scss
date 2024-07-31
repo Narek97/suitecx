@@ -1,7 +1,6 @@
 @import 'src/assets/styles/variables';
 @import 'src/assets/styles/mixins';
 
-
 .outcomes {
   .create-update-top-section {
     @include flex-center;
@@ -31,8 +30,12 @@
     }
   }
 
-  .custom-table {
+  &--table-container {
     margin-top: 18px;
+    height: calc(100dvh - 300px);
+  }
+
+  .custom-table {
     thead {
       position: sticky;
       top: 0;

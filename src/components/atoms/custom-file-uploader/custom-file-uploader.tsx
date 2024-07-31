@@ -1,6 +1,6 @@
 import './custom-file-uploader.scss';
 import React, { memo, ReactNode } from 'react';
-import DefaultImage  from '@/public/base-icons/default_image.svg';
+import DefaultImage from '@/public/base-icons/default_image.svg';
 import LinearProgress from '@mui/material/LinearProgress';
 
 const CustomFileUploader = memo(

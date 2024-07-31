@@ -255,16 +255,18 @@ const Outcomes = () => {
         />
       </div>
       {outcomes?.length ? (
-        <CustomTable
-          sortAscDescByField={sortTableByField}
-          dashedStyle={false}
-          isTableHead={true}
-          rows={outcomes}
-          columns={columns}
-          options={options}
-          // permissionCheckKey={'hasPermission'}
-          processingItemId={isLoadingOutcome ? selectedOutcomeGroup?.id : null}
-        />
+        <div className={'outcomes--table-container'}>
+          <CustomTable
+            sortAscDescByField={sortTableByField}
+            dashedStyle={false}
+            isTableHead={true}
+            rows={outcomes}
+            columns={columns}
+            options={options}
+            // permissionCheckKey={'hasPermission'}
+            processingItemId={isLoadingOutcome ? selectedOutcomeGroup?.id : null}
+          />
+        </div>
       ) : (
         <>
           <EmptyDataInfo icon={<Box />} message={'There are no outcomes yet'} />

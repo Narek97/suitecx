@@ -7,7 +7,6 @@ import {
 } from '@/gql/mutations/generated/deleteAiJourneyModel.generated';
 import { AiModelType } from '@/utils/ts/types/ai-model/ai-model-type';
 
-
 interface IAiModelDeleteModal {
   isOpen: boolean;
   aiModel: AiModelType | null;

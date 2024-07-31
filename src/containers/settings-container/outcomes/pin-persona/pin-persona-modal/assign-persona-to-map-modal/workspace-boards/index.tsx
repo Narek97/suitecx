@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState } from 'react';
 import './style.scss';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'next/navigation';
 import { useRecoilState } from 'recoil';
 import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
 import {
@@ -8,9 +8,10 @@ import {
   useInfiniteGetBoardsForOutcomeGroupQuery,
 } from '@/gql/infinite-queries/generated/getBoardsForOutcomeGroup.generated';
 import { BOARDS_LIMIT } from '@/utils/constants/pagination';
+import ErrorBoundary from '@/components/templates/error-boundary';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import LeftArrowIcon from '@/public/base-icons/left-secondary-arrow.svg';
 import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import LeftArrowIcon from '@/public/base-icons/left-secondary-arrow.svg';
 import { Box } from '@mui/material';
 import WorkspaceBoardItem from '@/containers/settings-container/outcomes/pin-persona/pin-persona-modal/assign-persona-to-map-modal/workspace-boards/workspace-board-item';
 
@@ -142,16 +143,18 @@ const WorkspaceBoards: FC<IWorkspaceBoards> = ({ handleClose, workspaceId, outco
                 }}>
                 <ul ref={childRef}>
                   {boards?.map(itm => (
-                    <WorkspaceBoardItem
-                      key={itm?.id}
-                      itm={itm}
-                      isSelected={
-                        !!outcomePinBoards?.defaultSelected?.find(idItem => idItem === itm?.id)
-                      }
-                      handleSelectPersona={(id: number, isSelected: boolean) =>
-                        handleSelectPersona(id, isSelected)
-                      }
-                    />
+                    <ErrorBoundary key={itm?.id}>
+                      <WorkspaceBoardItem
+                        key={itm?.id}
+                        itm={itm}
+                        isSelected={
+                          !!outcomePinBoards?.defaultSelected?.find(idItem => idItem === itm?.id)
+                        }
+                        handleSelectPersona={(id: number, isSelected: boolean) =>
+                          handleSelectPersona(id, isSelected)
+                        }
+                      />
+                    </ErrorBoundary>
                   ))}
                 </ul>
               </div>

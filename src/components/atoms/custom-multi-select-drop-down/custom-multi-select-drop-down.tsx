@@ -3,8 +3,7 @@ import { Chip, FormControl, InputLabel, MenuItem, SelectProps } from '@mui/mater
 import Select from '@mui/material/Select';
 import React, { FC, memo, useRef, useState } from 'react';
 import './custom-multi-select-drop-down.scss';
-import  DeleteIcon  from '@/public/base-icons/close.svg';
-
+import DeleteIcon from '@/public/base-icons/close.svg';
 
 interface ICustomMultiSelectDropDown
   extends Pick<SelectProps, 'open' | 'onOpen' | 'onClose' | 'disabled'> {
