@@ -1,0 +1,8 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.add-update-outcome-modal-header {
+  &--outcome-item {
+    margin-left: 4px;
+  }
+}

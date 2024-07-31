@@ -89,46 +89,48 @@ const CustomTable: FC<ICustomTable> = ({
             <TableRow>
               {columns.map(column => (
                 <TableCell key={column.id} align={column.align || align}>
-                  <span
-                    onClick={() => column.onClick && column.onClick()}
-                    className={'custom-table--header-item'}
-                    data-testid={'table-header-item-test-id'}>
-                    {column.label}
-                  </span>
-                  {column?.isAscDescSortable && sortAscDescByField && (
-                    <div className={'custom-table--header-item-sort'}>
-                      <button
-                        aria-label={'asc'}
-                        data-testid={'asc-sort-id'}
-                        className={'asc-button'}
-                        onClick={() =>
-                          sortAscDescByField(
-                            OrderByEnum.Asc,
-                            column?.sortFieldName as string,
-                            column.id as string,
-                          )
-                        }>
-                        <div className={'asc-button--content'}>
-                          <SortIcon />
-                        </div>
-                      </button>
-                      <button
-                        aria-label={'desc'}
-                        data-testid={'desc-sort-id'}
-                        className={'desc-button'}
-                        onClick={() =>
-                          sortAscDescByField(
-                            OrderByEnum.Desc,
-                            column?.sortFieldName as string,
-                            column.id as string,
-                          )
-                        }>
-                        <div className={'desc-button--content'}>
-                          <SortIcon />
-                        </div>
-                      </button>
+                  <div className={'custom-table--header-head'}>
+                    <div
+                      onClick={() => column.onClick && column.onClick()}
+                      className={'custom-table--header-item'}
+                      data-testid={'table-header-item-test-id'}>
+                      {column.label}
                     </div>
-                  )}
+                    {column?.isAscDescSortable && sortAscDescByField && (
+                      <div className={'custom-table--header-item-sort'}>
+                        <button
+                          aria-label={'asc'}
+                          data-testid={'asc-sort-id'}
+                          className={'asc-button'}
+                          onClick={() =>
+                            sortAscDescByField(
+                              OrderByEnum.Asc,
+                              column?.sortFieldName as string,
+                              column.id as string,
+                            )
+                          }>
+                          <div className={'asc-button--content'}>
+                            <SortIcon fill={'#fff'} />
+                          </div>
+                        </button>
+                        <button
+                          aria-label={'desc'}
+                          data-testid={'desc-sort-id'}
+                          className={'desc-button'}
+                          onClick={() =>
+                            sortAscDescByField(
+                              OrderByEnum.Desc,
+                              column?.sortFieldName as string,
+                              column.id as string,
+                            )
+                          }>
+                          <div className={'desc-button--content'}>
+                            <SortIcon fill={'#fff'} />
+                          </div>
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </TableCell>
               ))}
             </TableRow>

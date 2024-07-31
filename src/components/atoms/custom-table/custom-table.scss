@@ -3,7 +3,6 @@
 
 .custom-table {
   @include main-scrollbar;
-  //width: calc(100vw - 100px);
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -73,16 +72,18 @@
     }
   }
 
+  &--header-head{
+    display: flex;
+  }
+
   &--header-item,
   &--body-item {
     width: fit-content;
     display: inline-block;
     white-space: nowrap;
     &-sort {
-      width: 12px;
-      height: 22px;
       margin-left: 10px;
-      display: inline;
+      display: inline-block;
       position: relative;
 
       .asc-button {

@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
+.add-update-outcome-form {
+  padding: 16px;
+  height: 480px;
+  @include base-modal-footer;
+  &--content {
+    padding: 8px;
+    width: 100%;
+    height: calc(100% - 64px);
+    margin-bottom: 16px;
+    overflow-y: auto;
+    .outcome {
+      &-field {
+        &--content {
+          @include flex-center-center;
+        }
+        .validation-error {
+          margin-top: 10px;
+          margin-left: 94px;
+        }
+        margin-bottom: 18px;
+      }
+      &-description {
+        margin-bottom: 18px;
+        .element-label {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .read-only-field {
+      width: 100%;
+      font-size: $BASE_FONT-SIZE;
+      color: $BASE_GRAY_COLOR;
+      padding: 10px 0 10px 10px;
+    }
+    .element {
+      &-label {
+        width: 100px;
+        display: block;
+        color: $BASE_GRAY_COLOR;
+        margin-right: 8px;
+        font-size: $BASE_FONT-SIZE;
+        @include reduce-text(100%);
+      }
+      &-input {
+        width: 100%;
+      }
+    }
+  }
+}

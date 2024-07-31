@@ -1,7 +1,12 @@
 import React from 'react';
+import OutcomeContainer from '@/containers/outcome-conatiner';
 
 const Page = () => {
-  return <div></div>;
+  return (
+    <>
+      <OutcomeContainer />
+    </>
+  );
 };
 
 export default Page;

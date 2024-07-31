@@ -3,7 +3,6 @@ import React from 'react';
 import Organizations from '@/containers/admin-container/organizations';
 import OrgUsers from '@/containers/admin-container/organizations/organization/org-users';
 import AdminIcon from '@/public/left-menu-panel/admin.svg';
-import AtlasIcon from '@/public/left-menu-panel/atlas.svg';
 import WorkforcesIcon from '@/public/left-menu-panel/folder.svg';
 import HomeIcon from '@/public/left-menu-panel/home.svg';
 import InterviewsIcon from '@/public/left-menu-panel/interview.svg';
@@ -187,13 +186,13 @@ export const SECONDARY_MENU_PANEL_TOP_TABS = ({
       regexp: /^\/workspace\/\d+\/interviews(?:\/\d+)?s?$/,
       breadcrumbSlice: 2,
     },
-    {
-      icon: <AtlasIcon />,
-      name: 'Atlas',
-      url: primaryUrl + 'atlas',
-      regexp: /^\/workspace\/\d+\/atlas(?:\/\d+)?s?$/,
-      breadcrumbSlice: 2,
-    },
+    // {
+    //   icon: <AtlasIcon />,
+    //   name: 'Atlas',
+    //   url: primaryUrl + 'atlas',
+    //   regexp: /^\/workspace\/\d+\/atlas(?:\/\d+)?s?$/,
+    //   breadcrumbSlice: 2,
+    // },
   ];
 };
 
