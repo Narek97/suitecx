@@ -1,6 +1,7 @@
 'use client';
 import AiModel from '@/containers/admin-container/ai-model';
 import CopyMap from '@/containers/admin-container/copy-map';
+import Organization from '@/containers/admin-container/organizations/organization';
 import React, { useMemo } from 'react';
 import { useQueryParam } from '@/hooks/useQueryParam';
 import { useRecoilValue } from 'recoil';
@@ -48,9 +49,8 @@ const AdminContainer = () => {
     <>
       {getPageContentByKey({
         content: {
-          organization: <></>,
+          organization: <Organization />,
         },
-        key: tab,
         defaultPage: (
           <CustomTabs
             tabValue={tab || 'error-logs'}
@@ -62,6 +62,7 @@ const AdminContainer = () => {
             tabPanels={adminTabPanels}
           />
         ),
+        key: tab,
       })}
     </>
   );

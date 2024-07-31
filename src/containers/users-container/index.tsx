@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useMemo, useState } from 'react';
-import "./style.scss"
+import './style.scss';
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import { debounced400 } from '@/hooks/useDebounce';
 import { USER_TABLE_COLUMNS } from '@/utils/constants/table';
@@ -10,7 +10,10 @@ import CustomTable from '@/components/atoms/custom-table/custom-table';
 import EmptyDataInfo from '@/components/templates/empty-data-Info';
 import Pagination from '@/components/templates/pagination';
 import CreateUpdateUser from '@/containers/users-container/create-update-user';
-import { CreateUserMutation, useCreateUserMutation } from '@/gql/mutations/generated/createUser.generated';
+import {
+  CreateUserMutation,
+  useCreateUserMutation,
+} from '@/gql/mutations/generated/createUser.generated';
 import { CreateUserInput } from '@/gql/types';
 import {
   GetOrganizationUsersQuery,
@@ -22,7 +25,6 @@ import { USERS_LIMIT } from '@/utils/constants/pagination';
 import { ObjectKeysType, OrganizationUserType } from '@/utils/ts/types/global-types';
 import { Box } from '@mui/material';
 import dayjs from 'dayjs';
-
 
 const UserContainer = () => {
   const [allUsers, setAllUsers] = useState<OrganizationUserType[]>([]);
@@ -149,14 +151,13 @@ const UserContainer = () => {
     return <CustomError error={error?.message} />;
   }
 
-
   return (
     <>
       <div className={'users-container'}>
         <div className={`users-container--search-block `}>
           <div
             className={`users-container--search-block-input ${
-              isCreateUser ? 'users-container--disable-search-block' : ''
+              isCreateUser ? 'org-users-container--disable-search-block' : ''
             } `}>
             <CustomInput
               isIconInput={true}
@@ -194,11 +195,11 @@ const UserContainer = () => {
       {isLoading ? (
         <CustomLoader />
       ) : (
-        <div className={'users-container--table-block'}>
+        <div className={'org-users-container--table-block'}>
           {users.length ? (
             <CustomTable isTableHead={true} rows={rows} columns={columns} />
           ) : (
-            <EmptyDataInfo icon={<Box/>} message={'No users Yet'} />
+            <EmptyDataInfo icon={<Box />} message={'No org-users Yet'} />
           )}
           {usersTotalCount - 1 > USERS_LIMIT && (
             <Pagination

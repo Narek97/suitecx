@@ -1,4 +1,7 @@
+import OrgBoards from '@/containers/admin-container/organizations/organization/org-boards';
 import React from 'react';
+import Organizations from '@/containers/admin-container/organizations';
+import OrgUsers from '@/containers/admin-container/organizations/organization/org-users';
 import AdminIcon from '@/public/left-menu-panel/admin.svg';
 import AtlasIcon from '@/public/left-menu-panel/atlas.svg';
 import WorkforcesIcon from '@/public/left-menu-panel/folder.svg';
@@ -31,20 +34,20 @@ export const ADMIN_TABS: TabType[] = [
 export const ADMIN_TAB_PANELS: TabPanelType[] = [
   { page: <ErrorLogs />, value: 'error-logs' },
   { page: <PerformanceLogs />, value: 'performance-logs' },
-  // { page: <SuiteOrgs />, value: 'organizations' },
+  { page: <Organizations />, value: 'organizations' },
 ];
-//
-// //organization
-// export const ORGANIZATION_TABS: TabType[] = [
-//   { label: 'Users', value: 'users' },
-//   { label: 'Boards', value: 'boards' },
-// ];
-//
-// export const ORGANIZATION_TABS_PANELS: TabPanelType[] = [
-//   { page: <OrganizationUsers />, value: 'users' },
-//   { page: <UserBoards />, value: 'boards' },
-// ];
-//
+
+//organization
+export const ORGANIZATION_TABS: TabType[] = [
+  { label: 'Org users', value: 'org-users' },
+  { label: 'Org boards', value: 'org-boards' },
+];
+
+export const ORGANIZATION_TABS_PANELS: TabPanelType[] = [
+  { page: <OrgUsers />, value: 'org-users' },
+  { page: <OrgBoards />, value: 'org-boards' },
+];
+
 export const SETTINGS_TABS: TabType[] = [{ label: 'Outcomes', value: 'outcomes' }];
 export const SETTINGS_TAB_PANELS: TabPanelType[] = [{ page: <Outcomes />, value: 'outcomes' }];
 

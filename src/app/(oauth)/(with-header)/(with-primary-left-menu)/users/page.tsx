@@ -8,7 +8,7 @@ const Page = () => {
       <div className={'base-page-header'}>
         <h3 className={'base-title'}>Users</h3>
       </div>
-      <div className={'users--main'}>
+      <div className={'org-users--main'}>
         <UserContainer />
       </div>
     </div>

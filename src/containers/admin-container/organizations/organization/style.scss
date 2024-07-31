@@ -1,0 +1,32 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.organization {
+  color: $BASE_GRAY_COLOR;
+
+  &--users,
+  &--boards,
+  &--board-maps{
+    margin-top: 20px;
+    height: calc(100dvh - 255px);
+  }
+
+  &--breadcrumb {
+    @include flex-center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &--boards {
+      padding-left: 10px;
+      border-left: 1px solid $BASE_GRAY_COLOR;
+    }
+
+    &--organizations,
+    &--boards {
+      line-height: 20px;
+      &:hover {
+        color: $BASE_BLUE_COLOR;
+      }
+    }
+  }
+}
