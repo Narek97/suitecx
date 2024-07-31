@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import './style.scss';
 import SettingsContainer from '@/containers/settings-container';
+
+export const metadata: Metadata = {
+  title: 'Settings',
+};
 
 const Page = () => {
   return (

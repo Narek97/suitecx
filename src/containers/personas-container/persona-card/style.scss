@@ -1,0 +1,49 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.persona-card {
+  position: relative;
+  width: 284px;
+  height: 272px;
+  padding: 0 16px;
+  @include card-borders;
+
+  &--menu {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  &--frame-block {
+    @include flex-center-center;
+    height: 160px;
+  }
+
+  &--info {
+    display: flex;
+    flex-direction: column;
+
+    &--name {
+      @include reduce-text('100%');
+      line-height: 32px;
+      font-weight: 500;
+      color: $BASE_BLUE_COLOR;
+    }
+
+    &--type {
+      line-height: 16px;
+      font-size: 12px;
+    }
+  }
+
+  &--footer {
+    @include flex-center-between;
+    margin-top: 32px;
+    font-size: 12px;
+
+    &--journies {
+      @include flex-center-center;
+      gap: 8px;
+    }
+  }
+}

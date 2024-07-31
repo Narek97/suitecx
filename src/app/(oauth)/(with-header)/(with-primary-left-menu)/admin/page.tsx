@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import './style.scss';
 import AdminContainer from '@/containers/admin-container';
+
+export const metadata: Metadata = {
+  title: 'Admin',
+};
 
 const Admin = () => {
   return (
