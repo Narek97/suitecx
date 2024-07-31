@@ -1,3 +1,4 @@
+import { InterviewType } from '@/utils/ts/types/interview/interview-type';
 import React, { ChangeEvent } from 'react';
 import EyeIcon from '@/public/button-icons/eye.svg';
 import CopyIcon from '@/public/canvas/operations/copy.svg';
@@ -18,7 +19,6 @@ import {
   MenuOptionsType,
   NotesAndCommentsDrawerType,
 } from '@/utils/ts/types/global-types';
-import { interviewType } from '@/utils/ts/types/interview/interview-type';
 import { PersonaDemographicInfoType, PersonaType } from '@/utils/ts/types/persona/persona-types';
 import {
   BoxItemType,
@@ -56,8 +56,8 @@ const INTERVIEW_CARD_OPTIONS = ({
   onHandleDelete,
 }: {
   onHandleNavigateToMap: () => void;
-  onHandleView: (interview: interviewType) => void;
-  onHandleDelete: (interview: interviewType) => void;
+  onHandleView: (interview: InterviewType) => void;
+  onHandleDelete: (interview: InterviewType) => void;
 }): Array<MenuOptionsType> => {
   return [
     {

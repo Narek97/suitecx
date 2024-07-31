@@ -21,7 +21,8 @@ interface IAssignPersonaToMapModal {
 
 const CopyMapModal: FC<IAssignPersonaToMapModal> = ({ isOpen, orgId, handleClose, level }) => {
   const queryClient = useQueryClient();
-
+  console.log(orgId);
+  console.log(level);
   const { boardID } = useParams();
 
   const setSnackbarItem = useSetRecoilState(snackbarState);

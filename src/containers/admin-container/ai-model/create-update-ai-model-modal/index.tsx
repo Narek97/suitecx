@@ -274,47 +274,44 @@ const CreateUpdateAiModelModal: FC<ICreateUpdateAiModelModal> = ({
             <FileUploader
               id={'touchpoint-name'}
               classes={`attachments--file-uploader`}
-              children={
-                <CustomFileUploader
-                  uploadProgress={uploadProgress}
-                  content={
-                    selectedImage ? (
-                      <div className={'create-update-ai-model-modal--file-container'}>
-                        <Image
-                          src={selectedImage}
-                          alt="Img"
-                          width={180}
-                          height={90}
-                          style={{
-                            width: '180px',
-                            height: '90px',
-                          }}
-                        />
-                      </div>
-                    ) : attachmentUrl ? (
-                      <div className={'create-update-ai-model-modal--file-container'}>
-                        <Image
-                          src={`${process.env.NEXT_PUBLIC_AWS_URL}/${attachmentUrl}`}
-                          alt="Img"
-                          width={180}
-                          height={90}
-                          style={{
-                            width: '180px',
-                            height: '90px',
-                          }}
-                        />
-                      </div>
-                    ) : (
-                      <CustomFileUploader2 title={'Choose image'} />
-                    )
-                  }
-                />
-              }
-              multiple={false}
               handleChange={onHandleSelectFiles}
               name="file"
-              types={PERSONA_FILE_TYPES}
-            />
+              types={PERSONA_FILE_TYPES}>
+              <CustomFileUploader
+                uploadProgress={uploadProgress}
+                content={
+                  selectedImage ? (
+                    <div className={'create-update-ai-model-modal--file-container'}>
+                      <Image
+                        src={selectedImage}
+                        alt="Img"
+                        width={180}
+                        height={90}
+                        style={{
+                          width: '180px',
+                          height: '90px',
+                        }}
+                      />
+                    </div>
+                  ) : attachmentUrl ? (
+                    <div className={'create-update-ai-model-modal--file-container'}>
+                      <Image
+                        src={`${process.env.NEXT_PUBLIC_AWS_URL}/${attachmentUrl}`}
+                        alt="Img"
+                        width={180}
+                        height={90}
+                        style={{
+                          width: '180px',
+                          height: '90px',
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <CustomFileUploader2 title={'Choose image'} />
+                  )
+                }
+              />
+            </FileUploader>
           </div>
 
           <label

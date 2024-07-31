@@ -47,10 +47,7 @@ const BoardPinnedOutcomesModal: FC<IBoardPinnedOutcomesModal> = ({
           ) : (
             <div className={'outcomes-section--content-outcomes'}>
               <ul>
-                {[
-                  ...pinnedOutcomes?.getBoardOutcomesStat?.outcomeStats,
-                  ...pinnedOutcomes?.getBoardOutcomesStat?.outcomeStats,
-                ]?.map(outcomeGroupItem => (
+                {pinnedOutcomes?.getBoardOutcomesStat.outcomeStats?.map(outcomeGroupItem => (
                   <li
                     key={outcomeGroupItem?.id}
                     data-testid="outcome-item-test-id"
