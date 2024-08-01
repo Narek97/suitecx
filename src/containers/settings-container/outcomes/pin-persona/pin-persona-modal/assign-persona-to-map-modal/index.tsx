@@ -1,9 +1,14 @@
-import { Box, Tooltip } from '@mui/material';
 import React, { FC, useState } from 'react';
+
+import { Box, Tooltip } from '@mui/material';
 import './style.scss';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { userState } from '@/store/atoms/user.atom';
-import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
+
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import CustomModal from '@/components/atoms/custom-modal/custom-modal';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import ModalHeader from '@/components/templates/modal-header';
+import WorkspaceBoards from '@/containers/settings-container/outcomes/pin-persona/pin-persona-modal/assign-persona-to-map-modal/workspace-boards';
 import {
   GetAllPinnedBoardsQuery,
   useGetAllPinnedBoardsQuery,
@@ -12,13 +17,10 @@ import {
   GetWorkspacesByOrganizationIdQuery,
   useGetWorkspacesByOrganizationIdQuery,
 } from '@/gql/queries/generated/getWorkspaces.generated';
+import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
+import { userState } from '@/store/atoms/user.atom';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
-import CustomModal from '@/components/atoms/custom-modal/custom-modal';
-import ModalHeader from '@/components/templates/modal-header';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
 import { WORKSPACES_LIMIT } from '@/utils/constants/pagination';
-import WorkspaceBoards from '@/containers/settings-container/outcomes/pin-persona/pin-persona-modal/assign-persona-to-map-modal/workspace-boards';
 
 interface IAssignPersonaToMapModal {
   isOpen: boolean;

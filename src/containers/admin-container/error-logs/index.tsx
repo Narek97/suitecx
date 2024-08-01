@@ -1,21 +1,23 @@
 import { useCallback, useMemo, useState } from 'react';
+
 import './style.scss';
+import { Box } from '@mui/material';
 import { useRecoilState } from 'recoil';
+
+import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import CustomTable from '@/components/atoms/custom-table/custom-table';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import ErrorLogDeleteModal from '@/containers/admin-container/error-logs/error-log-delete-modal';
 import {
   GetErrorLogsQuery,
   useInfiniteGetErrorLogsQuery,
 } from '@/gql/infinite-queries/generated/getErrorLogs.generated';
-import { errorLogsState } from '@/store/atoms/errorLogs.atom';
-import { ERROR_LOGS_LIMIT } from '@/utils/constants/pagination';
 import { ErrorLog } from '@/gql/types';
+import { errorLogsState } from '@/store/atoms/errorLogs.atom';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
-import { Box } from '@mui/material';
+import { ERROR_LOGS_LIMIT } from '@/utils/constants/pagination';
 import { ADMIN_ERROR_TABLE_COLUMNS } from '@/utils/constants/table';
-import CustomTable from '@/components/atoms/custom-table/custom-table';
-import ErrorLogDeleteModal from '@/containers/admin-container/error-logs/error-log-delete-modal';
 
 const ErrorLogs = () => {
   const [errorLogs, setErrorLogs] = useRecoilState(errorLogsState);

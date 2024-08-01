@@ -1,11 +1,15 @@
 'use client';
-import ErrorBoundary from '@/components/templates/error-boundary';
 import React, { useCallback, useMemo, useState } from 'react';
+
 import './style.scss';
+
+import { Box } from '@mui/material';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import ErrorBoundary from '@/components/templates/error-boundary';
 import Pagination from '@/components/templates/pagination';
 import AiModelCard from '@/containers/admin-container/ai-model/ai-model-card';
 import AiModelDeleteModal from '@/containers/admin-container/ai-model/ai-model-delete-modal';
@@ -17,7 +21,6 @@ import {
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { AI_MODEL_LIMIT } from '@/utils/constants/pagination';
 import { AiModelType } from '@/utils/ts/types/ai-model/ai-model-type';
-import { Box } from '@mui/material';
 
 const AiModel = () => {
   const [isOpenCreateUpdateModal, setIsOpenCreateUpdateModal] = useState<boolean>(false);

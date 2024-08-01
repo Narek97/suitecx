@@ -1,11 +1,13 @@
 'use client';
 import React, { FC } from 'react';
+
 import { Alert } from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
+import { useRecoilState } from 'recoil';
+
+import WarningIcon from '@/public/base-icons/info.svg';
 import ErrorIcon from '@/public/base-icons/remove.svg';
 import SuccessIcon from '@/public/base-icons/success.svg';
-import WarningIcon from '@/public/base-icons/info.svg';
-import { useRecoilState } from 'recoil';
 import { snackbarState } from '@/store/atoms/snackbar.atom';
 
 interface ISnackbarProvider {

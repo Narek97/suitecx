@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import './custom-file-uploader.scss';
 import FileUploaderIcon from '@/public/base-icons/file-uploader.svg';
 

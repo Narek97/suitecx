@@ -1,5 +1,7 @@
-import Popover from '@mui/material/Popover';
 import React, { FC } from 'react';
+
+import Popover from '@mui/material/Popover';
+
 import './style.scss';
 import LeftArrowIcon from '@/public/base-icons/left-secondary-arrow.svg';
 import RightArrowIcon from '@/public/base-icons/right-secondary-arrow.svg';

@@ -1,6 +1,13 @@
-import { useParams } from 'next/navigation';
 import React, { ChangeEvent, FC, useCallback, useState } from 'react';
+
 import './style.scss';
+
+import { Skeleton } from '@mui/material';
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+import { FileUploader } from 'react-drag-drop-files';
+import { useRecoilValue } from 'recoil';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomFileUploader from '@/components/atoms/custom-file-uploader/custom-file-uploader';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
@@ -20,17 +27,13 @@ import {
   useGetPersonaGalleryQuery,
 } from '@/gql/queries/generated/getPersonaGallery.generated';
 import { AttachmentsEnum } from '@/gql/types';
+import DeleteIcon from '@/public/operations/delete.svg';
 import { userState } from '@/store/atoms/user.atom';
 import { PERSONA_FILE_TYPES } from '@/utils/constants/general';
 import { BOARDS_LIMIT, PERSONAS_GALLERY_LIMIT } from '@/utils/constants/pagination';
 import { resizeFile } from '@/utils/helpers/resize-file';
 import { UploadFile } from '@/utils/helpers/uploader';
 import { PersonaGalleryType } from '@/utils/ts/types/persona/persona-types';
-import { Skeleton } from '@mui/material';
-import { FileUploader } from 'react-drag-drop-files';
-import Image from 'next/image';
-import { useRecoilValue } from 'recoil';
-import DeleteIcon from '@/public/operations/delete.svg';
 
 interface IPersonaGalleryModal {
   isOpen: boolean;

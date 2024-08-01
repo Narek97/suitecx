@@ -1,10 +1,12 @@
 'use client';
 import React from 'react';
+
 import './style.scss';
 import { useRouter } from 'next/navigation';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
-import QuestionProLogoIcon from '@/public/base-icons/qp-logo.svg';
 import NotFoundIcon from '@/public/base-icons/not-found.svg';
+import QuestionProLogoIcon from '@/public/base-icons/qp-logo.svg';
 
 const NotFoundTemplate = () => {
   const router = useRouter();

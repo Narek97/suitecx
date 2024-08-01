@@ -1,9 +1,11 @@
 'use client';
 import React, { useCallback, useMemo, useState } from 'react';
+
 import './style.scss';
+import { Box } from '@mui/material';
+import dayjs from 'dayjs';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
-import { debounced400 } from '@/hooks/useDebounce';
-import { USER_TABLE_COLUMNS } from '@/utils/constants/table';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import CustomTable from '@/components/atoms/custom-table/custom-table';
@@ -14,17 +16,17 @@ import {
   CreateUserMutation,
   useCreateUserMutation,
 } from '@/gql/mutations/generated/createUser.generated';
-import { CreateUserInput } from '@/gql/types';
 import {
   GetOrganizationUsersQuery,
   useGetOrganizationUsersQuery,
 } from '@/gql/queries/generated/getOrganizationUsers.generated';
+import { CreateUserInput } from '@/gql/types';
+import { debounced400 } from '@/hooks/useDebounce';
 import { CREATE_USER_FORM_ELEMENTS } from '@/utils/constants/form/form-elements';
 import { CREATE_USER_VALIDATION_SCHEMA } from '@/utils/constants/form/yup-validation';
 import { USERS_LIMIT } from '@/utils/constants/pagination';
+import { USER_TABLE_COLUMNS } from '@/utils/constants/table';
 import { ObjectKeysType, OrganizationUserType } from '@/utils/ts/types/global-types';
-import { Box } from '@mui/material';
-import dayjs from 'dayjs';
 
 const UserContainer = () => {
   const [allUsers, setAllUsers] = useState<OrganizationUserType[]>([]);

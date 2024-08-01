@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react';
+
 import './style.scss';
 import QuestionMark from '@/public/base-icons/question-mark.svg';
 

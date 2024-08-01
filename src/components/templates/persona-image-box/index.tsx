@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
+
 import './style.scss';
-import { ImageSizeEnum } from '@/utils/ts/enums/global-enums';
-import { PersonaImageBoxType } from '@/utils/ts/types/persona/persona-types';
 import { Tooltip } from '@mui/material';
 import Image from 'next/image';
+
 import DefaultImage from '@/public/base-icons/user.svg';
+import { ImageSizeEnum } from '@/utils/ts/enums/global-enums';
+import { PersonaImageBoxType } from '@/utils/ts/types/persona/persona-types';
 
 interface IPersonaImageBox {
   title: string;

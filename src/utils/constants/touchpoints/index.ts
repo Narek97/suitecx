@@ -1,5 +1,6 @@
-import { JourneyMapTouchpointIconsType } from '@/utils/ts/types/journey-map/journey-map-types';
 import { v4 as uuidv4 } from 'uuid';
+
+import { JourneyMapTouchpointIconsType } from '@/utils/ts/types/journey-map/journey-map-types';
 
 export const COMMUNICATION: Array<JourneyMapTouchpointIconsType> = [
   {

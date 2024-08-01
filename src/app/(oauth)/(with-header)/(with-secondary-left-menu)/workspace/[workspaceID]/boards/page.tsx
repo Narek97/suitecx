@@ -1,5 +1,7 @@
-import type { Metadata } from 'next';
 import React from 'react';
+
+import type { Metadata } from 'next';
+
 import BoardsContainer from '@/containers/boards-container';
 
 export const metadata: Metadata = {

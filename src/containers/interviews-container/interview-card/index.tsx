@@ -1,10 +1,12 @@
 import React, { FC, useCallback, useMemo } from 'react';
+
 import './style.scss';
+import { useRouter } from 'next/navigation';
+
 import CustomLongMenu from '@/components/atoms/custom-long-menu/custom-long-menu';
 import { INTERVIEW_CARD_OPTIONS } from '@/utils/constants/options';
 import { menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
 import { InterviewType } from '@/utils/ts/types/interview/interview-type';
-import { useRouter } from 'next/navigation';
 
 interface IInterviewCard {
   interview: InterviewType;

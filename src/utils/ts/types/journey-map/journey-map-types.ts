@@ -1,4 +1,3 @@
-import { PersonaType } from '@/utils/ts/types/persona/persona-types';
 import {
   ImgScaleTypeEnum,
   MapRowTypeEnum,
@@ -7,9 +6,10 @@ import {
   MetricsTypeEnum,
   PersonaStateEnum,
 } from '@/gql/types';
-import { MapOutcomeItemType, OutcomeGroupType } from '@/utils/ts/types/outcome/outcome-type';
-import { LinkType } from '@/utils/ts/types/link/link-type';
 import { JourneyMapRowActionEnum } from '@/utils/ts/enums/global-enums';
+import { LinkType } from '@/utils/ts/types/link/link-type';
+import { MapOutcomeItemType, OutcomeGroupType } from '@/utils/ts/types/outcome/outcome-type';
+import { PersonaType } from '@/utils/ts/types/persona/persona-types';
 
 type JourneyMapCardOwnerType = {
   firstName: string;

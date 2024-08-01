@@ -1,14 +1,16 @@
-import { yupResolver } from '@hookform/resolvers/yup';
 import React, { FC, useCallback, useEffect } from 'react';
+
+import { yupResolver } from '@hookform/resolvers/yup';
 import './style.scss';
-import { CreatUpdateFormGeneralType } from '@/utils/ts/types/global-types';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { OUTCOMES_VALIDATION_SCHEMA } from '@/utils/constants/form/yup-validation';
-import { OUTCOMES_FORM_ELEMENTS } from '@/utils/constants/form/form-elements';
-import CustomInput from '@/components/atoms/custom-Input/custom-Input';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
-import CloseIcon from '@/public/base-icons/close.svg';
+import CustomInput from '@/components/atoms/custom-Input/custom-Input';
 import PinPersona from '@/containers/settings-container/outcomes/pin-persona';
+import CloseIcon from '@/public/base-icons/close.svg';
+import { OUTCOMES_FORM_ELEMENTS } from '@/utils/constants/form/form-elements';
+import { OUTCOMES_VALIDATION_SCHEMA } from '@/utils/constants/form/yup-validation';
+import { CreatUpdateFormGeneralType } from '@/utils/ts/types/global-types';
 
 interface ICreateUpdateOutcome {
   formData: any;

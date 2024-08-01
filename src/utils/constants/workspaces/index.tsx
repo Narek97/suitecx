@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+
 import JourneyIcon from '@/public/workspace/journey.svg';
 import PersonaIcon from '@/public/workspace/persona.svg';
 

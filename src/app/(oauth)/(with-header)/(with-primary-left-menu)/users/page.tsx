@@ -1,6 +1,8 @@
-import UserContainer from '@/containers/users-container';
-import type { Metadata } from 'next';
 import React from 'react';
+
+import type { Metadata } from 'next';
+
+import UserContainer from '@/containers/users-container';
 import './style.scss';
 
 export const metadata: Metadata = {

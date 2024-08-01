@@ -1,11 +1,13 @@
 'use client';
 import React, { useState } from 'react';
+
 import axios, { AxiosResponse } from 'axios';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import { useRouter } from 'next/navigation';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import { TOKEN_NAME } from '@/utils/constants/general';
 import { setCookies } from '@/utils/helpers/cookies';
-import { useRouter } from 'next/navigation';
 
 const AuthContainer = ({ code }: { code: string }) => {
   const router = useRouter();

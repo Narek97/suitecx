@@ -1,5 +1,7 @@
-import { Modal } from '@mui/material';
 import React, { FC, memo } from 'react';
+
+import { Modal } from '@mui/material';
+
 import './custom-modal.scss';
 import CloseIcon from '@/public/base-icons/close.svg';
 

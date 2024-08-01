@@ -1,9 +1,11 @@
-import { DropdownMultiSelectItemType } from '@/utils/ts/types/global-types';
+import React, { FC, memo, useRef, useState } from 'react';
+
 import { Chip, FormControl, InputLabel, MenuItem, SelectProps } from '@mui/material';
 import Select from '@mui/material/Select';
-import React, { FC, memo, useRef, useState } from 'react';
 import './custom-multi-select-drop-down.scss';
+
 import DeleteIcon from '@/public/base-icons/close.svg';
+import { DropdownMultiSelectItemType } from '@/utils/ts/types/global-types';
 
 interface ICustomMultiSelectDropDown
   extends Pick<SelectProps, 'open' | 'onOpen' | 'onClose' | 'disabled'> {

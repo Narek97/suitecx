@@ -1,5 +1,7 @@
-import type { Metadata } from 'next';
 import React from 'react';
+
+import type { Metadata } from 'next';
+
 import './style.scss';
 import SettingsContainer from '@/containers/settings-container';
 

@@ -1,10 +1,13 @@
-import BoardMaps from '@/containers/admin-container/organizations/organization/board-maps';
 import React from 'react';
+
 import './style.scss';
+
+import { useRouter } from 'next/navigation';
+
 import CustomTabs from '@/components/atoms/custom-tabs/custom-tabs';
+import BoardMaps from '@/containers/admin-container/organizations/organization/board-maps';
 import { useQueryParam } from '@/hooks/useQueryParam';
 import { ORGANIZATION_TABS, ORGANIZATION_TABS_PANELS } from '@/utils/constants/tabs';
-import { useRouter } from 'next/navigation';
 
 const Organization = () => {
   const { getQueryParamValue } = useQueryParam();

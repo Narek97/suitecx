@@ -1,9 +1,11 @@
-import { Button, ButtonProps } from '@mui/material';
 import React, { FC, memo } from 'react';
+
+import { Button, ButtonProps } from '@mui/material';
+
 import './custom-button.scss';
-import { ObjectKeysType } from '@/utils/ts/types/global-types';
-import PlusIcon from '@/public/button-icons/plus.svg';
 import LoaderIcon from '@/public/base-icons/loader.svg';
+import PlusIcon from '@/public/button-icons/plus.svg';
+import { ObjectKeysType } from '@/utils/ts/types/global-types';
 
 interface ICustomButton {
   children?: React.ReactNode;

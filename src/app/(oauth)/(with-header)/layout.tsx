@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
+
 import './style.scss';
-import BaseLayout from '@/layouts/base-layout/base-layout';
 import dynamic from 'next/dynamic';
+
+import BaseLayout from '@/layouts/base-layout/base-layout';
 
 interface IHeaderLayout {
   children: React.ReactNode;

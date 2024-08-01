@@ -1,4 +1,8 @@
 import React, { useCallback, useMemo } from 'react';
+
+import { Box } from '@mui/material';
+import { useRouter } from 'next/navigation';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import CustomTable from '@/components/atoms/custom-table/custom-table';
@@ -9,8 +13,6 @@ import {
 } from '@/gql/queries/generated/getSuiteOrgs.generated';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { ORG_USERS_TABLE } from '@/utils/constants/table';
-import { Box } from '@mui/material';
-import { useRouter } from 'next/navigation';
 
 const SuiteOrgs = () => {
   const router = useRouter();

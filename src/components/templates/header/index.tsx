@@ -1,14 +1,16 @@
 'use client';
 import React, { useCallback, useEffect, useState } from 'react';
+
 import './style.scss';
+import { WuAppHeader } from '@questionproext/wick-ui-lib';
 import { useRecoilValue } from 'recoil';
+
 import '@questionproext/wick-ui-icons/dist/icomoon/css/wick-ui-icon.css';
 import '@questionproext/wick-ui-lib/dist/esm/wick-ui-bundle.css';
 import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
-import { removeCookies } from '@/utils/helpers/cookies';
-import { TOKEN_NAME } from '@/utils/constants/general';
 import { userState } from '@/store/atoms/user.atom';
-import { WuAppHeader } from '@questionproext/wick-ui-lib';
+import { TOKEN_NAME } from '@/utils/constants/general';
+import { removeCookies } from '@/utils/helpers/cookies';
 
 const HeaderTemplate = () => {
   const user = useRecoilValue(userState);

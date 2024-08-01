@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+
 import CustomTabs from '@/components/atoms/custom-tabs/custom-tabs';
 import { useQueryParam } from '@/hooks/useQueryParam';
 import { SETTINGS_TAB_PANELS, SETTINGS_TABS } from '@/utils/constants/tabs';

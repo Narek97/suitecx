@@ -1,15 +1,20 @@
+import React, { FC, useMemo, useState } from 'react';
+
+import './style.scss';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Skeleton, Switch } from '@mui/material';
+import Image from 'next/image';
+import { FileUploader } from 'react-drag-drop-files';
+import { Controller, useFieldArray, useForm } from 'react-hook-form';
+import { useRecoilValue } from 'recoil';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomFileUploader from '@/components/atoms/custom-file-uploader/custom-file-uploader';
 import CustomFileUploader2 from '@/components/atoms/custom-file-uploader/custom-file-uploader2';
-import CustomMultiSelectDropDown from '@/components/atoms/custom-multi-select-drop-down/custom-multi-select-drop-down';
-import Image from 'next/image';
-import React, { FC, useMemo, useState } from 'react';
-import './style.scss';
-import { useRecoilValue } from 'recoil';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
 import CustomModal from '@/components/atoms/custom-modal/custom-modal';
+import CustomMultiSelectDropDown from '@/components/atoms/custom-multi-select-drop-down/custom-multi-select-drop-down';
 import ModalHeader from '@/components/templates/modal-header';
-import { Controller, useFieldArray, useForm } from 'react-hook-form';
 import {
   CreateAiJourneyModelMutation,
   useCreateAiJourneyModelMutation,
@@ -20,6 +25,7 @@ import {
 } from '@/gql/mutations/generated/updateAiJourneyModel.generated';
 import { GetOrgsQuery, useGetOrgsQuery } from '@/gql/queries/generated/getOrgs.generated';
 import { AttachmentsEnum } from '@/gql/types';
+import DeleteIcon from '@/public/operations/delete.svg';
 import { userState } from '@/store/atoms/user.atom';
 import { AI_MODEL_FORM_ELEMENTS } from '@/utils/constants/form/form-elements';
 import { CREATE_AI_MODEL_VALIDATION_SCHEMA } from '@/utils/constants/form/yup-validation';
@@ -27,10 +33,6 @@ import { PERSONA_FILE_TYPES, queryCacheTime, querySlateTime } from '@/utils/cons
 import { resizeFile } from '@/utils/helpers/resize-file';
 import { UploadFile } from '@/utils/helpers/uploader';
 import { AiModelFormType, AiModelType } from '@/utils/ts/types/ai-model/ai-model-type';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Skeleton, Switch } from '@mui/material';
-import { FileUploader } from 'react-drag-drop-files';
-import DeleteIcon from '@/public/operations/delete.svg';
 
 interface ICreateUpdateAiModelModal {
   aiModel: AiModelType | null;

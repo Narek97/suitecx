@@ -1,10 +1,18 @@
 'use client';
-import PersonaLeftMenu from '@/containers/perona-container/persona-left-menu';
-import PersonaRightSections from '@/containers/perona-container/persona-right-sections';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+
 import './style.scss';
+
+import { useQueryClient } from '@tanstack/react-query';
+import { useParams } from 'next/navigation';
+import { useSetRecoilState } from 'recoil';
+import { v4 as uuidv4 } from 'uuid';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import PersonaHeader from '@/containers/perona-container/persona-header';
+import PersonaLeftMenu from '@/containers/perona-container/persona-left-menu';
+import PersonaRightSections from '@/containers/perona-container/persona-right-sections';
 import {
   CreateDemographicInfoMutation,
   useCreateDemographicInfoMutation,
@@ -46,11 +54,6 @@ import {
   PersonaInfoType,
   PersonSectionType,
 } from '@/utils/ts/types/persona/persona-types';
-import { useQueryClient } from '@tanstack/react-query';
-import { useParams } from 'next/navigation';
-import PersonaHeader from '@/containers/perona-container/persona-header';
-import { useSetRecoilState } from 'recoil';
-import { v4 as uuidv4 } from 'uuid';
 
 const PersonaContainer = () => {
   const { personaID } = useParams();
@@ -58,7 +61,6 @@ const PersonaContainer = () => {
   const setBreadcrumb = useSetRecoilState(breadcrumbState);
 
   const [demographicInfos, setDemographicInfos] = useState<Array<PersonaDemographicInfoType>>([]);
-
   const [personaInfoState, setPersonaInfoState] = useState<PersonaInfoType | null>(null);
 
   const rightSectionRef = useRef<HTMLDivElement | null>(null);

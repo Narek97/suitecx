@@ -1,4 +1,5 @@
 import { forwardRef, memo, useCallback, useEffect, useImperativeHandle, useState } from 'react';
+
 import './color-picker.scss';
 import { ClickAwayListener } from '@mui/material';
 import { HexColorPicker as Colorful } from 'react-colorful';

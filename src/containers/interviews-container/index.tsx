@@ -1,4 +1,12 @@
 'use client';
+import React, { useCallback, useMemo, useState } from 'react';
+
+import './style.scss';
+import { Box } from '@mui/material';
+import { useParams } from 'next/navigation';
+
+import CustomButton from '@/components/atoms/custom-button/custom-button';
+import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import EmptyDataInfo from '@/components/templates/empty-data-Info';
 import ErrorBoundary from '@/components/templates/error-boundary';
@@ -6,18 +14,12 @@ import Pagination from '@/components/templates/pagination';
 import CreateInterviewModal from '@/containers/interviews-container/create-interview-modal';
 import InterviewCard from '@/containers/interviews-container/interview-card';
 import InterviewDeleteModal from '@/containers/interviews-container/interview-delete-modal';
-import { Box } from '@mui/material';
-import React, { useCallback, useMemo, useState } from 'react';
-import './style.scss';
 import {
   GetInterviewsByWorkspaceIdQuery,
   useGetInterviewsByWorkspaceIdQuery,
 } from '@/gql/queries/generated/getInterviewsByWorkspaceIdQuery.generated';
 import { INTERVIEWS_LIMIT } from '@/utils/constants/pagination';
 import { InterviewType } from '@/utils/ts/types/interview/interview-type';
-import { useParams } from 'next/navigation';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import CustomButton from '@/components/atoms/custom-button/custom-button';
 
 const InterviewsContainer = () => {
   const { workspaceID } = useParams();

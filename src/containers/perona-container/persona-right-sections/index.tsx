@@ -1,5 +1,15 @@
 import React, { FC, memo, useCallback, useEffect, useState } from 'react';
+
 import './style.scss';
+
+import { ClickAwayListener, Skeleton } from '@mui/material';
+import 'react-grid-layout/css/styles.css';
+import 'react-resizable/css/styles.css';
+import { useQueryClient } from '@tanstack/react-query';
+import { Responsive, WidthProvider } from 'react-grid-layout';
+import { useParams } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+
 import {
   DeletePersonaSectionMutation,
   useDeletePersonaSectionMutation,
@@ -9,25 +19,18 @@ import {
   useUpdatePersonaSectionMutation,
 } from '@/gql/mutations/generated/updatePersonSections.generated';
 import { debounced400 } from '@/hooks/useDebounce';
-import { snackbarState } from '@/store/atoms/snackbar.atom';
-import { PERSON_SECTION_COLORS } from '@/utils/constants/colors';
-import { getTextColorBasedOnBackground } from '@/utils/helpers/get-complementary-color';
-import { emitToSocket, socket } from '@/utils/helpers/socket-connection';
-import { ActionsEnum, EventsEnum } from '@/utils/ts/enums/global-enums';
-import { PersonSectionType } from '@/utils/ts/types/persona/persona-types';
-import { ClickAwayListener, Skeleton } from '@mui/material';
-import { useQueryClient } from '@tanstack/react-query';
-import { Responsive, WidthProvider } from 'react-grid-layout';
-import 'react-grid-layout/css/styles.css';
-import 'react-resizable/css/styles.css';
-import { useParams } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
 import ChangeColorIcon from '@/public/operations/change-color.svg';
 import CopyIcon from '@/public/operations/copy.svg';
 import DeleteIcon from '@/public/operations/delete.svg';
 import DragDropIcon from '@/public/operations/drag-drop.svg';
 import PlusIcon from '@/public/operations/plus.svg';
 import TickIcon from '@/public/operations/tick.svg';
+import { snackbarState } from '@/store/atoms/snackbar.atom';
+import { PERSON_SECTION_COLORS } from '@/utils/constants/colors';
+import { getTextColorBasedOnBackground } from '@/utils/helpers/get-complementary-color';
+import { emitToSocket, socket } from '@/utils/helpers/socket-connection';
+import { ActionsEnum, EventsEnum } from '@/utils/ts/enums/global-enums';
+import { PersonSectionType } from '@/utils/ts/types/persona/persona-types';
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 

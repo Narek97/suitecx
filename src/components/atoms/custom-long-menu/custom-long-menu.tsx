@@ -1,10 +1,12 @@
+import React, { FC, ReactNode, useCallback, useState } from 'react';
+
 import { Menu, MenuItem, Tooltip } from '@mui/material';
 import Zoom from '@mui/material/Zoom';
-import React, { FC, ReactNode, useCallback, useState } from 'react';
+
 import './custom-long-menu.scss';
 import MoreVertIcon from '@/public/base-icons/dots.svg';
-import { MenuOptionsType, ObjectKeysType } from '@/utils/ts/types/global-types';
 import { menuItemIconPositionEnum, menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
+import { MenuOptionsType, ObjectKeysType } from '@/utils/ts/types/global-types';
 
 const HORIZONTAL_MENU_SX = {
   display: 'flex',

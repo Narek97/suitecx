@@ -1,5 +1,6 @@
-import { Tooltip } from '@mui/material';
 import { FC } from 'react';
+
+import { Tooltip } from '@mui/material';
 
 interface IRowDescription {
   value: string;

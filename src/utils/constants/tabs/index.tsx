@@ -1,15 +1,17 @@
-import OrgBoards from '@/containers/admin-container/organizations/organization/org-boards';
 import React from 'react';
+
+import ErrorLogs from '@/containers/admin-container/error-logs';
 import Organizations from '@/containers/admin-container/organizations';
+import OrgBoards from '@/containers/admin-container/organizations/organization/org-boards';
 import OrgUsers from '@/containers/admin-container/organizations/organization/org-users';
+import PerformanceLogs from '@/containers/admin-container/performance-logs';
+import Outcomes from '@/containers/settings-container/outcomes';
 import AdminIcon from '@/public/left-menu-panel/admin.svg';
 import WorkforcesIcon from '@/public/left-menu-panel/folder.svg';
 import HomeIcon from '@/public/left-menu-panel/home.svg';
 import InterviewsIcon from '@/public/left-menu-panel/interview.svg';
 import SettingsIcon from '@/public/left-menu-panel/settings.svg';
 import UserIcon from '@/public/left-menu-panel/user.svg';
-import { MenuTabType, TabPanelType, TabType } from '@/utils/ts/types/global-types';
-import { TouchpointIconsEnum } from '@/utils/ts/enums/global-enums';
 import {
   COMMUNICATION,
   FINANCE,
@@ -19,9 +21,8 @@ import {
   SALES_MARKETING,
   SOCIAL_MEDIA,
 } from '@/utils/constants/touchpoints';
-import ErrorLogs from '@/containers/admin-container/error-logs';
-import PerformanceLogs from '@/containers/admin-container/performance-logs';
-import Outcomes from '@/containers/settings-container/outcomes';
+import { TouchpointIconsEnum } from '@/utils/ts/enums/global-enums';
+import { MenuTabType, TabPanelType, TabType } from '@/utils/ts/types/global-types';
 
 // admin
 export const ADMIN_TABS: TabType[] = [

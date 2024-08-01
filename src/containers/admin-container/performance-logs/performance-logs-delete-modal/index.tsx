@@ -1,12 +1,14 @@
 import { FC } from 'react';
+
 import { useSetRecoilState } from 'recoil';
-import { performanceLogsState } from '@/store/atoms/performanceLogs.atom';
+
+import CustomModal from '@/components/atoms/custom-modal/custom-modal';
+import DeleteModalFrame from '@/components/templates/delete-modal-frame';
 import {
   DeletePerformanceMutation,
   useDeletePerformanceMutation,
 } from '@/gql/mutations/generated/deletePerformancheLogs.generated';
-import CustomModal from '@/components/atoms/custom-modal/custom-modal';
-import DeleteModalFrame from '@/components/templates/delete-modal-frame';
+import { performanceLogsState } from '@/store/atoms/performanceLogs.atom';
 
 interface IPerformanceLogsDeleteModal {
   isOpen: boolean;

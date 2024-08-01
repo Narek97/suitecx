@@ -1,15 +1,17 @@
 'use client';
+import React, { useMemo } from 'react';
+
+import { useRecoilValue } from 'recoil';
+
+import CustomTabs from '@/components/atoms/custom-tabs/custom-tabs';
 import AiModel from '@/containers/admin-container/ai-model';
 import CopyMap from '@/containers/admin-container/copy-map';
 import Organization from '@/containers/admin-container/organizations/organization';
-import React, { useMemo } from 'react';
 import { useQueryParam } from '@/hooks/useQueryParam';
-import { useRecoilValue } from 'recoil';
 import { userState } from '@/store/atoms/user.atom';
-import { ADMIN_TAB_PANELS, ADMIN_TABS } from '@/utils/constants/tabs';
 import { USERS_FOR_COPY_ACTION } from '@/utils/constants/general';
+import { ADMIN_TAB_PANELS, ADMIN_TABS } from '@/utils/constants/tabs';
 import { getPageContentByKey } from '@/utils/helpers/get-page-content-by-key';
-import CustomTabs from '@/components/atoms/custom-tabs/custom-tabs';
 
 const AdminContainer = () => {
   const { getQueryParamValue, createQueryParam } = useQueryParam();

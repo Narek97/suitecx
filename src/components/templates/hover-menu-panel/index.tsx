@@ -1,12 +1,14 @@
 'use client';
 import { FC } from 'react';
+
 import './style.scss';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { MenuTabType } from '@/utils/ts/types/global-types';
-import { userState } from '@/store/atoms/user.atom';
-import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+
+import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
+import { userState } from '@/store/atoms/user.atom';
+import { MenuTabType } from '@/utils/ts/types/global-types';
 
 interface IHoverMenuPanel {
   topTabs: Array<MenuTabType>;

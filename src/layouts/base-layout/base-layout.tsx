@@ -1,20 +1,22 @@
 'use client';
 import React, { FC, useState } from 'react';
+
 import { useSetRecoilState } from 'recoil';
-import { userState } from '@/store/atoms/user.atom';
-import { getCookies, removeCookies } from '@/utils/helpers/cookies';
-import { LOGIN_ERROR_NAME, TOKEN_NAME } from '@/utils/constants/general';
+
+import CustomButton from '@/components/atoms/custom-button/custom-button';
+import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import { apiClient } from '@/gql/axiosRequest';
 import { GetMeQuery, useGetMeQuery } from '@/gql/queries/generated/getMe.generated';
+import { userState } from '@/store/atoms/user.atom';
+import { LOGIN_ERROR_NAME, TOKEN_NAME } from '@/utils/constants/general';
+import { getCookies, removeCookies } from '@/utils/helpers/cookies';
+import { generateRandomColor } from '@/utils/helpers/general';
 import {
   initiateSocketConnection,
   initiateSocketMapConnection,
 } from '@/utils/helpers/socket-connection';
 import { Usertype } from '@/utils/ts/types/global-types';
-import { generateRandomColor } from '@/utils/helpers/general';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import CustomButton from '@/components/atoms/custom-button/custom-button';
 
 interface IBaseLayout {
   children: React.ReactNode;

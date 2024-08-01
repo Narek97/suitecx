@@ -10,28 +10,30 @@ import React, {
   useRef,
   useState,
 } from 'react';
+
 import './style.scss';
-import DemographicInfoItem from '@/containers/perona-container/persona-left-menu/demographic-Info-Item';
-import PersonaGalleryModal from '@/containers/perona-container/persona-left-menu/persona-gallery-modal';
+import { Popover, Skeleton } from '@mui/material';
+import Image from 'next/image';
+
 import ColorPicker from '@/components/atoms/color-picker/color-picker';
-import { personaTypeMenuItems } from '@/utils/constants/dropdown';
-import { DEMOGRAPHIC_INFO_POPOVER } from '@/utils/constants/popover';
 import CustomDropDown from '@/components/atoms/custom-drop-down/custom-drop-down';
 import CustomFileUploader from '@/components/atoms/custom-file-uploader/custom-file-uploader';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
+import DemographicInfoItem from '@/containers/perona-container/persona-left-menu/demographic-Info-Item';
+import PersonaGalleryModal from '@/containers/perona-container/persona-left-menu/persona-gallery-modal';
 import { DemographicInfoTypeEnum } from '@/gql/types';
 import { debounced400 } from '@/hooks/useDebounce';
+import PlusIcon from '@/public/operations/plus.svg';
+import TickIcon from '@/public/operations/tick.svg';
+import XDeleteIcon from '@/public/operations/xdelete.svg';
+import { personaTypeMenuItems } from '@/utils/constants/dropdown';
 import { PERSONA_DEMOGRAPHIC_INFO_OPTIONS } from '@/utils/constants/options';
+import { DEMOGRAPHIC_INFO_POPOVER } from '@/utils/constants/popover';
 import { PersonaTypeEnum } from '@/utils/ts/enums/global-enums';
 import {
   PersonaDemographicInfoType,
   PersonaInfoType,
 } from '@/utils/ts/types/persona/persona-types';
-import Image from 'next/image';
-import { Popover, Skeleton } from '@mui/material';
-import PlusIcon from '@/public/operations/plus.svg';
-import TickIcon from '@/public/operations/tick.svg';
-import XDeleteIcon from '@/public/operations/xdelete.svg';
 
 interface IPersonaLeftMenu {
   personaInfo: PersonaInfoType;

@@ -1,5 +1,6 @@
 'use client';
 import React, { FC } from 'react';
+
 import LeftMenuPanelLayout from '@/layouts/left-menu-panel-layout/left-menu-panel-layout';
 import { MENU_PANEL_BOTTOM_TABS, PRIMARY_MENU_PANEL_TOP_TABS } from '@/utils/constants/tabs';
 

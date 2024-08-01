@@ -1,23 +1,25 @@
 'use client';
 import React, { FC, useMemo } from 'react';
-import LeftMenuPanelLayout from '@/layouts/left-menu-panel-layout/left-menu-panel-layout';
-import { MENU_PANEL_BOTTOM_TABS, SECONDARY_MENU_PANEL_TOP_TABS } from '@/utils/constants/tabs';
+
+import { useParams } from 'next/navigation';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { workspaceState } from '@/store/atoms/workspace.atom';
-import useGetOutcomeGroups from '@/hooks/useGetOutcomeGroups';
+
+import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import {
   GetBoardByIdQuery,
   useGetBoardByIdQuery,
 } from '@/gql/queries/generated/getBoardById.generated';
-import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import {
   GetWorkspaceByIdQuery,
   useGetWorkspaceByIdQuery,
 } from '@/gql/queries/generated/getWorkspaceById.generated';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import useGetOutcomeGroups from '@/hooks/useGetOutcomeGroups';
+import LeftMenuPanelLayout from '@/layouts/left-menu-panel-layout/left-menu-panel-layout';
 import AtlasIcon from '@/public/left-menu-panel/atlas.svg';
-import { useParams } from 'next/navigation';
+import { workspaceState } from '@/store/atoms/workspace.atom';
+import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
+import { MENU_PANEL_BOTTOM_TABS, SECONDARY_MENU_PANEL_TOP_TABS } from '@/utils/constants/tabs';
 
 interface IHeaderLayout {
   children: React.ReactNode;

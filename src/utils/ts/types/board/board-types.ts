@@ -1,5 +1,5 @@
-import { PinnedOutcomeGroupType } from '@/utils/ts/types/outcome/outcome-type';
 import { JourneyMapCardType } from '@/utils/ts/types/journey-map/journey-map-types';
+import { PinnedOutcomeGroupType } from '@/utils/ts/types/outcome/outcome-type';
 
 export type WorkspaceType = {
   id: number;

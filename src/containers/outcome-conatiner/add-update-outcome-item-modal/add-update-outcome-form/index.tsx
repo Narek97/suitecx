@@ -1,5 +1,10 @@
 import React, { ChangeEvent, FC, memo, useCallback, useEffect, useState } from 'react';
+
 import './style.scss';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { useRecoilValue } from 'recoil';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomDropDown from '@/components/atoms/custom-drop-down/custom-drop-down';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
@@ -34,9 +39,6 @@ import {
   OutcomeFormType,
   OutcomeGroupItemType,
 } from '@/utils/ts/types/outcome/outcome-type';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { useRecoilValue } from 'recoil';
 
 interface IAddUpdateOutcomeFormType {
   workspaceId: number;

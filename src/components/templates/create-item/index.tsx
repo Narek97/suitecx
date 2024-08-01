@@ -1,9 +1,10 @@
 import React, { FC, KeyboardEvent, useRef, useState } from 'react';
+
 import './style.scss';
-import { ObjectKeysType } from '@/utils/ts/types/global-types';
 import CustomButton from '@/components/atoms/custom-button/custom-button';
-import CloseIcon from '@/public/base-icons/close.svg';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
+import CloseIcon from '@/public/base-icons/close.svg';
+import { ObjectKeysType } from '@/utils/ts/types/global-types';
 
 interface ICreateItem {
   createButtonText: string;

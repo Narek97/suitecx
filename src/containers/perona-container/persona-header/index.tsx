@@ -1,13 +1,15 @@
 import React, { FC } from 'react';
+
 import './style.scss';
-import CustomInput from '@/components/atoms/custom-Input/custom-Input';
-import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
-import { PersonaInfoType, PersonSectionType } from '@/utils/ts/types/persona/persona-types';
 import { useParams, useRouter } from 'next/navigation';
+import { useSetRecoilState } from 'recoil';
+
+import CustomInput from '@/components/atoms/custom-Input/custom-Input';
 import BackIcon from '@/public/base-icons/arrow-left.svg';
 import PlusIcon from '@/public/operations/plus.svg';
 import JourneyIcon from '@/public/workspace/journey.svg';
-import { useSetRecoilState } from 'recoil';
+import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
+import { PersonaInfoType, PersonSectionType } from '@/utils/ts/types/persona/persona-types';
 
 interface IPersonaHeader {
   personaInfo: PersonaInfoType;

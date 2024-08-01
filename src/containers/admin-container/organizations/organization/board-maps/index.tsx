@@ -1,3 +1,7 @@
+import React, { FC, useMemo } from 'react';
+
+import { Box } from '@mui/material';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import CustomTable from '@/components/atoms/custom-table/custom-table';
@@ -9,8 +13,6 @@ import {
 import { useQueryParam } from '@/hooks/useQueryParam';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { PROJECT_MAPS_COLUMNS } from '@/utils/constants/table';
-import { Box } from '@mui/material';
-import React, { FC, useMemo } from 'react';
 
 const BoardMaps: FC<any> = () => {
   const { getQueryParamValue } = useQueryParam();

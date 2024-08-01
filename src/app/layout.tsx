@@ -1,10 +1,12 @@
-import type { Metadata } from 'next';
 import React, { Suspense } from 'react';
+
+import type { Metadata } from 'next';
+
 import '@/assets/styles/base.scss';
 import ReactQueryProvider from '@/providers/react-query-provider';
-import ThemProvider from '@/providers/them-provider';
 import RecoilProvider from '@/providers/recoil-provider';
 import SnackbarProvider from '@/providers/snackbar-provider';
+import ThemProvider from '@/providers/them-provider';
 import { firaSans } from '@/utils/constants/general';
 
 export const metadata: Metadata = {

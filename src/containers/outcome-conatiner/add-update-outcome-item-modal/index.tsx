@@ -1,8 +1,10 @@
-import AddUpdateOutcomeForm from '@/containers/outcome-conatiner/add-update-outcome-item-modal/add-update-outcome-form';
 import React, { FC, memo } from 'react';
+
 import './style.scss';
+
 import CustomModal from '@/components/atoms/custom-modal/custom-modal';
 import ModalHeader from '@/components/templates/modal-header';
+import AddUpdateOutcomeForm from '@/containers/outcome-conatiner/add-update-outcome-item-modal/add-update-outcome-form';
 import { OutcomeLevelEnum } from '@/utils/ts/enums/global-enums';
 import { MapOutcomeItemType, OutcomeGroupItemType } from '@/utils/ts/types/outcome/outcome-type';
 

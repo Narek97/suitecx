@@ -1,13 +1,15 @@
-import React, { useCallback } from 'react';
+import React, { FC, useCallback } from 'react';
+
 import './style.scss';
+
 import dayjs from 'dayjs';
 import fromNow from 'dayjs/plugin/relativeTime';
-import { FC } from 'react';
-import { WorkspaceType } from '@/utils/ts/types/global-types';
 import { useRouter } from 'next/navigation';
-import DescriptionIcon from '@/public/workspace/description.svg';
+
 import WorkspaceAnalytics from '@/components/templates/workspace-analytics';
+import DescriptionIcon from '@/public/workspace/description.svg';
 import { WorkspaceAnalyticsEnumType } from '@/utils/ts/enums/global-enums';
+import { WorkspaceType } from '@/utils/ts/types/global-types';
 
 dayjs.extend(fromNow);
 

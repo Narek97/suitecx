@@ -1,11 +1,13 @@
 import React, { FC, useMemo } from 'react';
+
 import './style.scss';
 import Image from 'next/image';
+
 import CustomLongMenu from '@/components/atoms/custom-long-menu/custom-long-menu';
+import QPLogo from '@/public/base-icons/qp-logo.svg';
 import { AI_MODEL_CARD_OPTIONS } from '@/utils/constants/options';
 import { menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
 import { AiModelType } from '@/utils/ts/types/ai-model/ai-model-type';
-import QPLogo from '@/public/base-icons/qp-logo.svg';
 
 interface IAiModelCard {
   aiModel: AiModelType;

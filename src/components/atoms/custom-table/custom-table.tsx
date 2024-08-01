@@ -1,12 +1,15 @@
-import ErrorBoundary from '@/components/templates/error-boundary';
 import React, { FC, useRef } from 'react';
+
 import './custom-table.scss';
+
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import dayjs from 'dayjs';
 import fromNow from 'dayjs/plugin/relativeTime';
-import { MenuOptionsType, TableColumnType } from '@/utils/ts/types/global-types';
+
+import ErrorBoundary from '@/components/templates/error-boundary';
 import { OrderByEnum } from '@/gql/types';
 import SortIcon from '@/public/base-icons/sort.svg';
+import { MenuOptionsType, TableColumnType } from '@/utils/ts/types/global-types';
 
 interface ICustomTable {
   type?: string;

@@ -1,5 +1,6 @@
 import './style.scss';
 import { FC } from 'react';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import ModalHeader from '@/components/templates/modal-header';
 

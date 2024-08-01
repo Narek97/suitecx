@@ -1,33 +1,35 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
+
 import './style.scss';
 import { Box, Tooltip } from '@mui/material';
+import Image from 'next/image';
 import { useRecoilState } from 'recoil';
-import { OutcomeType } from '@/utils/ts/types/outcome/outcome-type';
-import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
-import { DEFAULT_OUTCOME_ICON } from '@/utils/constants/general';
-import {
-  DeleteOutcomeGroupMutation,
-  useDeleteOutcomeGroupMutation,
-} from '@/gql/mutations/generated/deleteOutcomeGroup.generated';
+
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import CustomPopover from '@/components/atoms/custom-popover/custom-popover';
+import CustomTable from '@/components/atoms/custom-table/custom-table';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import CreateUpdateOutcome from '@/containers/settings-container/outcomes/create-update-outcome';
+import SearchNounProjectIcon from '@/containers/settings-container/outcomes/search-noun-project-icon';
 import {
   CreateOrUpdateOutcomeGroupMutation,
   useCreateOrUpdateOutcomeGroupMutation,
 } from '@/gql/mutations/generated/createOrUpdateOutcomeGroup.generated';
 import {
+  DeleteOutcomeGroupMutation,
+  useDeleteOutcomeGroupMutation,
+} from '@/gql/mutations/generated/deleteOutcomeGroup.generated';
+import {
   GetOutcomeGroupsQuery,
   useGetOutcomeGroupsQuery,
 } from '@/gql/queries/generated/getOutcomeGroups.generated';
-import { ObjectKeysType } from '@/utils/ts/types/global-types';
 import { OrderByEnum } from '@/gql/types';
-import { WORKSPACE_OUTCOMES_COLUMNS } from '@/utils/constants/table';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import CustomPopover from '@/components/atoms/custom-popover/custom-popover';
-import CustomTable from '@/components/atoms/custom-table/custom-table';
+import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
+import { DEFAULT_OUTCOME_ICON } from '@/utils/constants/general';
 import { OUTCOME_OPTIONS } from '@/utils/constants/options';
-import SearchNounProjectIcon from '@/containers/settings-container/outcomes/search-noun-project-icon';
-import CreateUpdateOutcome from '@/containers/settings-container/outcomes/create-update-outcome';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
-import Image from 'next/image';
+import { WORKSPACE_OUTCOMES_COLUMNS } from '@/utils/constants/table';
+import { ObjectKeysType } from '@/utils/ts/types/global-types';
+import { OutcomeType } from '@/utils/ts/types/outcome/outcome-type';
 
 const Outcomes = () => {
   const [outcomes, setOutcomes] = useState<OutcomeType[]>([]);

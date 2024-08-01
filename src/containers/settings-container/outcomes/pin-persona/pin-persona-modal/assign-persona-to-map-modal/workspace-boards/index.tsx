@@ -1,19 +1,21 @@
 import React, { FC, useRef, useState } from 'react';
+
 import './style.scss';
+import { Box } from '@mui/material';
 import { useParams } from 'next/navigation';
 import { useRecoilState } from 'recoil';
-import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
+
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import ErrorBoundary from '@/components/templates/error-boundary';
+import WorkspaceBoardItem from '@/containers/settings-container/outcomes/pin-persona/pin-persona-modal/assign-persona-to-map-modal/workspace-boards/workspace-board-item';
 import {
   GetBoardsForOutcomeGroupQuery,
   useInfiniteGetBoardsForOutcomeGroupQuery,
 } from '@/gql/infinite-queries/generated/getBoardsForOutcomeGroup.generated';
-import { BOARDS_LIMIT } from '@/utils/constants/pagination';
-import ErrorBoundary from '@/components/templates/error-boundary';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
 import LeftArrowIcon from '@/public/base-icons/left-secondary-arrow.svg';
-import { Box } from '@mui/material';
-import WorkspaceBoardItem from '@/containers/settings-container/outcomes/pin-persona/pin-persona-modal/assign-persona-to-map-modal/workspace-boards/workspace-board-item';
+import { outcomePinBoardsState } from '@/store/atoms/outcomePinBoards.atom';
+import { BOARDS_LIMIT } from '@/utils/constants/pagination';
 
 interface IWorkspaceBoards {
   workspaceId: number;

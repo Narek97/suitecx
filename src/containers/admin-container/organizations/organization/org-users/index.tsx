@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
-import { useQueryParam } from '@/hooks/useQueryParam';
+
+import { Box } from '@mui/material';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import CustomTable from '@/components/atoms/custom-table/custom-table';
@@ -8,9 +10,9 @@ import {
   GetSuiteUsersQuery,
   useGetSuiteUsersQuery,
 } from '@/gql/queries/generated/getSuiteUsers.generated';
+import { useQueryParam } from '@/hooks/useQueryParam';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { ORGS_USERS_TABLE } from '@/utils/constants/table';
-import { Box } from '@mui/material';
 
 const OrgUsers = () => {
   const { getQueryParamValue } = useQueryParam();

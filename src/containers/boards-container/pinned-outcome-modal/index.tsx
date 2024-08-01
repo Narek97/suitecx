@@ -1,5 +1,8 @@
 import React, { FC } from 'react';
+
 import './style.scss';
+import Image from 'next/image';
+
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import CustomModal from '@/components/atoms/custom-modal/custom-modal';
 import ModalHeader from '@/components/templates/modal-header';
@@ -7,7 +10,6 @@ import {
   GetBoardOutcomesStatQuery,
   useGetBoardOutcomesStatQuery,
 } from '@/gql/queries/generated/getBoardOutcomesStat.generated';
-import Image from 'next/image';
 
 interface IBoardPinnedOutcomesModal {
   isOpen: boolean;

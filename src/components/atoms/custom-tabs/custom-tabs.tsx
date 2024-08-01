@@ -1,10 +1,12 @@
 'use client';
 import React, { FC, Suspense } from 'react';
+
 import TabContext from '@mui/lab/TabContext';
 import TabPanel from '@mui/lab/TabPanel';
-import { TabPanelType, TabType } from '@/utils/ts/types/global-types';
 import { Tab, Tabs } from '@mui/material';
+
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import { TabPanelType, TabType } from '@/utils/ts/types/global-types';
 
 type indicatorTypes = 'linear' | 'circular';
 

@@ -1,4 +1,5 @@
 import { getCookies } from '@/utils/helpers/cookies';
+
 import { TOKEN_NAME } from '../constants/general';
 
 const token = getCookies(TOKEN_NAME);

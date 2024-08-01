@@ -1,16 +1,18 @@
 import React, { ChangeEvent, FC, useState } from 'react';
+
 import './style.scss';
+import { ClickAwayListener } from '@mui/material';
 import Image from 'next/image';
+
+import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomInput from '@/components/atoms/custom-Input/custom-Input';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import {
   GetNounProjectIconsQuery,
   useGetNounProjectIconsQuery,
 } from '@/gql/queries/generated/getNounProjectIcons.generated';
 import { debounced400 } from '@/hooks/useDebounce';
-import { ClickAwayListener } from '@mui/material';
 import { JourneyMapNounProjectIconsType } from '@/utils/ts/types/journey-map/journey-map-types';
-import CustomInput from '@/components/atoms/custom-Input/custom-Input';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 
 interface ISearchNounProjectIcon {
   onIconSelect: (url: string, searchText: string) => void;

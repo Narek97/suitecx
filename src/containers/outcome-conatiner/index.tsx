@@ -1,12 +1,16 @@
 'use client';
-import AddUpdateOutcomeItemModal from '@/containers/outcome-conatiner/add-update-outcome-item-modal';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+import { Box } from '@mui/material';
+import { useParams } from 'next/navigation';
+
 import './style.scss';
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import CustomTable from '@/components/atoms/custom-table/custom-table';
 import EmptyDataInfo from '@/components/templates/empty-data-Info';
 import Pagination from '@/components/templates/pagination';
+import AddUpdateOutcomeItemModal from '@/containers/outcome-conatiner/add-update-outcome-item-modal';
 import { useInfiniteGetOutcomeGroupQuery } from '@/gql/infinite-queries/generated/getOutcomeGroup.generated';
 import {
   DeleteOutcomeMutation,
@@ -17,8 +21,6 @@ import { OUTCOME_OPTIONS } from '@/utils/constants/options';
 import { OUTCOMES_LIMIT } from '@/utils/constants/pagination';
 import { OUTCOME_TABLE_COLUMNS } from '@/utils/constants/table';
 import { MapOutcomeItemType, OutcomeGroupItemType } from '@/utils/ts/types/outcome/outcome-type';
-import { Box } from '@mui/material';
-import { useParams } from 'next/navigation';
 
 const OutcomeContainer = () => {
   const { workspaceID, outcomeID } = useParams();

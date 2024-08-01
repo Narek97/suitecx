@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AuthContainer from '@/containers/auth-container';
 
 const Page = ({ searchParams }: { searchParams: { code: string } }) => (

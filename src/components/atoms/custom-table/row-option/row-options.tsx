@@ -1,7 +1,8 @@
 import { FC } from 'react';
+
 import './row-options.scss';
-import { MenuOptionsType } from '@/utils/ts/types/global-types';
 import CustomLongMenu from '@/components/atoms/custom-long-menu/custom-long-menu';
+import { MenuOptionsType } from '@/utils/ts/types/global-types';
 
 interface IRowOptions {
   options: MenuOptionsType[];

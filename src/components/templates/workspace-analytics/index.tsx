@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
+
 import './style.scss';
+import Image from 'next/image';
+
 import { WORKSPACE_ANALYTICS_ITEMS } from '@/utils/constants/workspaces';
 import { PinnedOutcomeGroupType } from '@/utils/ts/types/outcome/outcome-type';
-import Image from 'next/image';
 
 interface IWorkspaceAnalytics {
   showType?: string;

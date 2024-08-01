@@ -1,5 +1,12 @@
 import React, { FC, useCallback, useState } from 'react';
+
 import './style.scss';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Skeleton } from '@mui/material';
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+import { Controller, useForm } from 'react-hook-form';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomDropDown from '@/components/atoms/custom-drop-down/custom-drop-down';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
@@ -18,17 +25,12 @@ import {
   GetAiJourneyModelsQuery,
   useGetAiJourneyModelsQuery,
 } from '@/gql/queries/generated/getAiJourneyModels.generated';
+import QPLogo from '@/public/base-icons/qp-logo.svg';
 import { CREATE_INTERVIEW_VALIDATION_SCHEMA } from '@/utils/constants/form/yup-validation';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { BOARDS_LIMIT } from '@/utils/constants/pagination';
 import { DropdownSelectItemType } from '@/utils/ts/types/global-types';
 import { InterviewFormType, InterviewType } from '@/utils/ts/types/interview/interview-type';
-import { useParams } from 'next/navigation';
-import { Controller, useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Skeleton } from '@mui/material';
-import Image from 'next/image';
-import QPLogo from '@/public/base-icons/qp-logo.svg';
 
 interface ICreateInterviewModal {
   interview: InterviewType | null;

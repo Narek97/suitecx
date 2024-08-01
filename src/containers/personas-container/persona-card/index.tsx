@@ -1,12 +1,14 @@
 import React, { FC, memo, useCallback, useMemo } from 'react';
+
 import './style.scss';
-import PersonaImageBox from '@/components/templates/persona-image-box';
 import { useParams, useRouter } from 'next/navigation';
+
 import CustomLongMenu from '@/components/atoms/custom-long-menu/custom-long-menu';
+import PersonaImageBox from '@/components/templates/persona-image-box';
+import JourneyIcon from '@/public/workspace/journey.svg';
 import { PERSONA_OPTIONS } from '@/utils/constants/options';
 import { ImageSizeEnum, menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
 import { PersonaType } from '@/utils/ts/types/persona/persona-types';
-import JourneyIcon from '@/public/workspace/journey.svg';
 
 interface IPersonaCard {
   persona: PersonaType;

@@ -1,10 +1,12 @@
 import './style.scss';
 import React, { ComponentClass } from 'react';
+
 import { SortableContainer, SortableContainerProps, SortableElement } from 'react-sortable-hoc';
-import { BoardType } from '@/utils/ts/types/board/board-types';
-import { UpdateBoardInput } from '@/gql/types';
+
 import ErrorBoundary from '@/components/templates/error-boundary';
 import BoardCard from '@/containers/boards-container/sortable-boards/board-card';
+import { UpdateBoardInput } from '@/gql/types';
+import { BoardType } from '@/utils/ts/types/board/board-types';
 
 const SortableBoardComponent = SortableElement<{
   board: BoardType;

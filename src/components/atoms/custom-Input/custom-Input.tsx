@@ -1,5 +1,7 @@
-import { InputAdornment, TextField, TextFieldProps } from '@mui/material';
 import React, { FC, memo, Ref } from 'react';
+
+import { InputAdornment, TextField, TextFieldProps } from '@mui/material';
+
 import './custom-Input.scss';
 import SearchIcon from '@/public/base-icons/search.svg';
 import { ObjectKeysType } from '@/utils/ts/types/global-types';

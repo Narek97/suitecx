@@ -1,6 +1,8 @@
-import { Popover } from '@mui/material';
 import React, { FC, memo, useEffect, useState } from 'react';
+
+import { Popover } from '@mui/material';
 import { useRecoilState } from 'recoil';
+
 import { popoverState } from '@/store/atoms/popover.atom';
 
 interface IPopover {

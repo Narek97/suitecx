@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
+
 import Slider, { CustomArrowProps } from 'react-slick';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './style.scss';

@@ -1,5 +1,6 @@
 'use client';
 import React, { FC } from 'react';
+
 import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 interface IRecoilProvider {

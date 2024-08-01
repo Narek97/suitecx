@@ -1,6 +1,8 @@
 import React from 'react';
+
 import './style.scss';
 import { SortableHandle } from 'react-sortable-hoc';
+
 import DragIcon from '@/public//base-icons/drag-icon.svg';
 
 const DragHandle = SortableHandle(() => (

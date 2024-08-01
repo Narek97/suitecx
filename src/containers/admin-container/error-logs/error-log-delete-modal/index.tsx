@@ -1,12 +1,14 @@
 import { FC } from 'react';
+
 import { useSetRecoilState } from 'recoil';
-import { errorLogsState } from '@/store/atoms/errorLogs.atom';
+
+import CustomModal from '@/components/atoms/custom-modal/custom-modal';
+import DeleteModalFrame from '@/components/templates/delete-modal-frame';
 import {
   DeleteErrorLogsMutation,
   useDeleteErrorLogsMutation,
 } from '@/gql/mutations/generated/deleteErrorLogs.generated';
-import CustomModal from '@/components/atoms/custom-modal/custom-modal';
-import DeleteModalFrame from '@/components/templates/delete-modal-frame';
+import { errorLogsState } from '@/store/atoms/errorLogs.atom';
 
 interface IErrorLogDeleteModal {
   isOpen: boolean;

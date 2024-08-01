@@ -1,19 +1,21 @@
 'use client';
 import React from 'react';
+
 import './style.scss';
+import { useRecoilValue } from 'recoil';
+
 import CustomError from '@/components/atoms/custom-error/custome-error';
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
+import ErrorBoundary from '@/components/templates/error-boundary';
+import WorkspaceCard from '@/containers/workspaces-container/workspace-card';
 import {
   GetWorkspacesByOrganizationIdQuery,
   useGetWorkspacesByOrganizationIdQuery,
 } from '@/gql/queries/generated/getWorkspaces.generated';
-import { WORKSPACES_LIMIT } from '@/utils/constants/pagination';
-import { useRecoilValue } from 'recoil';
 import { userState } from '@/store/atoms/user.atom';
-import WorkspaceCard from '@/containers/workspaces-container/workspace-card';
+import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
+import { WORKSPACES_LIMIT } from '@/utils/constants/pagination';
 import { WorkspaceType } from '@/utils/ts/types/global-types';
-import ErrorBoundary from '@/components/templates/error-boundary';
 
 const WorkspacesContainer = () => {
   const user = useRecoilValue(userState);

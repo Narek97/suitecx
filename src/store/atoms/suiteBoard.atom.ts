@@ -1,5 +1,6 @@
 import { atom } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
+
 import { ArrowEndingShapesEnum, ShapesEnum } from '@/utils/ts/enums/global-enums';
 
 export const selectedShapeTypeState = atom({

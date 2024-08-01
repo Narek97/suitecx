@@ -1,6 +1,8 @@
-import PersonaContainer from '@/containers/perona-container';
-import type { Metadata } from 'next';
 import React from 'react';
+
+import type { Metadata } from 'next';
+
+import PersonaContainer from '@/containers/perona-container';
 
 export const metadata: Metadata = {
   title: 'Persona',

@@ -2,7 +2,13 @@
   "root": true,
   "extends": "next",
   "parser": "@typescript-eslint/parser",
-  "plugins": ["import", "unused-imports", "@typescript-eslint", "prettier", "react-hooks"],
+  "plugins": [
+    "import",
+    "unused-imports",
+    "@typescript-eslint",
+    "prettier",
+    "react-hooks"
+  ],
   "ignorePatterns": ["src/gql/**"],
   "overrides": [
     {
@@ -32,6 +38,29 @@
           {
             "ignoreCase": true,
             "ignoreDeclarationSort": true
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              ["builtin", "external"],
+              "internal",
+              ["parent", "sibling", "index"]
+            ],
+            "pathGroups": [
+              {
+                "pattern": "react",
+                "group": "external",
+                "position": "before"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["react"],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
           }
         ]
       }

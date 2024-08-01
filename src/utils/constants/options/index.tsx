@@ -1,5 +1,5 @@
-import { InterviewType } from '@/utils/ts/types/interview/interview-type';
 import React, { ChangeEvent } from 'react';
+
 import EyeIcon from '@/public/button-icons/eye.svg';
 import CopyIcon from '@/public/canvas/operations/copy.svg';
 import LockIcon from '@/public/canvas/operations/lock.svg';
@@ -13,21 +13,22 @@ import EditIcon from '@/public/operations/edit.svg';
 import FillIcon from '@/public/operations/fill.svg';
 import FitIcon from '@/public/operations/fit.svg';
 import ShareIcon from '@/public/operations/share.svg';
+import { JourneyMapHeaderExportEnum } from '@/utils/ts/enums/global-enums';
+import { AiModelType } from '@/utils/ts/types/ai-model/ai-model-type';
 import { BoardType } from '@/utils/ts/types/board/board-types';
 import {
   CommentButtonItemType,
   MenuOptionsType,
   NotesAndCommentsDrawerType,
 } from '@/utils/ts/types/global-types';
-import { PersonaDemographicInfoType, PersonaType } from '@/utils/ts/types/persona/persona-types';
+import { InterviewType } from '@/utils/ts/types/interview/interview-type';
 import {
   BoxItemType,
   JourneyMapCardType,
   TouchPointType,
 } from '@/utils/ts/types/journey-map/journey-map-types';
-import { JourneyMapHeaderExportEnum } from '@/utils/ts/enums/global-enums';
 import { LinkType } from '@/utils/ts/types/link/link-type';
-import { AiModelType } from '@/utils/ts/types/ai-model/ai-model-type';
+import { PersonaDemographicInfoType, PersonaType } from '@/utils/ts/types/persona/persona-types';
 
 const BOARD_CARD_OPTIONS = ({
   onHandleEdit,

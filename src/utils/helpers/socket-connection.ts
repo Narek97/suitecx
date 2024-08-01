@@ -1,6 +1,8 @@
 import { io } from 'socket.io-client';
-import { TOKEN_NAME } from '../constants/general';
+
 import { getCookies } from '@/utils/helpers/cookies';
+
+import { TOKEN_NAME } from '../constants/general';
 
 export let socket: any;
 export let socketMap: any;

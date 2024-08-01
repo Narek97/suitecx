@@ -1,22 +1,24 @@
 import { useCallback, useMemo, useState } from 'react';
+
 import './style.scss';
+import { Box } from '@mui/material';
 import { useRecoilState } from 'recoil';
+
+import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import CustomTable from '@/components/atoms/custom-table/custom-table';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import PerformanceLogsDeleteModal from '@/containers/admin-container/performance-logs/performance-logs-delete-modal';
+import PerformanceLogsQueryModal from '@/containers/admin-container/performance-logs/performance-logs-query-modal';
 import {
   GetPerformanceLogsQuery,
   useInfiniteGetPerformanceLogsQuery,
 } from '@/gql/infinite-queries/generated/getPerformance.generated';
 import { performanceLogsState } from '@/store/atoms/performanceLogs.atom';
-import { PERFORMANCE_LOGS_LIMIT } from '@/utils/constants/pagination';
-import { PerformanceLogsType } from '@/utils/ts/types/global-types';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
+import { PERFORMANCE_LOGS_LIMIT } from '@/utils/constants/pagination';
 import { ADMIN_PERFORMANCE_TABLE_COLUMNS } from '@/utils/constants/table';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
-import { Box } from '@mui/material';
-import CustomTable from '@/components/atoms/custom-table/custom-table';
-import PerformanceLogsDeleteModal from '@/containers/admin-container/performance-logs/performance-logs-delete-modal';
-import PerformanceLogsQueryModal from '@/containers/admin-container/performance-logs/performance-logs-query-modal';
+import { PerformanceLogsType } from '@/utils/ts/types/global-types';
 
 const PerformanceLogs = () => {
   const [performanceLogs, setPerformanceLogs] = useRecoilState(performanceLogsState);

@@ -1,11 +1,13 @@
 import React, { FC, useCallback, useEffect } from 'react';
+
 import './style.scss';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
-import { CreatUpdateFormGeneralType } from '@/utils/ts/types/global-types';
-import { yupResolver } from '@hookform/resolvers/yup';
 import CloseIcon from '@/public/base-icons/close.svg';
+import { CreatUpdateFormGeneralType } from '@/utils/ts/types/global-types';
 
 interface ICreateUpdateUser {
   createButtonText: string;

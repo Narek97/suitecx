@@ -1,3 +1,11 @@
+import React, { FC } from 'react';
+
+import './style.scss';
+
+import { useQueryClient } from '@tanstack/react-query';
+import { useParams } from 'next/navigation';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomModal from '@/components/atoms/custom-modal/custom-modal';
 import ModalHeader from '@/components/templates/modal-header';
@@ -6,11 +14,6 @@ import { DeleteErrorLogsMutation } from '@/gql/mutations/generated/deleteErrorLo
 import { copyMapState } from '@/store/atoms/copyMap.atom';
 import { snackbarState } from '@/store/atoms/snackbar.atom';
 import { CopyMapLevelTemplateEnum, MapCopyLevelEnum } from '@/utils/ts/enums/global-enums';
-import { useParams } from 'next/navigation';
-import React, { FC } from 'react';
-import './style.scss';
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { useQueryClient } from '@tanstack/react-query';
 
 interface IAssignPersonaToMapModal {
   isOpen: boolean;

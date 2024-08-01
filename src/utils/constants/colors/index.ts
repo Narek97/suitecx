@@ -1,6 +1,6 @@
-import { ColorType, IDType, ObjectKeysType } from '@/ts/types/globalTypes';
+import { ObjectKeysType } from '@/utils/ts/types/global-types';
 
-const TOOLS_COLORS: Array<{ color: ColorType }> = [
+const TOOLS_COLORS: Array<{ color: string }> = [
   { color: '#9825fb' },
   { color: '#fc0d1b' },
   { color: '#fffd38' },
@@ -9,7 +9,7 @@ const TOOLS_COLORS: Array<{ color: ColorType }> = [
   { color: '#12892b' },
 ];
 
-const DRAW_COLORS: Array<{ color: ColorType }> = [
+const DRAW_COLORS: Array<{ color: string }> = [
   { color: '#000000' },
   { color: '#df4b26' },
   { color: '#1b87e6' },
@@ -18,9 +18,9 @@ const DRAW_COLORS: Array<{ color: ColorType }> = [
 ];
 
 const NOTE_COLORS: Array<{
-  id: IDType;
-  color: ColorType;
-  foldedAngleColor: ColorType;
+  id: number;
+  color: string;
+  foldedAngleColor: string;
 }> = [
   { id: 1, color: '#FFE589', foldedAngleColor: '#f8d251' },
   { id: 2, color: '#9BE3E3', foldedAngleColor: '#4cd9d9' },
@@ -48,7 +48,7 @@ const PRODUCT_SWITCHER_HOVER_COLORS: ObjectKeysType = {
 
 const PERSON_SECTION_COLORS: Array<{
   id: number;
-  color: ColorType;
+  color: string;
 }> = [
   { id: 1, color: '#ffffff' },
   { id: 2, color: '#545E6B' },

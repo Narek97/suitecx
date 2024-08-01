@@ -1,34 +1,36 @@
 'use client';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
+import { Box } from '@mui/material';
+import { useParams } from 'next/navigation';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+
+import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import CreateItem from '@/components/templates/create-item';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
+import Pagination from '@/components/templates/pagination';
 import BoardDeleteModal from '@/containers/boards-container/board-delete-modal';
 import BoardPinnedOutcomesModal from '@/containers/boards-container/pinned-outcome-modal';
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import './style.scss';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
-import { BoardType } from '@/utils/ts/types/board/board-types';
-import { useParams } from 'next/navigation';
+import SortableBoards from '@/containers/boards-container/sortable-boards';
 import {
   GetMyBoardsQuery,
   useGetMyBoardsQuery,
 } from '@/gql/infinite-queries/generated/getBoards.generated';
-import { BOARDS_LIMIT } from '@/utils/constants/pagination';
-import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { useCreateBoardMutation } from '@/gql/mutations/generated/createBoard.generated';
-import { CreateBoardInput, UpdateBoardInput } from '@/gql/types';
-import { ActionsEnum } from '@/utils/ts/enums/global-enums';
 import {
   UpdateBoardMutation,
   useUpdateBoardMutation,
 } from '@/gql/mutations/generated/updateBoard.generated';
-import { arrayMove } from '@/utils/helpers/general';
-import CustomError from '@/components/atoms/custom-error/custome-error';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
-import { Box } from '@mui/material';
-import SortableBoards from '@/containers/boards-container/sortable-boards';
-import CreateItem from '@/components/templates/create-item';
+import { CreateBoardInput, UpdateBoardInput } from '@/gql/types';
+import { breadcrumbState } from '@/store/atoms/breadcrumb.atom';
 import { workspaceState } from '@/store/atoms/workspace.atom';
-import Pagination from '@/components/templates/pagination';
+import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
+import { BOARDS_LIMIT } from '@/utils/constants/pagination';
+import { arrayMove } from '@/utils/helpers/general';
+import { ActionsEnum } from '@/utils/ts/enums/global-enums';
+import { BoardType } from '@/utils/ts/types/board/board-types';
 
 const BoardsContainer = () => {
   const workspace = useRecoilValue(workspaceState);

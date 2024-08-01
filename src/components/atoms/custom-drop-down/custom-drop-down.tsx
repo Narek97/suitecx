@@ -1,12 +1,14 @@
+import React, { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
+
+import './custom-drop-down.scss';
+import { FormControl, InputLabel, ListSubheader, MenuItem, SelectProps } from '@mui/material';
+import Select from '@mui/material/Select';
+
 import { getPageContentByKey } from '@/utils/helpers/get-page-content-by-key';
 import {
   DropdownSelectItemType,
   DropdownWithCategorySelectItemType,
 } from '@/utils/ts/types/global-types';
-import React, { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
-import './custom-drop-down.scss';
-import { FormControl, InputLabel, ListSubheader, MenuItem, SelectProps } from '@mui/material';
-import Select from '@mui/material/Select';
 
 interface ICustomDropDown extends Pick<SelectProps, 'open' | 'onOpen' | 'onClose' | 'disabled'> {
   id?: string;

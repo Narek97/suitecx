@@ -1,8 +1,9 @@
 'use client';
 import { FC, ReactNode } from 'react';
+
 import './left-menu-panel-layout.scss';
-import { MenuTabType } from '@/utils/ts/types/global-types';
 import HoverMenuPanel from '@/components/templates/hover-menu-panel';
+import { MenuTabType } from '@/utils/ts/types/global-types';
 
 interface ILeftMenuPanelLayout {
   children: ReactNode;

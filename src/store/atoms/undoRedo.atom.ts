@@ -1,6 +1,7 @@
 import { atom } from 'recoil';
-import { ActionsEnum, JourneyMapRowActionEnum } from '@/utils/ts/enums/global-enums';
 import { v4 as uuidv4 } from 'uuid';
+
+import { ActionsEnum, JourneyMapRowActionEnum } from '@/utils/ts/enums/global-enums';
 
 export const undoActionsState = atom({
   key: uuidv4(),

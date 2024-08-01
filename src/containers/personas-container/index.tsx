@@ -1,10 +1,19 @@
 'use client';
 import React, { useCallback, useEffect, useState } from 'react';
+
 import './style.scss';
-import PersonaDeleteModal from '@/containers/personas-container/persona-delete-modal';
+import { Box } from '@mui/material';
+import { useParams, useRouter } from 'next/navigation';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+
+import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomError from '@/components/atoms/custom-error/custome-error';
+import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import EmptyDataInfo from '@/components/templates/empty-data-Info';
 import ErrorBoundary from '@/components/templates/error-boundary';
+import Pagination from '@/components/templates/pagination';
 import PersonaCard from '@/containers/personas-container/persona-card';
+import PersonaDeleteModal from '@/containers/personas-container/persona-delete-modal';
 import { useCreatePersonaMutation } from '@/gql/mutations/generated/createPersona.generated';
 import {
   GetPersonasQuery,
@@ -15,13 +24,6 @@ import { workspaceState } from '@/store/atoms/workspace.atom';
 import { queryCacheTime, querySlateTime } from '@/utils/constants/general';
 import { BOARDS_LIMIT, PERSONAS_LIMIT } from '@/utils/constants/pagination';
 import { PersonaType } from '@/utils/ts/types/persona/persona-types';
-import CustomButton from '@/components/atoms/custom-button/custom-button';
-import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
-import EmptyDataInfo from '@/components/templates/empty-data-Info';
-import Pagination from '@/components/templates/pagination';
-import { Box } from '@mui/material';
-import { useParams, useRouter } from 'next/navigation';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
 
 const PersonasContainer = () => {
   const { workspaceID } = useParams();
