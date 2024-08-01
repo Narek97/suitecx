@@ -1,0 +1,133 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.perosna-left-menu {
+  &--content {
+    display: flex;
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  &--avatar-frame {
+    @include flex-center-center;
+    width: 112px;
+    height: 112px;
+    padding: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &--avatar-border {
+    @include flex-center-center;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: $BASE-WHITE-COLOR;
+  }
+
+  &--avatar {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &--color-type-block {
+    @include flex-column-between;
+    justify-content: flex-end;
+    position: relative;
+    gap: 16px;
+    flex: 1;
+  }
+
+  &--color-block,
+  &--type-block {
+    flex-direction: row;
+    justify-content: start !important;
+    gap: 8px;
+    @include flex-center-center;
+  }
+
+  &--type-block {
+    position: relative;
+    .custom-type-input {
+      top: 26px;
+      z-index: 1;
+      position: absolute;
+      width: 90%;
+    }
+  }
+
+  &--block-2 {
+    margin-top: 32px;
+  }
+
+  &--block-2-title {
+    font-weight: 500;
+  }
+
+  &--demographic-info-block {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+    padding-right: 8px;
+    overflow: auto;
+  }
+
+  &--demographic-info-popover {
+    height: auto;
+    max-height: 100px;
+    overflow: auto;
+    border: 1px solid $BASE_BLUE_COLOR;
+    background-color: $BASE-WHITE-COLOR;
+  }
+
+  &--demographic-info-popover-item {
+    width: 100px;
+    height: 32px;
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    color: $BASE_GRAY_COLOR;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
+  }
+
+  &--demographic-info-create-loading-block {
+    position: relative;
+    height: 34px;
+  }
+
+  &--demographic-info-create-block,
+  &--demographic-info-actions {
+    @include flex-center-center;
+    gap: 18px;
+  }
+
+  &--demographic-info-create-block {
+    height: 0;
+    overflow: hidden;
+    margin: 16px 0;
+    transition: 0.3s;
+  }
+
+  &--demographic-open-info-create-block {
+    height: 34px;
+  }
+
+  &--demographic-none-info-create-block {
+    display: none;
+  }
+  .custom-file-uploader {
+    &:hover {
+      @include svg-fill($BASE-WHITE-COLOR);
+      background-color: #7a7a7a;
+      color: $BASE-WHITE-COLOR;
+    }
+  }
+}

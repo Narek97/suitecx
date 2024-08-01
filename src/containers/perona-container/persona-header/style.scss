@@ -1,0 +1,35 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+
+.persona-header {
+  @include flex-center-between;
+  padding: 0 20px;
+  height: 48px;
+  border-bottom: 1px solid $BASE-LIGHT-GRAY-COLOR;
+
+  &--left-block,
+  &--right-block {
+    @include flex-center-center;
+    gap: 10px;
+  }
+
+  &--left-block {
+    font-size: 24px;
+  }
+
+  &--right-block {
+    font-size: 14px;
+    font-weight: 500;
+    color: $BASE_BLUE_COLOR;
+  }
+
+  &--go-back-btn {
+    @include flex-center-center;
+    width: 32px;
+    height: 32px;
+    &:hover {
+      background-color: #eeeeee;
+    }
+  }
+}

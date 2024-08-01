@@ -1,3 +1,4 @@
+import ErrorBoundary from '@/components/templates/error-boundary';
 import React, { FC, useRef } from 'react';
 import './custom-table.scss';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
@@ -138,59 +139,61 @@ const CustomTable: FC<ICustomTable> = ({
         ) : null}
         <TableBody>
           {rows.map(row => (
-            <TableRow
-              hover
-              onClick={() => {
-                onClickRow && onClickRow(row);
-              }}
-              data-testid={`table-row-test-id`}
-              className={`cursor-pointer ${processingItemId === row?.id ? 'processing-item' : ''}`}
-              role="checkbox"
-              sx={{
-                height: '40px',
-              }}
-              key={row.id}>
-              {columns.map(column => {
-                const value = row[column.id];
-                return (
-                  <TableCell
-                    className={'custom-table--td'}
-                    key={column.id}
-                    align={column.align || align}
-                    sx={{
-                      backgroundColor: '#ffffff',
-                      padding: column.id === 'operation' ? '0px' : '0 16px',
-                      fontSize: 12,
-                      borderBottom: '4px solid #f2f2f4',
-                      color: '#545e6b',
-                      ...column.style,
-                    }}>
-                    {column.id === 'operation' &&
-                    (!permissionCheckKey || row[permissionCheckKey]) ? (
-                      <div className={'operations'}>
-                        {options?.map(itm => (
-                          <button
-                            data-testid={`table-${itm.name?.toLowerCase()}-item-test-id`}
-                            key={itm.name}
-                            onClick={() => itm.onClick && itm.onClick(row)}
-                            className={'operations-item'}>
-                            {itm?.icon}
-                          </button>
-                        ))}
-                      </div>
-                    ) : (
-                      <span className={`custom-table--${column.id} ${getStyle(column, value)}`}>
-                        {column?.renderFunction
-                          ? column.renderFunction(row)
-                          : column.label === 'created date' || column.label === 'updated date'
-                            ? dayjs(value).format('DD-MM-YYYY')
-                            : value}
-                      </span>
-                    )}
-                  </TableCell>
-                );
-              })}
-            </TableRow>
+            <ErrorBoundary key={row.id}>
+              <TableRow
+                hover
+                onClick={() => {
+                  onClickRow && onClickRow(row);
+                }}
+                data-testid={`table-row-test-id`}
+                className={`cursor-pointer ${processingItemId === row?.id ? 'processing-item' : ''}`}
+                role="checkbox"
+                sx={{
+                  height: '40px',
+                }}
+                key={row.id}>
+                {columns.map(column => {
+                  const value = row[column.id];
+                  return (
+                    <TableCell
+                      className={'custom-table--td'}
+                      key={column.id}
+                      align={column.align || align}
+                      sx={{
+                        backgroundColor: '#ffffff',
+                        padding: column.id === 'operation' ? '0px' : '0 16px',
+                        fontSize: 12,
+                        borderBottom: '4px solid #f2f2f4',
+                        color: '#545e6b',
+                        ...column.style,
+                      }}>
+                      {column.id === 'operation' &&
+                      (!permissionCheckKey || row[permissionCheckKey]) ? (
+                        <div className={'operations'}>
+                          {options?.map(itm => (
+                            <button
+                              data-testid={`table-${itm.name?.toLowerCase()}-item-test-id`}
+                              key={itm.name}
+                              onClick={() => itm.onClick && itm.onClick(row)}
+                              className={'operations-item'}>
+                              {itm?.icon}
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <span className={`custom-table--${column.id} ${getStyle(column, value)}`}>
+                          {column?.renderFunction
+                            ? column.renderFunction(row)
+                            : column.label === 'created date' || column.label === 'updated date'
+                              ? dayjs(value).format('DD-MM-YYYY')
+                              : value}
+                        </span>
+                      )}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            </ErrorBoundary>
           ))}
         </TableBody>
       </Table>

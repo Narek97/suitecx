@@ -1,0 +1,26 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.color-picker {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+
+  &-circle {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border-radius: 50px;
+    @include base-shadow();
+  }
+
+  .wheel-color-picker {
+    top: 20px;
+    left: 44px;
+    position: absolute;
+    z-index: 11;
+    border-radius: 50%;
+    @include base-shadow();
+  }
+}

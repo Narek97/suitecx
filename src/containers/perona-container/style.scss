@@ -1,0 +1,42 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.persona-container {
+  height: 100%;
+  color: $BASE_GRAY_COLOR;
+
+  .persona-header--add-section-btn,
+  .perosna-left-menu--add-demographic-info {
+    @include flex-center-center;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    border: 1px solid $BASE_BLUE_COLOR;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $BASE_BLUE_COLOR;
+      @include svg-fill($BASE-WHITE-COLOR);
+    }
+  }
+
+  &--body {
+    display: flex;
+    height: calc(100% - 48px);
+    background-color: $BASE_BG_COLOR;
+  }
+
+  &--left-menu {
+    position: relative;
+    padding: 30px;
+    min-width: 400px;
+    background-color: $BASE-WHITE-COLOR;
+  }
+
+  &--right-sections {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    overflow: auto;
+  }
+}

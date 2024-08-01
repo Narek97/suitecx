@@ -1,0 +1,32 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.demographic-info-item {
+  &:hover {
+    .custom-vertical-menu {
+      display: flex;
+    }
+  }
+
+  &--key {
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px 0;
+    width: 80px;
+  }
+
+  &--options-block {
+    @include flex-center-between;
+
+    input {
+      padding: 8px 0;
+      &:disabled {
+        -webkit-text-fill-color: $BASE_GRAY_COLOR;
+      }
+    }
+  }
+
+  &--input {
+    width: 100%;
+  }
+}

@@ -5,7 +5,7 @@ import fromNow from 'dayjs/plugin/relativeTime';
 import { FC } from 'react';
 import { WorkspaceType } from '@/utils/ts/types/global-types';
 import { useRouter } from 'next/navigation';
-import Description from '@/public/workspace/description.svg';
+import DescriptionIcon from '@/public/workspace/description.svg';
 import WorkspaceAnalytics from '@/components/templates/workspace-analytics';
 import { WorkspaceAnalyticsEnumType } from '@/utils/ts/enums/global-enums';
 
@@ -34,7 +34,7 @@ const WorkspaceCard: FC<IWorkspaceItem> = ({ workspace }) => {
         </p>
         {workspace.description && (
           <div className={'workspace-card--info--description'}>
-            <Description />
+            <DescriptionIcon />
             <p>{workspace.description}</p>
           </div>
         )}
