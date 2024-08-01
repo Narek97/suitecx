@@ -197,7 +197,7 @@ const UserContainer = () => {
       {isLoading ? (
         <CustomLoader />
       ) : (
-        <div className={'org-users-container--table-block'}>
+        <div className={'users-container--table-block'}>
           {users.length ? (
             <CustomTable isTableHead={true} rows={rows} columns={columns} />
           ) : (

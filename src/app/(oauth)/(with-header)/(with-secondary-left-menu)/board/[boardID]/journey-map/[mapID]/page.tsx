@@ -2,16 +2,16 @@ import React from 'react';
 
 import type { Metadata } from 'next';
 
-import InterviewsContainer from '@/containers/interviews-container';
+import JourneyMapContainer from '@/containers/journey-map-container';
 
 export const metadata: Metadata = {
-  title: 'Interviews',
+  title: 'Journey map',
 };
 
 const Page = () => {
   return (
     <>
-      <InterviewsContainer />
+      <JourneyMapContainer />
     </>
   );
 };

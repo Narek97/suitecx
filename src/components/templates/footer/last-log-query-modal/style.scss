@@ -1,0 +1,38 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.last-user-query-modal {
+  padding: 12px;
+  height: 330px;
+  color: $BASE_GRAY_COLOR;
+  overflow: auto;
+  margin: 8px;
+
+  &--query-item {
+    margin-bottom: 14px;
+  }
+
+  &--title {
+    color: $BASE_GRAY_COLOR;
+  }
+
+  &--key {
+    font-size: 14px;
+  }
+
+  &--time-key,
+  &--size-key {
+    padding: 6px;
+    border-radius: 4px;
+  }
+
+  &--sql-key {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    padding-right: 20px;
+    margin-top: 10px;
+    max-height: 86px;
+  }
+}

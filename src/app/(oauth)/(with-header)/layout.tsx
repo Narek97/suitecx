@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
 
 import './style.scss';
+
 import dynamic from 'next/dynamic';
 
+import Footer from '@/components/templates/footer';
 import BaseLayout from '@/layouts/base-layout/base-layout';
 
 interface IHeaderLayout {
@@ -18,6 +20,7 @@ const HeaderLayout: FC<IHeaderLayout> = ({ children }) => {
           <Header />
         </header>
         <main className={'base-layout--main'}>{children}</main>
+        <Footer />
       </BaseLayout>
     </>
   );

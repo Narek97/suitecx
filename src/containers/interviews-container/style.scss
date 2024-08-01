@@ -1,5 +1,7 @@
 .interviews-container {
   padding: 8px 32px;
+  height: 100%;
+
   &--create-section {
     padding: 16px 0 32px;
     border-bottom: 1px solid #d8d8d8;
@@ -8,6 +10,8 @@
     padding: 0 26px;
     margin-top: 20px;
     &--list {
+      height: calc(100dvh - 234px);
+      overflow: auto;
       display: flex;
       flex-wrap: wrap;
       gap: 16px;

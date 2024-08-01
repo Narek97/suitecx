@@ -1,0 +1,32 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.footer {
+  @include flex-center-between;
+  height: 40px;
+  font-size: 12px;
+  padding: 0 16px 0 66px;
+  color: $BASE_GRAY_COLOR;
+  background-color: #f2f2f2;
+  border-top: 1px solid $BASE-LIGHT-GRAY-COLOR;
+
+  &--version-btn {
+    order: 2;
+    padding: 0 20px;
+    color: $BASE_BLUE_COLOR;
+  }
+
+  &--right-block {
+    @include flex-center;
+    gap: 32px;
+    &--loading {
+      @include flex-center;
+      gap: 4px;
+      svg {
+        circle {
+          stroke: $BASE_GRAY_COLOR;
+        }
+      }
+    }
+  }
+}
