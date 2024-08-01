@@ -1,3 +1,5 @@
+import JourneyCard from '@/containers/journies-conatiner/sortable-journeys/journey-card';
+
 import React, { FC, memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import './style.scss';
@@ -12,7 +14,7 @@ import WorkspaceAnalytics from '@/components/templates/workspace-analytics';
 import { UpdateBoardInput } from '@/gql/types';
 import { debounced400 } from '@/hooks/useDebounce';
 import { BOARD_CARD_OPTIONS } from '@/utils/constants/options';
-import { menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
+import { JourneyViewTypeEnum, menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
 import { BoardType } from '@/utils/ts/types/board/board-types';
 
 dayjs.extend(fromNow);
@@ -161,20 +163,20 @@ const BoardCard: FC<IBoardCard> = memo(
         <ul className={'board-card--right'}>
           {board?.journeyMapCount > 0 ? (
             <>
-              {/*<div className={'board-card--right-journies'}>*/}
-              {/*  {board?.maps*/}
-              {/*    ?.slice(0, maxCardNumber)*/}
-              {/*    ?.map(mapItem => (*/}
-              {/*      <Index*/}
-              {/*        key={mapItem?.id}*/}
-              {/*        viewType={JourneyViewTypeEnum.BOARD}*/}
-              {/*        map={mapItem}*/}
-              {/*        boardId={board?.id}*/}
-              {/*        onHandleDelete={() => {}}*/}
-              {/*        onHandleCopy={() => {}}*/}
-              {/*      />*/}
-              {/*    ))}*/}
-              {/*</div>*/}
+              <div className={'board-card--right-journies'}>
+                {board?.maps
+                  ?.slice(0, maxCardNumber)
+                  ?.map(mapItem => (
+                    <JourneyCard
+                      key={mapItem?.id}
+                      viewType={JourneyViewTypeEnum.BOARD}
+                      map={mapItem}
+                      boardID={+board?.id}
+                      onHandleDelete={() => {}}
+                      onHandleCopy={() => {}}
+                    />
+                  ))}
+              </div>
               {board?.journeyMapCount > maxCardNumber && (
                 <li className={'board-card--right-more-block'}>
                   and {board?.journeyMapCount - maxCardNumber} more

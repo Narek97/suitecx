@@ -1,5 +1,7 @@
 import React, { ComponentClass } from 'react';
 
+import { useParams } from 'next/navigation';
+
 import './style.scss';
 
 import {
@@ -25,13 +27,15 @@ const SortableJourneyMapComponent = SortableElement<{
   onHandleDelete: (data: JourneyMapCardType) => void;
   onHandleCopy: (data: JourneyMapCardType) => void;
 }>(({ map, onHandleDelete, onHandleCopy }: ISortableJourneyMapComponentProps) => {
+  const { boardID } = useParams();
   return (
-    <li data-testid="journey-item-test-id">
+    <li data-testid="journey-item-test-id" key={map.id}>
       <ErrorBoundary>
         <JourneyCard
           key={map.id}
           map={map}
           viewType={JourneyViewTypeEnum.STANDARD}
+          boardID={+boardID!}
           onHandleDelete={onHandleDelete}
           onHandleCopy={onHandleCopy}
         />

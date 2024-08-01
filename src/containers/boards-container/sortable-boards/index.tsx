@@ -64,10 +64,10 @@ const SortableBoards: ComponentClass<SortableComponentProps & SortableContainerP
         <ul className={'sortable-boards'}>
           {items.map((board, index) => (
             <SortableBoardComponent
+              key={board?.id}
               updateBoardName={updateBoardName}
               onToggleBoardDeleteModal={onToggleBoardDeleteModal}
               onToggleAllPinnedOutcomesModal={onToggleAllPinnedOutcomesModal}
-              key={board?.id}
               index={index}
               board={board}
             />
