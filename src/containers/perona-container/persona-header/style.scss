@@ -1,7 +1,6 @@
 @import 'src/assets/styles/mixins';
 @import 'src/assets/styles/variables';
 
-
 .persona-header {
   @include flex-center-between;
   padding: 0 20px;

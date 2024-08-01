@@ -41,6 +41,7 @@
     @include flex-center;
     gap: 4px;
     font-size: 20px;
+    cursor: pointer;
     &:hover {
       color: $BASE_BLUE_COLOR;
     }

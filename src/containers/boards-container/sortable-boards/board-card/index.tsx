@@ -165,7 +165,7 @@ const BoardCard: FC<IBoardCard> = memo(
               {/*  {board?.maps*/}
               {/*    ?.slice(0, maxCardNumber)*/}
               {/*    ?.map(mapItem => (*/}
-              {/*      <JourneyCard*/}
+              {/*      <Index*/}
               {/*        key={mapItem?.id}*/}
               {/*        viewType={JourneyViewTypeEnum.BOARD}*/}
               {/*        map={mapItem}*/}

@@ -359,8 +359,7 @@
   background-color: $BASE-LIGHT-GRAY-COLOR;
 }
 
-
-@mixin map-card-header-hover(){
+@mixin map-card-header-hover() {
   &:hover {
     .custom-vertical-menu {
       display: flex;
@@ -381,7 +380,7 @@
   }
 }
 
-@mixin map-row(){
+@mixin map-row() {
   display: flex;
   gap: 2px;
   min-height: 84px;
@@ -390,24 +389,24 @@
     min-height: 48px;
   }
 
-  &--column{
+  &--column {
     position: relative;
     padding: 8px;
     background-color: $BASE-WHITE-COLOR;
     border-bottom: 2px solid $BASE-EXTRA-LIGHT-GRAY-2;
 
-    &:hover{
-      .add-row-box-element-button{
+    &:hover {
+      .add-row-box-element-button {
         visibility: visible;
       }
     }
 
-    &--item{
+    &--item {
       height: 100%;
     }
   }
 
-  &--card{
+  &--card {
     width: 100%;
     margin-bottom: 8px;
   }

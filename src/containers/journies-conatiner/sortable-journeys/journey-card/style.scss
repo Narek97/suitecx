@@ -1,0 +1,74 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.journey-card {
+  position: relative;
+  color: $BASE_GRAY_COLOR;
+  background: $BASE-WHITE-COLOR;
+  padding: 8px 24px;
+  @include card-borders;
+  border-left: 1px solid transparent;
+
+  &-board-view {
+    width: 244px;
+    height: 136px;
+    border-left: 1px solid $BASE-LIGHT-GRAY-COLOR;
+  }
+
+  .board-view {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &--name {
+    width: 200px;
+    @include reduce-text(200px);
+    font-weight: 500;
+    color: $BASE_BLUE_COLOR;
+  }
+
+  &--content {
+    &--create-details {
+      line-height: 16px;
+      font-size: 12px;
+    }
+
+    &--images-block {
+      height: 32px;
+      margin: 32px 0;
+    }
+
+    &--last-update {
+      font-size: 12px;
+    }
+  }
+
+  &--menu {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  &--name-block {
+    line-height: 32px;
+    @include reduce-text(100%);
+  }
+
+  .persona-images {
+    .custom-vertical-menu {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    border-left: 1px solid $BASE_BLUE_COLOR;
+
+    .drag-handle-area {
+      background: $BASE_BLUE_COLOR;
+
+      &--icon {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 
+import './style.scss';
+
 import type { Metadata } from 'next';
 
 import UserContainer from '@/containers/users-container';
-import './style.scss';
 
 export const metadata: Metadata = {
   title: 'Users',

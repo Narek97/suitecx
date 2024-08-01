@@ -1,0 +1,40 @@
+@import 'src/assets/styles/mixins';
+
+.persona-images {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  &--card {
+    padding: 2px;
+    border-radius: 2px;
+  }
+
+  .persona-menu-item {
+    display: flex;
+    justify-content: space-between;
+    .delete-btn {
+      &:hover {
+        @include svg-fill('black');
+      }
+    }
+  }
+
+  .active-menu-button {
+    background: $BASE_BLUE_COLOR;
+    color: $BASE_WHITE-COLOR;
+  }
+}
+
+.more-items {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  background: #f5f5f5;
+  color: #9b9b9b;
+  @include flex-center-center;
+}

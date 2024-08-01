@@ -1,0 +1,53 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.journeys {
+  padding: 8px 32px;
+  height: 100%;
+
+  &--body {
+    height: calc(100% - 136px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+
+  .base-page-header {
+    .journies-date {
+      font-size: $BASE-FONT-SIZE;
+      color: $BASE_GRAY_COLOR;
+      margin-top: 8px;
+    }
+  }
+
+  &--journey-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  &--button-block {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  &--top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--analytics {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      &--view-all {
+        color: $BASE_BLUE_COLOR;
+        cursor: pointer;
+      }
+    }
+  }
+}

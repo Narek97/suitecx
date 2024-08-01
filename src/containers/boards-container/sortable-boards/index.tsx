@@ -26,16 +26,16 @@ const SortableBoardComponent = SortableElement<{
     onToggleAllPinnedOutcomesModal: (board?: BoardType) => void;
   }) => {
     return (
-      <ErrorBoundary>
-        <li className={'sortable-boards--list'}>
+      <li className={'sortable-boards--list'}>
+        <ErrorBoundary>
           <BoardCard
             board={board}
             updateBoardName={updateBoardName}
             onToggleBoardDeleteModal={onToggleBoardDeleteModal}
             onToggleAllPinnedOutcomesModal={onToggleAllPinnedOutcomesModal}
           />
-        </li>
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </li>
     );
   },
 );

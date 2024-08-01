@@ -1,7 +1,7 @@
 @import 'src/assets/styles/mixins';
 @import 'src/assets/styles/variables';
 
-.ai-model-card{
+.ai-model-card {
   @include card-borders;
   position: relative;
   width: 200px;
@@ -21,7 +21,7 @@
     @include line-clamp(3);
   }
 
-  &--logo-block{
+  &--logo-block {
     @include flex-center-center;
     width: 100%;
     height: 100px;
@@ -32,5 +32,4 @@
     right: 8px;
     top: 8px;
   }
-
 }

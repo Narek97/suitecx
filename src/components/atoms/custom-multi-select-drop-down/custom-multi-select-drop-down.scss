@@ -10,7 +10,7 @@
   &--menu-item {
     @include reduce-text(100%);
   }
-  &--selected-menu-item{
+  &--selected-menu-item {
     background-color: #deebf7 !important;
     border-bottom: 1px solid $BASE-WHITE-COLOR !important;
   }
