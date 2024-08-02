@@ -1,7 +1,7 @@
 import { FC, useCallback } from 'react';
 
 import { useQueryClient } from '@tanstack/react-query';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'next/navigation';
 
 import CustomModal from '@/components/atoms/custom-modal/custom-modal';
 import DeleteModalFrame from '@/components/templates/delete-modal-frame';

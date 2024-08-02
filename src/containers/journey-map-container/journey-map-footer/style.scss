@@ -1,0 +1,45 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.journey-map-footer {
+  position: relative;
+  border-top: 2px solid $BASE-LIGHT-GRAY-COLOR;
+  display: flex;
+  width: 100%;
+  z-index: 20;
+  background: #eeeeee;
+
+  &--add-new-persona-btn,
+  &--persona,
+  &--overview {
+    @include flex-center-center;
+    width: 48px;
+    height: 48px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $BASE-LIGHT-GRAY-COLOR;
+    }
+  }
+
+  &--selected-item {
+    background: white;
+  }
+
+  &--persona {
+    //@include flex-center-center;
+    //text-align: center;
+    //
+    //&:first-child {
+    //  border-left: unset;
+    //  width: 60px;
+    //}
+    //&:last-child {
+    //  border-right: 2px solid $BASE-LIGHT-GRAY-COLOR;
+    //}
+    //&:hover {
+    //  transition: 0.5s;
+    //  background: #f6f6f6;
+    //}
+  }
+}

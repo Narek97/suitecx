@@ -1,0 +1,112 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.metrics-item {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  color: $BASE_GRAY_COLOR;
+  @include map-card-header-hover();
+
+  &--content {
+    padding: 8px 12px;
+    background-color: #edf6fd;
+  }
+
+  &--title-description-block,
+  &--goal-score-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 8px;
+  }
+
+  &--title-description-block {
+    line-height: 20px;
+  }
+
+  &--goal-score-block {
+    line-height: 24px;
+  }
+
+  &--title {
+    @include reduce-text(100%);
+    font-weight: 500;
+  }
+
+  &--score,
+  &--goal {
+    @include flex-center-center;
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  &--score-block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  &--score-interval-block {
+    @include flex-center-between;
+    font-size: 12px;
+    width: 100%;
+    color: $BASE_GRAY_COLOR_2;
+  }
+
+  &--score-item {
+    position: relative;
+    height: 8px;
+    background-color: #1b87e6;
+
+    &:nth-child(1) {
+      background-color: #ff7681;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffcb47;
+    }
+
+    &:nth-child(3) {
+      background-color: #1ba758;
+    }
+  }
+
+  &--goal-icon {
+    position: absolute;
+    top: -4px;
+    z-index: 10;
+  }
+
+  &--score-icon {
+    position: absolute;
+    top: -8px;
+    z-index: 10;
+  }
+
+  &--average-block {
+    @include flex-center-center;
+    font-size: 12px;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  &--nps-positive {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+
+  &--nps-negative {
+    svg {
+      fill: $BASE-ERROR-COLOR;
+    }
+  }
+  &--nps-negative-value {
+    color: $BASE-ERROR-COLOR;
+  }
+
+  &--loading {
+    @include journey-map-item-loading();
+  }
+}

@@ -1,0 +1,45 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.link-item {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  color: $BASE_GRAY_COLOR;
+  background-color: #f5f7ff;
+  @include map-card-header-hover();
+
+  &--content {
+    padding: 8px;
+    a {
+      color: $BASE_GRAY_COLOR;
+    }
+    &--logo-title {
+      @include flex-center;
+      gap: 8px;
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      a {
+        @include reduce-text(100%);
+      }
+    }
+
+    &--personas {
+      @include flex-center-center;
+      margin-top: 16px;
+      gap: 8px;
+
+      &--person-counts {
+        @include flex-center-center;
+        font-size: 16px;
+        font-weight: 500;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        color: $DARK_BLUE;
+        background-color: #e9ebf2;
+      }
+    }
+  }
+}

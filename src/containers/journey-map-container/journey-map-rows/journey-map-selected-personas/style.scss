@@ -1,0 +1,21 @@
+@import '../../../../assets/styles/mixins';
+
+.selected-persona-images {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.add-persona-btn {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  @include flex-center-center;
+  border-radius: 4px;
+  border: 1px solid $BASE_BLUE_COLOR;
+  outline: 2px solid transparent;
+  &:hover {
+    background: $BASE_BLUE_COLOR;
+    @include svg-fill($BASE_WHITE-COLOR);
+  }
+}

@@ -16,6 +16,7 @@ interface ICustomInput {
   min?: number;
   max?: number;
   step?: number;
+  variant?: string;
   inputRef?: Ref<HTMLInputElement>;
 }
 
@@ -32,6 +33,7 @@ const CustomInput: FC<ICustomInput & TextFieldProps> = memo(
     max,
     className,
     step,
+    variant = 'standard',
     inputRef,
     ...inputRestParams
   }) => {
@@ -67,7 +69,7 @@ const CustomInput: FC<ICustomInput & TextFieldProps> = memo(
         {...inputRestParams}
         autoComplete="off"
         sx={customStyle[inputType]}
-        variant="standard"
+        variant={variant}
         className={`custom-input ${className || ''}`}
         rows={rows}
         inputProps={{ maxLength, minLength, min, max, step }}

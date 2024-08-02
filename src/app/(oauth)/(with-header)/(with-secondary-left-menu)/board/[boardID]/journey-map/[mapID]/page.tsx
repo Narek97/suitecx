@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <JourneyMapContainer />
+      <JourneyMapContainer isGuest={false} />
     </>
   );
 };

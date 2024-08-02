@@ -1,0 +1,159 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.journey-map-selected-persona {
+  min-width: 328px;
+  max-width: 328px;
+  color: $BASE_GRAY_COLOR;
+  border-right: 1px solid #e8e8e8;
+  transition: 0.3s;
+
+  &--info-block {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    margin: 8px;
+    border-bottom: 1px solid $BASE-LIGHT-GRAY-COLOR;
+
+    &--name-type {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &--name,
+    &--type {
+      @include reduce-text(240px);
+      height: 32px;
+    }
+    &--name {
+      font-size: 24px;
+      color: $BASE_BLUE_COLOR;
+    }
+    &--type {
+      text-transform: capitalize;
+    }
+    &--close {
+      position: absolute;
+      top: 4px;
+      right: 12px;
+      padding: 4px;
+      &:hover {
+        background-color: $BASE_BG_COLOR;
+      }
+    }
+    &--settings {
+      position: absolute;
+      right: 12px;
+      bottom: 8px;
+      padding: 4px;
+      &:hover {
+        background-color: $BASE_BG_COLOR;
+      }
+    }
+  }
+
+  &--items-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 4px;
+    height: calc(100dvh - 287px);
+    overflow: auto;
+  }
+
+  &--demographic-infos {
+    border-radius: 4px;
+    border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      height: 32px;
+      padding: 8px;
+      background-color: $BASE_BG_COLOR;
+      &--title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    &--list {
+      padding: 8px;
+    }
+
+    &--list-item {
+      list-style-type: disc;
+      list-style-position: inside;
+      line-height: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &--pinned-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &--pinned-section {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+
+    &--header {
+      height: 32px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $BASE-LIGHT-GRAY-COLOR;
+      &--title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    &--content {
+      margin-top: 12px;
+      line-height: 20px;
+    }
+  }
+
+  &--card {
+    &--collapse-btn {
+      @include flex-center-center;
+      width: 20px;
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &--collapse-close-btn {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &--open-content {
+    transition: 0.3s;
+    max-height: 200px;
+    overflow: auto;
+  }
+
+  &--close-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+  }
+}
+
+.journey-map-selected-persona-close {
+  min-width: 0;
+  max-width: 0;
+  height: 100%;
+  color: $BASE_GRAY_COLOR;
+  border-right: 1px solid transparent;
+  overflow: hidden;
+  transition: 0.3s;
+}

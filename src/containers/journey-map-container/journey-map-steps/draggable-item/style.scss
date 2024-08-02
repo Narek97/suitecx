@@ -1,0 +1,7 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.step-draggable-item {
+  width: 280px;
+  background-color: $LIGHT_BLUE_2;
+}

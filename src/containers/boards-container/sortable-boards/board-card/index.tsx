@@ -1,8 +1,7 @@
-import JourneyCard from '@/containers/journies-conatiner/sortable-journeys/journey-card';
-
 import React, { FC, memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import './style.scss';
+
 import dayjs from 'dayjs';
 import fromNow from 'dayjs/plugin/relativeTime';
 import { useRouter } from 'next/navigation';
@@ -11,6 +10,7 @@ import CustomInput from '@/components/atoms/custom-Input/custom-Input';
 import CustomLongMenu from '@/components/atoms/custom-long-menu/custom-long-menu';
 import DragHandle from '@/components/templates/drag-handle';
 import WorkspaceAnalytics from '@/components/templates/workspace-analytics';
+import JourneyCard from '@/containers/journies-conatiner/sortable-journeys/journey-card';
 import { UpdateBoardInput } from '@/gql/types';
 import { debounced400 } from '@/hooks/useDebounce';
 import { BOARD_CARD_OPTIONS } from '@/utils/constants/options';

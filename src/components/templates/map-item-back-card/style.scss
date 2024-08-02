@@ -1,0 +1,14 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.map-item-back-card {
+  &--header {
+    @include flex-center;
+    height: 32px;
+    padding: 6px;
+    color: $BASE-WHITE-COLOR;
+    background-color: #3d3d3d;
+  }
+  min-height: 100px;
+  border-radius: 2px;
+}

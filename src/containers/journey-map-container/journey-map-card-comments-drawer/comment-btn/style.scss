@@ -1,0 +1,28 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.comments-btn {
+  @include flex-center-center;
+  width: 16px;
+  height: 16px;
+  &:hover {
+    @include svg-fill($BASE_GRAY_COLOR);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .comments-count {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 10px;
+    color: $BASE_GRAY_COLOR;
+    line-height: 1;
+    @include absolute-center;
+  }
+}

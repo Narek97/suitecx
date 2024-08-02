@@ -1,0 +1,28 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.cons-pros-interaction {
+  border-bottom: 2px solid $BASE-EXTRA-LIGHT-GRAY-2;
+
+  &--column {
+    position: relative;
+    padding: 8px;
+    background-color: $BASE-WHITE-COLOR;
+    height: 100%;
+
+    &:hover {
+      .add-row-box-element-button {
+        visibility: visible;
+      }
+    }
+
+    &--item {
+      height: 100%;
+    }
+  }
+
+  &--card {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}

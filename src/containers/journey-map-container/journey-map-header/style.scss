@@ -1,0 +1,74 @@
+@import 'src/assets/styles/mixins';
+
+.journey-map-header {
+  background: $BASE_WHITE-COLOR;
+  padding: 8px 16px 8px 8px;
+
+  .custom-vertical-menu {
+    display: flex;
+    background-color: transparent;
+    &-open {
+      background-color: transparent;
+    }
+  }
+
+  &--top-block {
+    @include flex-center-between;
+    margin-bottom: 8px;
+  }
+
+  &--left-block {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+  }
+
+  &--right-block {
+    @include flex-center;
+    gap: 8px;
+
+    &--operations {
+      @include flex-center-between;
+      gap: 24px;
+      button {
+        height: 16px;
+      }
+    }
+  }
+
+  &--title {
+    width: 100%;
+    margin-right: 8px;
+    font-size: $BASE-LARGE-SIZE;
+    color: $BASE_GRAY_COLOR;
+  }
+
+  &--buttons-icon-btn {
+    @include flex-center-center;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+  }
+
+  &--selected-persona {
+    &--open-close-btn-block {
+      padding-top: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: $BASE_GRAY_COLOR;
+      background-color: $BASE_WHITE-COLOR;
+    }
+    &--open-btn {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .outline-btn {
+    &:hover {
+      @include svg-fill($BASE_WHITE-COLOR);
+    }
+  }
+}

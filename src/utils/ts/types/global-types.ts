@@ -118,19 +118,6 @@ export type TableRowItemChangeType = { id: number | string; key: string; value: 
 
 export type PerformanceLogsType = Omit<PerformanceLog, 'method' | 'user' | 'updatedAt'>;
 
-export type NoteType = {
-  id: number;
-  text: string;
-  itemId: number;
-  updatedAt: any;
-  owner: {
-    color?: string;
-    emailAddress: string;
-    firstName: string;
-    lastName: string;
-  };
-};
-
 export type DropdownMultiSelectItemType = {
   id: number;
   name: string;
@@ -148,4 +135,32 @@ export type DropdownWithCategorySelectItemType = {
   id?: number;
   headerTitle?: string | ReactNode;
   group: DropdownSelectItemType[];
+};
+
+export type CommentType = {
+  id: number;
+  text: string;
+  itemId: number;
+  updatedAt: number;
+  replies?: CommentType[];
+  owner: {
+    userId?: number;
+    color?: string;
+    emailAddress: string;
+    firstName: string;
+    lastName: string;
+  };
+};
+
+export type NoteType = {
+  id: number;
+  text: string;
+  itemId: number;
+  updatedAt: any;
+  owner: {
+    color?: string;
+    emailAddress: string;
+    firstName: string;
+    lastName: string;
+  };
 };

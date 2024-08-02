@@ -1,0 +1,103 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.assign-persona-to-map {
+  padding: 8px;
+  height: 430px;
+
+  &--content {
+    &-personas {
+      height: 366px;
+      padding: 16px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      border-bottom: 1px solid $BASE-EXTRA-LIGHT-GRAY-2;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 8px;
+        height: 8px;
+      }
+
+      &-item {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        //min-height: 88px;
+        border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 10px 12px 12px;
+        color: $BASE_GRAY_COLOR;
+        border-left: 6px solid $BASE-LIGHT-GRAY-COLOR;
+
+        &:hover {
+          border: 1px solid $BASE_BLUE_COLOR;
+          border-left: 6px solid $BASE_BLUE_COLOR;
+        }
+
+        &--left {
+          width: 80%;
+          @include flex-center-center;
+          justify-content: start;
+          overflow: hidden;
+
+          .persona-image-box {
+            min-width: 38px;
+          }
+
+          .persona-text-info {
+            width: 100%;
+            margin-left: 8px;
+            @include reduce-text(90%);
+
+            &--title {
+              color: $BASE_BLUE_COLOR;
+              font-weight: 500;
+              font-size: 16px;
+              margin-bottom: 4px;
+              @include reduce-text(100%);
+            }
+
+            &--position {
+              font-size: $BASE_FONT-SIZE;
+            }
+          }
+        }
+
+        &--right {
+          @include flex-center-center;
+
+          .journeys-info--text {
+            margin-left: 8px;
+            font-size: $BASE_FONT-SIZE;
+          }
+        }
+      }
+
+      .selected-persona {
+        border-left: 6px solid $BASE_BLUE_COLOR;
+      }
+    }
+  }
+}
+
+.custom-modal-footer {
+  justify-content: space-between;
+  .create-new {
+    text-transform: lowercase;
+  }
+}
+
+.assign-modal-header {
+  @include flex-center;
+
+  .question-sign {
+    margin-left: 8px;
+    @include base-round-btn(16px, 16px, $DARK_BLUE);
+    font-size: 12px;
+    color: $BASE_WHITE-COLOR;
+    font-weight: 500;
+  }
+}

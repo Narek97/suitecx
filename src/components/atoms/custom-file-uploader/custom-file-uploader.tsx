@@ -22,7 +22,7 @@ const CustomFileUploader = memo(
               content
             ) : (
               <>
-                <DefaultImage width={26} />
+                <DefaultImage />
                 <p>Add picture</p>
               </>
             )}

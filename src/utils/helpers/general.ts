@@ -23,3 +23,22 @@ export const arrayMove = ({
 export const isValidNumberFormat = (value: any): value is number => {
   return /^-?\d*\.?\d+$/.test(value);
 };
+
+export const scrollNeighbours = (scrollLeft: number, neighbours: HTMLElement[]) => {
+  neighbours.forEach(el => {
+    el?.scroll({
+      // top: 0,
+      left: scrollLeft,
+    });
+  });
+};
+
+export const getMapColumnNameByType = (type: string) => {
+  switch (type) {
+    case 'list_item': {
+      return 'List item';
+    }
+    default:
+      return type;
+  }
+};

@@ -1,0 +1,22 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.import-data-point-table-modal {
+  padding: 16px 32px;
+  color: $BASE_GRAY_COLOR;
+
+  &--title {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  &--table-block {
+    max-height: 400px;
+    margin-bottom: 16px;
+  }
+
+  .react-datepicker-popper {
+    left: 45px !important;
+  }
+}

@@ -1,9 +1,8 @@
 import React, { ComponentClass } from 'react';
 
-import { useParams } from 'next/navigation';
-
 import './style.scss';
 
+import { useParams } from 'next/navigation';
 import {
   SortableContainer,
   SortableContainerProps,

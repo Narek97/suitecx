@@ -1,0 +1,88 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.row-actions-drawer {
+  @include flex-center-center;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 50%;
+  height: 18px;
+  z-index: 20;
+  color: $BASE_GRAY_COLOR;
+  transform: translate(-50%, 0);
+  &:hover {
+    .row-actions-drawer--button {
+      visibility: visible;
+    }
+  }
+
+  &--loading-block {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &--info-block {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+  }
+
+  &--button {
+    @include flex-center-center;
+    visibility: hidden;
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    border: 2px solid $BASE_BLUE_COLOR;
+
+    &:hover {
+      background-color: $BASE_BLUE_COLOR;
+      outline: 2px solid rgba(27, 135, 230, 0.5);
+      @include svg-fill($BASE_WHITE-COLOR);
+    }
+  }
+
+  &--drawer {
+    &--content {
+      width: 312px;
+      padding: 8px 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    &--groups {
+      width: 130px;
+      font-size: 12px;
+      overflow: auto;
+    }
+
+    &--outcome-groups {
+      width: 100%;
+    }
+
+    &--groups-title {
+      line-height: 32px;
+      font-weight: 500;
+    }
+
+    &--groups-item {
+      @include reduce-text(100%);
+      @include flex-center;
+      padding: 8px;
+      gap: 8px;
+      line-height: 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        color: $BASE_WHITE-COLOR;
+        background-color: $BASE_BLUE_COLOR;
+        @include svg-fill($BASE_WHITE-COLOR);
+      }
+    }
+  }
+}

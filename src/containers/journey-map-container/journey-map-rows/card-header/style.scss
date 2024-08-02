@@ -1,0 +1,62 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.card-header {
+  @include flex-center-between;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  height: 32px;
+  padding: 4px;
+
+  &--base-icon {
+    display: block;
+  }
+
+  &--drag-icon {
+    display: none;
+    transform: rotate(90deg);
+    cursor: grab;
+  }
+
+  &--hide-icon {
+    display: none;
+  }
+  &--show-icon {
+    display: block !important;
+  }
+
+  &--left-block,
+  &--right-block {
+    position: relative;
+    flex: 1;
+    height: 100%;
+  }
+
+  &--left-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &--menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &--note {
+    visibility: hidden;
+    position: absolute;
+    top: 4px;
+    right: 60px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--comment {
+    visibility: hidden;
+    position: absolute;
+    top: 4px;
+    right: 88px;
+  }
+}

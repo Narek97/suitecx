@@ -1,0 +1,47 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.journey-map-rows {
+  height: calc(100dvh - 295px);
+  overflow: auto;
+  padding-top: 14px;
+  background-color: #f5f5f5;
+
+  &--droppable-item {
+    display: flex;
+    width: fit-content;
+  }
+
+  &--loading-block {
+    width: 100%;
+    height: 40px;
+    position: relative;
+  }
+
+  &--empty-data-block {
+    position: relative;
+    text-align: center;
+    &--title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 16px;
+      font-weight: 400;
+      color: $BASE_GRAY_COLOR;
+    }
+    &--sub-title {
+      width: 510px;
+      font-size: 16px;
+      line-height: 24px;
+      color: #9b9b9b;
+      font-weight: 400;
+    }
+    .row-actions-drawer {
+      width: 20px;
+      top: -30px;
+      left: 80px;
+    }
+    .row-actions-drawer--button {
+      visibility: visible;
+    }
+  }
+}

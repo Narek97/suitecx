@@ -6,8 +6,8 @@ import { ClickAwayListener, Skeleton } from '@mui/material';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { useQueryClient } from '@tanstack/react-query';
+import { useParams } from 'next/navigation';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import { useParams } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 
 import {
@@ -47,6 +47,7 @@ const PersonaRightSections: FC<IPersonaSections> = memo(
   ({ isLoadingPersonaSections, onHandleAddSection, dataPersonaSections }) => {
     const queryClient = useQueryClient();
     const { personaID } = useParams();
+
     const setSnackbar = useSetRecoilState(snackbarState);
 
     const [layouts, setLayouts] = useState<Array<PersonSectionType>>([]);

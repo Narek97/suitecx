@@ -1,0 +1,12 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.text-insights {
+  padding: 8px;
+  background-color: $BASE-WHITE-COLOR;
+  border-bottom: 2px solid $BASE-EXTRA-LIGHT-GRAY-2;
+  &--header {
+    height: 32px;
+    padding: 8px;
+  }
+}

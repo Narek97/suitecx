@@ -1,0 +1,119 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.create-update-metrics-drawer {
+  width: 500px;
+  height: 100%;
+  color: $BASE_GRAY_COLOR;
+
+  &--form {
+    height: calc(100% - 40px);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include base-modal-footer();
+  }
+
+  &--content {
+    overflow: auto;
+    height: 100%;
+    padding: 16px;
+  }
+
+  &--title {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  &--label {
+    padding-top: 10px;
+  }
+
+  &--general-block,
+  &--data-settings-block {
+    &--item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-left: 8px;
+      gap: 8px;
+    }
+    &--validation-block {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+  }
+
+  &--general-block {
+    &--switch-validation {
+      width: 308px;
+    }
+
+    &--description-validation {
+      overflow: hidden;
+    }
+
+    &--description-validation-open {
+      transition: 0.3s;
+      height: 105px;
+    }
+
+    &--description-validation-close {
+      transition: 0.3s;
+      height: 0;
+    }
+  }
+
+  &--data-settings-block {
+    &--date-picker {
+      @include flex-center;
+      justify-content: space-between;
+      width: 300px;
+      height: 32px;
+      padding: 8px;
+      background-color: #f5f5f5;
+    }
+
+    &--date-picker-block {
+      display: flex;
+      gap: 8px;
+    }
+
+    &--goal-item {
+      margin-top: 8px;
+    }
+  }
+
+  &--data-points-block {
+    margin-top: 32px;
+
+    &--header {
+      @include flex-center-between;
+    }
+
+    &--btns-block {
+      display: flex;
+      gap: 8px;
+    }
+
+    &--table-block {
+      margin-top: 8px;
+      min-height: 100px;
+      position: relative;
+    }
+
+    &--empty-table-title {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
+      margin-top: 24px;
+    }
+  }
+}

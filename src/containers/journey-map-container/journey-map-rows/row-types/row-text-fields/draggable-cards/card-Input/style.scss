@@ -1,0 +1,8 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.draggable-input {
+  @include map-card-header-hover();
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}

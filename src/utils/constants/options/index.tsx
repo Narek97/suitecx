@@ -465,28 +465,28 @@ const OUTCOME_OPTIONS = ({
   ];
 };
 
-// const ITEM_OPTIONS = ({
-//   onHandleDelete,
-//   onHandleEdit,
-//   color,
-// }: {
-//   onHandleEdit: (data?: any) => void;
-//   onHandleDelete: (data: any) => void;
-//   color?: string;
-// }): Array<MenuOptionsType> => {
-//   return [
-//     {
-//       icon: <Edit fill={color || '#545E6B'} />,
-//       name: 'Edit',
-//       onClick: onHandleEdit,
-//     },
-//     {
-//       icon: <Delete fill={color || '#545E6B'} />,
-//       name: 'Delete',
-//       onClick: onHandleDelete,
-//     },
-//   ];
-// };
+const COMMENT_ITEM_OPTIONS = ({
+  onHandleDelete,
+  onHandleEdit,
+  color,
+}: {
+  onHandleEdit: (data?: any) => void;
+  onHandleDelete: (data: any) => void;
+  color?: string;
+}): Array<MenuOptionsType> => {
+  return [
+    {
+      icon: <EditIcon fill={color || '#545E6B'} />,
+      name: 'Edit',
+      onClick: onHandleEdit,
+    },
+    {
+      icon: <DeleteIcon fill={color || '#545E6B'} />,
+      name: 'Delete',
+      onClick: onHandleDelete,
+    },
+  ];
+};
 
 const AI_MODEL_CARD_OPTIONS = ({
   onHandleEdit,
@@ -528,4 +528,5 @@ export {
   METRICS_DATA_POINT_EXEL_OPTIONS,
   AI_MODEL_CARD_OPTIONS,
   OUTCOME_OPTIONS,
+  COMMENT_ITEM_OPTIONS,
 };

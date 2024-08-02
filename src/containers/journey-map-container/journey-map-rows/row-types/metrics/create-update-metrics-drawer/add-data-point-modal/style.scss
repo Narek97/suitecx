@@ -1,0 +1,46 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.add-data-point-modal {
+  padding: 16px;
+  color: $BASE_GRAY_COLOR;
+
+  &--content {
+    display: flex;
+    gap: 32px;
+    height: 330px;
+    padding: 0 16px;
+  }
+
+  &--title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &--input-item {
+    min-height: 78px;
+  }
+
+  &--label {
+    padding-bottom: 4px;
+    line-height: 24px;
+  }
+
+  &--left-block {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &--right-block {
+    width: 252px;
+  }
+
+  &--date-picker-block {
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+  }
+}

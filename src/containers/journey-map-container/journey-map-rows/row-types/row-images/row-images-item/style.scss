@@ -1,0 +1,75 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.row-images-item {
+  max-width: 280px;
+  min-width: 280px;
+  min-height: 280px;
+  border-radius: 2px;
+  padding: 8px;
+  border-bottom: 2px solid #e8e8e8;
+  background-color: $BASE-WHITE-COLOR;
+
+  &--first-image {
+    .image-card {
+      width: 100%;
+      height: 262px;
+      margin-bottom: 8px;
+    }
+    .row-images-item--add-image-button {
+      width: 100%;
+      height: 32px;
+    }
+  }
+
+  &:hover {
+    .row-images-item--add-image-button {
+      visibility: visible;
+    }
+  }
+
+  &--images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    &--card {
+      max-height: 88px;
+    }
+    &--firs-card {
+      grid-column: span 2;
+      max-height: 100%;
+    }
+
+    &--full-height {
+      height: 100%;
+    }
+  }
+
+  &--add-image-button {
+    visibility: hidden;
+    position: relative;
+    display: inline-block;
+    width: 128px;
+    height: 88px;
+    border-radius: 2px;
+    border: 1px solid $BASE_BLUE_COLOR;
+    svg {
+      fill: $BASE_BLUE_COLOR;
+      @include absolute-center;
+    }
+    input {
+      width: inherit;
+      opacity: 0;
+    }
+  }
+
+  &--add-image-first-button {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+    svg {
+      fill: #9b9b9b;
+    }
+  }
+}

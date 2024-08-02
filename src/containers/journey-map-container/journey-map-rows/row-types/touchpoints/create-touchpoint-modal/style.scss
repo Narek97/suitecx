@@ -1,0 +1,36 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.create-touchpoint-modal {
+  padding: 16px;
+  color: $BASE_GRAY_COLOR;
+
+  &--content {
+    padding-bottom: 16px;
+  }
+
+  &--icon-block {
+    margin-top: 24px;
+  }
+
+  &--icon-frame {
+    @include flex-center-center;
+    width: 100%;
+    height: 120px;
+    margin-top: 8px;
+    background-image: url('../../../../../../../public/base-icons/file-upload_frame.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .attachments--file-uploader {
+      width: 330px;
+      height: 114px;
+    }
+  }
+
+  &--or-block {
+    text-align: center;
+    margin: 8px 0;
+  }
+  @include base-modal-footer();
+}

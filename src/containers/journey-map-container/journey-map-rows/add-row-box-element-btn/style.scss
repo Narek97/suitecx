@@ -1,0 +1,44 @@
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+
+.add-row-box-element-button {
+  visibility: hidden;
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    button {
+      background-color: #54a5ec;
+      svg {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.add-row-box-element-first-button {
+  height: 100%;
+  visibility: visible;
+  svg {
+    fill: #9b9b9b;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $BASE-LIGHT-GRAY-COLOR;
+  }
+
+  &:hover {
+    button {
+      background-color: #edf6fd;
+      border: 1px solid $BASE_BLUE_COLOR;
+      svg {
+        fill: $BASE_BLUE_COLOR;
+      }
+    }
+  }
+}

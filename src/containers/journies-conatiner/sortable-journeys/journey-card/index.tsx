@@ -1,5 +1,3 @@
-import { useRouter } from 'next/navigation';
-
 import { ChangeEvent, FC, memo, MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import './style.scss';
@@ -7,6 +5,7 @@ import './style.scss';
 import { ClickAwayListener } from '@mui/material';
 import dayjs from 'dayjs';
 import fromNow from 'dayjs/plugin/relativeTime';
+import { useRouter } from 'next/navigation';
 import { useSetRecoilState } from 'recoil';
 
 import CustomInput from '@/components/atoms/custom-Input/custom-Input';
@@ -63,7 +62,7 @@ const JourneyCard: FC<IJourneyCard> = memo(
 
     const onHandleCopyShareUrl = useCallback(async () => {
       await navigator?.clipboard?.writeText(
-        `${process.env.NEXT_PUBLIC_AWS_URL}/board/${boardID}/journey-map/${map?.id}/guest`,
+        `${process.env.NEXT_PUBLIC_APP}/board/${boardID}/journey-map/${map?.id}/guest`,
       );
       setSnackbar(prev => ({
         ...prev,

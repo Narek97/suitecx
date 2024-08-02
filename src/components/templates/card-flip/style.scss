@@ -1,0 +1,30 @@
+@import 'src/assets/styles/mixins';
+
+.react-card-flip {
+  @include map-card-header-hover();
+
+  &:hover {
+    .react-card-flip--btn {
+      visibility: visible;
+    }
+  }
+
+  &--btn {
+    visibility: hidden;
+    @include flex-center-center;
+    position: absolute;
+    top: 7px;
+    right: 36px;
+    z-index: 10;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--back-btn {
+    visibility: visible;
+    top: 9px;
+    right: 12px;
+    transform: rotate(180deg);
+    @include svg-fill($BASE-WHITE-COLOR);
+  }
+}

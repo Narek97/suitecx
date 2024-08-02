@@ -1,0 +1,7 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.column-draggable-item {
+  min-width: 280px;
+  background-color: $LIGHT_BLUE;
+}
