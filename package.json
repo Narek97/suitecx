@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "npx npmrc-replace-env & next dev",
-    "build": "next build",
+    "build": "GENERATE_SOURCEMAP=false && npx npmrc-replace-env && yarn && tsc && next build",
     "start": "next start",
     "codegen": "graphql-codegen --require dotenv/config --config codegen.ts dotenv_config_path=.env",
     "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet",
     "format": "prettier --write '*/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "test": "jest",
+    "test": "jest --watch=false",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage --watch=false",
+    "test:coverage:watch": "jest --coverage"
   },
   "dependencies": {
     "@emotion/cache": "^11.13.0",

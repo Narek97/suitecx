@@ -22,7 +22,11 @@ const SuiteOrgs = () => {
     isLoading: isLoadingOrgUsers,
     error: errorOrgs,
   } = useGetSuiteOrgsQuery<GetSuiteOrgsQuery, Error>(
-    {},
+    {
+      getSuiteOrgsInput: {
+        search: '',
+      },
+    },
     {
       cacheTime: queryCacheTime,
       staleTime: querySlateTime,

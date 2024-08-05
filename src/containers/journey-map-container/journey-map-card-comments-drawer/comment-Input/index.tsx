@@ -1,16 +1,13 @@
+'use client';
 import { FC, KeyboardEvent, useCallback, useEffect, useRef, useState } from 'react';
 
 import './style.scss';
 
 import ReactQuill from 'react-quill';
-import 'quill-mention';
-import { useRecoilValue } from 'recoil';
-
-import SendIcon from '@/public/base-icons/send.svg';
-import { orgUsersState } from '@/store/atoms/orgUsers.atom';
-
 import 'react-quill/dist/quill.snow.css';
 import 'quill-mention/dist/quill.mention.css';
+
+import SendIcon from '@/public/base-icons/send.svg';
 
 interface ICommentInput {
   addComment: (text: string, commentId?: number) => void;
@@ -20,7 +17,7 @@ interface ICommentInput {
 }
 
 const CommentInput: FC<ICommentInput> = ({ addComment, focus, value, isUpdateMode }) => {
-  const allUsers = useRecoilValue(orgUsersState);
+  // const allUsers = useRecoilValue(orgUsersState);
 
   const [isEmpty, setIsEmpty] = useState<boolean>(true);
 
@@ -35,27 +32,27 @@ const CommentInput: FC<ICommentInput> = ({ addComment, focus, value, isUpdateMod
     }
   }, []);
 
-  const suggestPeople = useCallback(
-    (searchTerm: any) => {
-      return allUsers.filter(person => person.value.includes(searchTerm));
-    },
-    [allUsers],
-  );
-
+  // const suggestPeople = useCallback(
+  //   (searchTerm: any) => {
+  //     return allUsers.filter(person => person.value.includes(searchTerm));
+  //   },
+  //   [allUsers],
+  // );
+  // todo
   const modules = {
     toolbar: false,
-    mention: {
-      allowedChars: /^[A-Za-z\sÅÄÖåäö]*$/,
-      mentionDenotationChars: ['@'],
-      spaceAfterInsert: true,
-      source: useCallback(
-        async (searchTerm: any, renderList: any) => {
-          const matchedPeople = await suggestPeople(searchTerm);
-          renderList(matchedPeople);
-        },
-        [suggestPeople],
-      ),
-    },
+    // mention: {
+    //   allowedChars: /^[A-Za-z\sÅÄÖåäö]*$/,
+    //   mentionDenotationChars: ['@'],
+    //   spaceAfterInsert: true,
+    //   source: useCallback(
+    //     async (searchTerm: any, renderList: any) => {
+    //       const matchedPeople = await suggestPeople(searchTerm);
+    //       renderList(matchedPeople);
+    //     },
+    //     [suggestPeople],
+    //   ),
+    // },
   };
 
   const handleInputKeyDown = useCallback(
@@ -97,15 +94,14 @@ const CommentInput: FC<ICommentInput> = ({ addComment, focus, value, isUpdateMod
         </button>
         <ReactQuill
           className={'comments-editor'}
-          modules={modules}
           ref={editorRef}
+          modules={modules}
           onFocus={() => {
             focus && focus();
           }}
           onKeyDown={handleInputKeyDown}
           placeholder={'Type to comment'}
           onChange={onHandleChange}
-          style={{}}
         />
       </div>
     </>

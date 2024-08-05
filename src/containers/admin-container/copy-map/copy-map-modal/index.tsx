@@ -9,10 +9,15 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import CustomButton from '@/components/atoms/custom-button/custom-button';
 import CustomModal from '@/components/atoms/custom-modal/custom-modal';
 import ModalHeader from '@/components/templates/modal-header';
+import BoardMaps from '@/containers/admin-container/copy-map/board-maps';
+import OrgWorkspaces from '@/containers/admin-container/copy-map/org-workspaces';
+import Orgs from '@/containers/admin-container/copy-map/orgs';
+import WorkspaceBoards from '@/containers/admin-container/copy-map/workspace-boards';
 import { useCopyMapMutation } from '@/gql/mutations/generated/copyMap.generated';
 import { DeleteErrorLogsMutation } from '@/gql/mutations/generated/deleteErrorLogs.generated';
 import { copyMapState } from '@/store/atoms/copyMap.atom';
 import { snackbarState } from '@/store/atoms/snackbar.atom';
+import { getPageContentByKey } from '@/utils/helpers/get-page-content-by-key';
 import { CopyMapLevelTemplateEnum, MapCopyLevelEnum } from '@/utils/ts/enums/global-enums';
 
 interface IAssignPersonaToMapModal {
@@ -99,26 +104,25 @@ const CopyMapModal: FC<IAssignPersonaToMapModal> = ({ isOpen, orgId, handleClose
           ? ' * Select workspace, then board for pasting the map'
           : 'Choose workspaces, then boards for paste the map'}
       </div>
-      {/*todo*/}
-      {/*{getPageContentByKey({*/}
-      {/*  content: {*/}
-      {/*    [CopyMapLevelTemplateEnum.ORGS]: <Orgs />,*/}
-      {/*    [CopyMapLevelTemplateEnum.WORKSPACES]: (*/}
-      {/*      <OrgWorkspaces level={level} orgId={(copyMapData.orgId || orgId)!} />*/}
-      {/*    ),*/}
-      {/*    [CopyMapLevelTemplateEnum.BOARDS]: (*/}
-      {/*      <WorkspaceBoardsForPaste*/}
-      {/*        isLoadingCopyMap={isLoadingCopyMap}*/}
-      {/*        handleClose={handleClose}*/}
-      {/*        mapId={copyMapData?.mapId!}*/}
-      {/*        workspaceId={copyMapData?.workspaceId!}*/}
-      {/*      />*/}
-      {/*    ),*/}
-      {/*    [CopyMapLevelTemplateEnum.MAPS]: <BoardsMap boardId={copyMapData.boardId!} />,*/}
-      {/*  },*/}
-      {/*  key: copyMapData.template,*/}
-      {/*  defaultPage: <OrgWorkspaces level={level} orgId={(copyMapData.orgId || orgId)!} />,*/}
-      {/*})}*/}
+
+      {getPageContentByKey({
+        content: {
+          [CopyMapLevelTemplateEnum.ORGS]: <Orgs />,
+          [CopyMapLevelTemplateEnum.WORKSPACES]: (
+            <OrgWorkspaces level={level} orgId={(copyMapData.orgId || orgId)!} />
+          ),
+          [CopyMapLevelTemplateEnum.BOARDS]: (
+            <WorkspaceBoards
+              isLoadingCopyMap={isLoadingCopyMap}
+              mapId={copyMapData?.mapId!}
+              workspaceId={copyMapData?.workspaceId!}
+            />
+          ),
+          [CopyMapLevelTemplateEnum.MAPS]: <BoardMaps boardId={copyMapData.boardId!} />,
+        },
+        key: copyMapData.template,
+        defaultPage: <OrgWorkspaces level={level} orgId={(copyMapData.orgId || orgId)!} />,
+      })}
       <div className={'copy-map-modal--footer'}>
         <CustomButton
           type={'submit'}

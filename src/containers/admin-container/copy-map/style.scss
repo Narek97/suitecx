@@ -1,0 +1,11 @@
+@import 'src/assets/styles/mixins';
+
+.map-copy--search {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin: 20px 0;
+  &-input {
+    width: 260px;
+  }
+}

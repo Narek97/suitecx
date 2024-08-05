@@ -3,6 +3,7 @@ import fromNow from 'dayjs/plugin/relativeTime';
 import Image from 'next/image';
 
 import CustomDatePicker from '@/components/atoms/custom-date-picker/custom-date-picker';
+import HighlightedText from '@/components/templates/hightlited-text';
 import DeleteIcon from '@/public/operations/delete.svg';
 import { isValidNumberFormat } from '@/utils/helpers/general';
 import {
@@ -152,15 +153,17 @@ const ADMIN_ERROR_TABLE_COLUMNS = ({ toggleDeleteModal }: ITableColumn): Array<T
   ];
 };
 
-const ORGS_TABLE_COLUMNS = (): Array<TableColumnType> => {
+const ORGS_TABLE_COLUMNS = (search: string): Array<TableColumnType> => {
   return [
     {
       id: 'orgId',
       label: 'OrgId',
+      renderFunction: ({ orgId }) => <HighlightedText name={String(orgId)} search={search} />,
     },
     {
       id: 'name',
       label: 'Name',
+      renderFunction: ({ name }) => <HighlightedText name={name} search={search} />,
     },
   ];
 };

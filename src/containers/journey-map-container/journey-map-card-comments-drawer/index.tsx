@@ -1,3 +1,4 @@
+'use client';
 import { FC, useCallback, useEffect, useState } from 'react';
 
 import './style.scss';
@@ -8,6 +9,7 @@ import deepcopy from 'deepcopy';
 import { useRecoilValue } from 'recoil';
 
 import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
+import ErrorBoundary from '@/components/templates/error-boundary';
 import ModalHeader from '@/components/templates/modal-header';
 import { useChangeCommentsCount } from '@/containers/journey-map-container/hooks/useChangeComments';
 import CommentInput from '@/containers/journey-map-container/journey-map-card-comments-drawer/comment-Input';
@@ -371,18 +373,20 @@ const CommentsDrawer: FC<ICommentsDrawer> = ({ commentsDrawer, onClose }) => {
             </div>
           ) : comments?.length ? (
             comments?.map((commentItem, index) => (
-              <CommentItem
-                key={commentItem?.id}
-                isFirstLevel={true}
-                comment={commentItem}
-                index={index}
-                deleteComment={deleteComment}
-                updateComment={updateComment}
-                setLastMessageRef={ref => {
-                  setLastMessageRef(ref);
-                }}
-                addComment={addCommentItem}
-              />
+              <ErrorBoundary key={commentItem?.id}>
+                <CommentItem
+                  key={commentItem?.id}
+                  isFirstLevel={true}
+                  comment={commentItem}
+                  index={index}
+                  deleteComment={deleteComment}
+                  updateComment={updateComment}
+                  setLastMessageRef={ref => {
+                    setLastMessageRef(ref);
+                  }}
+                  addComment={addCommentItem}
+                />
+              </ErrorBoundary>
             ))
           ) : (
             <div className={'comments-drawer--empty-state'}>
