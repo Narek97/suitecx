@@ -12,7 +12,6 @@ import CustomLoader from '@/components/atoms/custom-loader/custom-loader';
 import ErrorBoundary from '@/components/templates/error-boundary';
 import ModalHeader from '@/components/templates/modal-header';
 import { useChangeCommentsCount } from '@/containers/journey-map-container/hooks/useChangeComments';
-import CommentInput from '@/containers/journey-map-container/journey-map-card-comments-drawer/comment-Input';
 import CommentItem from '@/containers/journey-map-container/journey-map-card-comments-drawer/comment-item';
 import { commentSocket } from '@/containers/journey-map-container/journey-map-card-comments-drawer/helpers/comment-socket';
 import useKeepScrollPosition from '@/containers/journey-map-container/journey-map-card-comments-drawer/hooks/useKeepScrollPosition';
@@ -38,6 +37,8 @@ import { COMMENTS_LIMIT } from '@/utils/constants/pagination';
 import { emitToSocketMap, socketMap } from '@/utils/helpers/socket-connection';
 import { CommentEventsEnum } from '@/utils/ts/enums/global-enums';
 import { CommentType, NotesAndCommentsDrawerType } from '@/utils/ts/types/global-types';
+
+import CommentInput from '../../../components/templates/comment-Input';
 
 interface ICommentsDrawer {
   commentsDrawer: NotesAndCommentsDrawerType;

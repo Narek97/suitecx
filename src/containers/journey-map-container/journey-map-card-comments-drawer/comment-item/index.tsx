@@ -1,14 +1,17 @@
 import React, { FC, useMemo, useState } from 'react';
 
+import './style.scss';
+
 import dayjs from 'dayjs';
 import { useRecoilValue } from 'recoil';
 
 import CustomLongMenu from '@/components/atoms/custom-long-menu/custom-long-menu';
-import CommentInput from '@/containers/journey-map-container/journey-map-card-comments-drawer/comment-Input';
 import { userState } from '@/store/atoms/user.atom';
 import { COMMENT_ITEM_OPTIONS } from '@/utils/constants/options';
 import { menuViewTypeEnum } from '@/utils/ts/enums/global-enums';
 import { CommentType } from '@/utils/ts/types/global-types';
+
+import CommentInput from '../../../../components/templates/comment-Input';
 
 interface ICommentItem {
   isFirstLevel: boolean;
